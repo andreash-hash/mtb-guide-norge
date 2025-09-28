@@ -21,16 +21,16 @@ const Index = () => {
       <section id="tester" className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle 
-            subtitle="Grundige tester av de nyeste terrengsyklene"
+            subtitle="Grundige analyser av de nyeste terrengsyklene"
           >
-            Siste tester
+            Siste anmeldelser
           </SectionTitle>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <TestCard
               image={trekMarlin}
-              title="Test av Trek Marlin 8"
-              description="En grundig test av en populær terrengsykkel som kombinerer kvalitet med rimelig pris. Perfekt for både nybegynnere og erfarne syklister."
+              title="Anmeldelse av Trek Marlin 8"
+              description="En grundig analyse av en populær terrengsykkel som kombinerer kvalitet med rimelig pris. Perfekt for både nybegynnere og erfarne syklister."
             />
             <TestCard
               image={specializedRockhopper}
@@ -104,8 +104,8 @@ const Index = () => {
             
             <div className="bg-card p-8 rounded-lg shadow-md">
               <p className="text-lg leading-relaxed text-foreground mb-6">
-                mtb-test hjelper deg å finne riktig terrengsykkel. Vi tilbyr uavhengige tester, 
-                ærlige guider og nyheter fra terrengsykkel-verden. Vårt mål er å gjøre sykkelvalget 
+                mtb-test hjelper deg å finne riktig terrengsykkel. Vi tilbyr uavhengige anmeldelser, 
+                ærlige sammenligninger og nyheter fra terrengsykkel-verden. Vårt mål er å gjøre sykkelvalget 
                 enklere og tryggere.
               </p>
               
