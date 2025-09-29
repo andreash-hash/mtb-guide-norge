@@ -16,13 +16,11 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="fade-in">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 tracking-tight">
-            OPPDAG NYE STIER,
-            <br />
-            <span className="text-accent">SYKLER OG OPPLEVELSER</span>
+            <span className="text-accent">OPPDAG NYE STIER OG SYKLER</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto font-medium">
-            Vi deler inspirasjon, erfaringer og kunnskap som gir deg mer ut av hvert tråkk.
+            Mer flyt. Mer glede. Mer sykling.
           </p>
 
           <div className="slide-up">
