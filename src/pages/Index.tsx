@@ -50,7 +50,7 @@ const Index = () => {
       <section id="guider" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle 
-            subtitle="Ekspertråd for å hjelpe deg med det rette valget"
+            subtitle="Stier, utstyr og teknikk som gir deg mer ut av sykkelturen"
           >
             Populære guider
           </SectionTitle>
