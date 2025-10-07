@@ -4,6 +4,7 @@ import SectionTitle from "@/components/SectionTitle";
 import TestCard from "@/components/TestCard";
 import GuideCard from "@/components/GuideCard";
 import NewsCard from "@/components/NewsCard";
+import FeaturedProducts from "@/components/FeaturedProducts";
 import Footer from "@/components/Footer";
 
 // Import bike images
@@ -96,26 +97,12 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Featured Products Section */}
+      <FeaturedProducts />
+
       {/* About Us Section */}
       <section id="om-oss" className="py-20 bg-secondary/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <SectionTitle>Om oss</SectionTitle>
-            
-            <div className="bg-card p-8 rounded-lg shadow-md">
-              <p className="text-lg leading-relaxed text-foreground mb-6">
-                mtb-test hjelper deg å finne riktig terrengsykkel. Vi tilbyr uavhengige anmeldelser, 
-                ærlige sammenligninger og nyheter fra terrengsykkel-verden. Vårt mål er å gjøre sykkelvalget 
-                enklere og tryggere.
-              </p>
-              
-              <p className="text-muted-foreground">
-                Noen artikler inneholder affiliate-lenker, men vi velger alltid anbefalinger 
-                basert på kvalitet og verdi.
-              </p>
-            </div>
-          </div>
-        </div>
+...
       </section>
 
       <Footer />
