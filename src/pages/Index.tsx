@@ -7,6 +7,7 @@ import NewsCard from "@/components/NewsCard";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import Footer from "@/components/Footer";
 import { guides } from "@/data/guides";
+import { newsArticles } from "@/data/newsArticles";
 
 // Import bike images
 import trekMarlin from "@/assets/trek-marlin-8.jpg";
@@ -75,16 +76,9 @@ const Index = () => {
           </SectionTitle>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <NewsCard
-              title="Nye el-MTB modeller lanseres i 2025"
-              excerpt="Flere produsenter presenterer sine nyeste elektriske terrengsykler med forbedret batteriteknologi og kraftigere motorer for bedre ytelse på krevende terreng."
-              date="15. januar 2025"
-            />
-            <NewsCard
-              title="Terrengsykkelritt i Norge du bør få med deg"
-              excerpt="En oversikt over årets mest spennende terrengsykkelritt og arrangementer rundt om i Norge. Fra Birkebeinerrittet til lokale konkurranser."
-              date="8. januar 2025"
-            />
+            {newsArticles.slice(0, 2).map((article) => (
+              <NewsCard key={article.id} article={article} />
+            ))}
           </div>
         </div>
       </section>
