@@ -1,3 +1,10 @@
+import trekFuelEx7 from "@/assets/trek-fuel-ex-7.jpg";
+import specializedStumpjumper from "@/assets/specialized-stumpjumper.jpg";
+import canyonSpectral from "@/assets/canyon-spectral.jpg";
+import santaCruzHightower from "@/assets/santa-cruz-hightower.jpg";
+import yetiSb130 from "@/assets/yeti-sb130.jpg";
+import norcoFluidFs from "@/assets/norco-fluid-fs.jpg";
+
 export interface BikeReview {
   id: string;
   name: string;
@@ -42,7 +49,7 @@ Bremsene fra Shimano MT520 med 4-stempels kalipere gir kraftig og kontrollerbar 
 For norske forhold er dette en nesten perfekt pakke. Den takler alt fra hverdagsturer til helgeturer i fjellet, og kvaliteten på komponentene tilsier lang levetid med minimal vedlikehold.`,
     priceRange: "Mellomklasse - 35.000-45.000 kr",
     rating: 4.5,
-    image: "/placeholder.svg",
+    image: trekFuelEx7,
     pros: [
       "Utrolig allsidig og morsom på variert terreng",
       "Solid komponentpakke til prisen",
@@ -87,7 +94,7 @@ Geometrien er moderne og aggressiv, men ikke så ekstrem at den blir vanskelig p
 Dette er en sykkel for deg som vil ha det beste, og er villig til å betale for det. Kvaliteten skinner gjennom i hver eneste detalj.`,
     priceRange: "Premium - 65.000-85.000 kr",
     rating: 4.8,
-    image: "/placeholder.svg",
+    image: specializedStumpjumper,
     pros: [
       "Eksepsjonell byggekvalitet med karbonramme",
       "Fox Factory-demping gir førsteklasses ytelse",
@@ -132,7 +139,7 @@ Shimano XT-bremsene gir kraftig og pålitelig bremsing. Kombinert med de lette k
 For deg som vil ha karbonramme og gode komponenter uten å bruke formuen, er Spectral et utmerket valg.`,
     priceRange: "Mellomklasse - 40.000-50.000 kr",
     rating: 4.4,
-    image: "/placeholder.svg",
+    image: canyonSpectral,
     pros: [
       "Utmerket verdi for pengene",
       "Lett og effektiv karbonramme",
@@ -177,7 +184,7 @@ SRAM G2 RSC-bremsene gir kraftig og modulerbar bremsing. Reserve-kraften er allt
 Santa Cruz' livstidsgaranti på rammen gir ekstra trygghet. Dette er en investering som vil vare.`,
     priceRange: "Premium - 70.000-90.000 kr",
     rating: 4.7,
-    image: "/placeholder.svg",
+    image: santaCruzHightower,
     pros: [
       "VPP-demping gir fantastisk pedaltråkk-effektivitet",
       "Livstidsgaranti på rammen",
@@ -224,7 +231,7 @@ SRAM Code RSC-bremsene gir deg all bremsekraften du trenger, med en følelse som
 Dette er drømmesykkelen for mange, og den lever opp til forventningene.`,
     priceRange: "Ultra-Premium - 95.000-120.000 kr",
     rating: 4.9,
-    image: "/placeholder.svg",
+    image: yetiSb130,
     pros: [
       "Switch Infinity-demping er i en egen klasse",
       "Ekstrem lett Turq-karbonramme",
@@ -269,7 +276,7 @@ Shimano MT420-bremsene med 4-stempels kalipere gir god bremsekraft. De er kanskj
 For nybegynnere eller de som vil teste fulldemper-verdenen, er Fluid FS et utmerket valg. Den gir deg en ekte stisykkel-opplevelse uten å tømme lommeboken.`,
     priceRange: "Budsjett - 22.000-28.000 kr",
     rating: 4.2,
-    image: "/placeholder.svg",
+    image: norcoFluidFs,
     pros: [
       "Utmerket pris for en fulldemper",
       "Solid komponentvalg til prisklassen",
