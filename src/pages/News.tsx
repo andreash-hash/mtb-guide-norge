@@ -1,14 +1,30 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsCard from "@/components/NewsCard";
+import SEO from "@/components/SEO";
 import { newsArticles, getFeaturedNews, getRegularNews } from "@/data/newsArticles";
 
 const News = () => {
   const featuredNews = getFeaturedNews();
   const regularNews = getRegularNews();
 
+  const newsStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "MTB Nyheter",
+    "description": "Siste nytt fra terrengsykkel-verdenen",
+    "url": "https://mtbguide.no/nyheter"
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="MTB Nyheter Norge - Siste fra terrengsykkel-verdenen | MTB Guide"
+        description="Hold deg oppdatert med de siste nyhetene om terrengsykling. Produktlanseringer, stinyheter og bransjeoppdateringer."
+        keywords="mtb nyheter, terrengsykkel nyheter, sykkelnyheter norge, mtb oppdateringer"
+        canonicalUrl="/nyheter"
+        structuredData={newsStructuredData}
+      />
       <Header />
       
       {/* Hero Section */}

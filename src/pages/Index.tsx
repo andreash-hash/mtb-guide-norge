@@ -7,6 +7,7 @@ import GuideCard from "@/components/GuideCard";
 import NewsCard from "@/components/NewsCard";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Bike, Wrench, Shirt, BookOpen } from "lucide-react";
@@ -15,6 +16,32 @@ import { newsArticles } from "@/data/newsArticles";
 import { bikeReviews } from "@/data/bikeReviews";
 
 const Index = () => {
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "MTB Guide Norge",
+    "url": "https://mtbguide.no",
+    "description": "Din guide til terrengsykling i Norge",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://mtbguide.no/sok?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  const organizationStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MTB Guide Norge",
+    "url": "https://mtbguide.no",
+    "logo": "https://mtbguide.no/logo.png",
+    "sameAs": [
+      "https://facebook.com/mtbguidenorge",
+      "https://instagram.com/mtbguidenorge",
+      "https://youtube.com/mtbguidenorge"
+    ]
+  };
+
   const categories = [
     { 
       name: "Terrengsykler", 
@@ -44,6 +71,13 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="MTB Guide Norge - Terrengsykkel anmeldelser, guider og tips 2024"
+        description="Finn din neste terrengsykkel. Grundige tester, ekspertguider og ærlige anmeldelser av MTB-utstyr. Oppdatert 2024."
+        keywords="terrengsykkel, mtb norge, terrengsykkel test, beste terrengsykkel, mtb guide"
+        canonicalUrl="/"
+        structuredData={[websiteStructuredData, organizationStructuredData]}
+      />
       <Header />
       <Hero />
       

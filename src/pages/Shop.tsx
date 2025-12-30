@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/SectionTitle";
 import ProductCard from "@/components/ProductCard";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 
 type Category = "alle" | "sykler" | "deler" | "bekledning" | "verktoy" | "tilbehor";
@@ -20,6 +21,14 @@ interface Product {
 
 const Shop = () => {
   const [activeCategory, setActiveCategory] = useState<Category>("alle");
+
+  const shopStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "MTB Butikk - Anbefalte produkter",
+    "description": "Anbefalte terrengsykkel-produkter og utstyr",
+    "url": "https://mtbguide.no/butikk"
+  };
 
   // Sample products - you can replace with your actual products
   const products: Product[] = [
@@ -100,6 +109,13 @@ const Shop = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="Anbefalte MTB-produkter - Sykler, utstyr og tilbehør | MTB Guide"
+        description="Våre anbefalte terrengsykkel-produkter. Finn beste pris på sykler, utstyr og tilbehør fra kjente forhandlere."
+        keywords="mtb butikk, terrengsykkel utstyr, mtb tilbehør, sykkelutstyr, mtb produkter"
+        canonicalUrl="/butikk"
+        structuredData={shopStructuredData}
+      />
       <Header />
       
       <main className="flex-grow">

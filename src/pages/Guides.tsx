@@ -1,11 +1,27 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GuideCard from "@/components/GuideCard";
+import SEO from "@/components/SEO";
 import { guides } from "@/data/guides";
 
 const Guides = () => {
+  const guidesStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Terrengsykkel guider",
+    "description": "Omfattende guider om terrengsykling for alle nivåer",
+    "url": "https://mtbguide.no/guider"
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Terrengsykkel guider - Alt om MTB | MTB Guide Norge"
+        description="Lær alt om terrengsykling. Guider for nybegynnere og erfarne. Vedlikehold, teknikk og utstyr."
+        keywords="mtb guide, terrengsykkel tips, mtb for nybegynnere, sykkelvedlikehold, mtb teknikk"
+        canonicalUrl="/guider"
+        structuredData={guidesStructuredData}
+      />
       <Header />
       
       {/* Hero Section */}
