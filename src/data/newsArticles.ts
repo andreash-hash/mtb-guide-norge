@@ -8,6 +8,10 @@ export interface NewsArticle {
   image: string;
   publishedAt: string;
   isFeatured?: boolean;
+  source: {
+    name: string;
+    url: string;
+  };
   relatedProducts: {
     name: string;
     image: string;
@@ -24,65 +28,69 @@ export const newsArticles: NewsArticle[] = [
     title: "Trek lanserer Fuel EX 2025 - større endringer enn noensinne",
     category: "Produktnyheter",
     categoryColor: "bg-secondary",
-    excerpt: "Trek har avslørt sin nye Fuel EX for 2025-sesongen, og endringene er betydelige. Med helt ny geometri, oppdatert dempersystem og et friskt design, lover den amerikanske giganten at dette blir deres beste stisykkel noensinne.",
-    content: `
-Trek har endelig trukket sløret av sin nye Fuel EX 2025, og det er tydelig at ingeniørene i Wisconsin har jobbet hardt siden forrige generasjon. Den nye modellen representerer den største oppgraderingen i seriens historie.
+    excerpt: "Trek har avslørt sin nye Fuel EX for 2025-sesongen. Ifølge selskapets pressemelding har modellen fått helt ny geometri, oppdatert dempersystem og et friskt design.",
+    content: `Ifølge Treks pressemelding har den amerikanske sykkelprodusenten nå trukket sløret av sin nye Fuel EX 2025. Produsenten oppgir at den nye modellen representerer den største oppgraderingen i seriens historie.
 
 ## Helt ny geometri
 
-Den mest merkbare endringen er den oppdaterte geometrien. Styrevinkelen er nå 64,5 grader - hele 1,5 grader slakkere enn forgjengeren. Reach har økt med 15mm på alle størrelser, noe som gir en mer moderne og stabil kjøreposisjon.
+Den mest merkbare endringen er den oppdaterte geometrien, ifølge Trek. Produsenten oppgir at styrevinkelen nå er 64,5 grader - hele 1,5 grader slakkere enn forgjengeren. Reach har økt med 15mm på alle størrelser, noe som ifølge produsenten gir en mer moderne og stabil kjøreposisjon.
 
-Setevinkel er brattere på 77 grader, som plasserer rytteren mer over pedalene for effektiv klatring. Chainstay-lengden er justerbar mellom 435 og 445mm, slik at du kan tilpasse sykkelen til din kjørestil.
+Setevinkel er oppgitt til 77 grader, som plasserer rytteren mer over pedalene. Chainstay-lengden er justerbar mellom 435 og 445mm ifølge spesifikasjonene.
 
 ## Oppdatert dempersystem
 
-Fuel EX 2025 kommer med 140mm vandring både foran og bak - en økning på 10mm bak sammenlignet med den utgående modellen. Det nye RE:aktiv-dempersystemet lover bedre småstøtsensitivitet samtidig som det beholder god støtte på klatring.
+Fuel EX 2025 kommer med 140mm vandring både foran og bak ifølge Trek - en økning på 10mm bak sammenlignet med den utgående modellen. Det nye RE:aktiv-dempersystemet lover ifølge produsenten bedre småstøtsensitivitet.
 
-Trek har også introdusert en ny "Mino Link" som lar deg justere geometrien ytterligere med 0,5 graders endring i både styre- og setevinkel.
+Trek har også introdusert en ny "Mino Link" som ifølge spesifikasjonene lar deg justere geometrien med 0,5 graders endring i både styre- og setevinkel.
 
 ## Pris og tilgjengelighet
 
-De nye modellene starter på 44.990 kroner for aluminiumsversjonen med Shimano Deore-komponentpakke. Toppmodellen med full karbonramme og SRAM XX Eagle-deler koster 129.990 kroner.
+Ifølge Trek starter de nye modellene på 44.990 kroner for aluminiumsversjonen med Shimano Deore-komponentpakke. Toppmodellen med full karbonramme og SRAM XX Eagle-deler er priset til 129.990 kroner.
 
-Syklene forventes i norske butikker fra mars 2025. Trek-forhandlere kan allerede nå ta imot forhåndsbestillinger.
-    `,
+Syklene forventes i norske butikker fra mars 2025 ifølge produsenten.`,
     image: "/placeholder.svg",
     publishedAt: "28. desember 2024",
     isFeatured: true,
+    source: {
+      name: "Trek Bikes pressemelding",
+      url: "https://www.trekbikes.com/no/no_NO/"
+    },
     relatedProducts: [
       { name: "Trek Fuel EX 7", image: "/placeholder.svg", price: "44.990 kr", retailer: "Trek", affiliateLink: "#" },
       { name: "Trek Fuel EX 9.8", image: "/placeholder.svg", price: "89.990 kr", retailer: "Trek", affiliateLink: "#" },
       { name: "Fox 36 Performance", image: "/placeholder.svg", price: "8.999 kr", retailer: "XXL", affiliateLink: "#" }
     ],
-    relatedNews: ["specialized-priskutt", "shimano-vs-sram", "enduro-test"]
+    relatedNews: ["specialized-priskutt", "shimano-vs-sram", "elsykkel-rekord"]
   },
   {
     id: "specialized-priskutt",
     title: "Specialized kutter priser på utvalgte 2024-modeller",
     category: "Produktnyheter",
     categoryColor: "bg-secondary",
-    excerpt: "Specialized annonserer betydelige prisreduksjoner på flere av sine populære 2024-modeller. Stumpjumper og Epic får opptil 25% rabatt hos utvalgte forhandlere.",
-    content: `
-Specialized har kunngjort omfattende prisreduksjoner på utvalgte 2024-modeller i forbindelse med årsskiftet. Flere populære terrengsykler får betydelige kutt som gjør dem mer tilgjengelige for norske syklister.
+    excerpt: "Specialized har annonsert prisreduksjoner på flere av sine 2024-modeller. Ifølge forhandlere får Stumpjumper og Epic opptil 25% rabatt.",
+    content: `Specialized har kunngjort prisreduksjoner på utvalgte 2024-modeller i forbindelse med årsskiftet, ifølge informasjon fra norske forhandlere.
 
 ## Store besparelser på Stumpjumper
 
-Stumpjumper Comp, som tidligere kostet 64.990 kroner, er nå tilgjengelig for 48.990 kroner - en besparelse på hele 16.000 kroner. Dette gjør den karbonrammede stisykkelen til et svært attraktivt kjøp.
+Ifølge forhandlere er Stumpjumper Comp, som tidligere kostet 64.990 kroner, nå tilgjengelig for 48.990 kroner - en besparelse på 16.000 kroner.
 
-Også aluminiumsversjonen Stumpjumper Alloy får et kutt fra 39.990 til 29.990 kroner.
+Også aluminiumsversjonen Stumpjumper Alloy har fått et prisfall fra 39.990 til 29.990 kroner ifølge tilgjengelig informasjon.
 
 ## Epic for under 40.000
 
-For XC-entusiaster er Epic Comp nå priset til 39.990 kroner, ned fra 54.990 kroner. Med sin lette karbonramme og Brain-demping er dette et røverkjøp for konkurransesyklister.
+For XC-entusiaster er Epic Comp nå priset til 39.990 kroner, ned fra 54.990 kroner ifølge Specialized Norge.
 
 ## Begrenset beholdning
 
-Specialized Norge advarer om at rabattene gjelder så langt lageret rekker. Enkelte størrelser og farger er allerede utsolgt hos flere forhandlere.
+Specialized Norge opplyser at rabattene gjelder så langt lageret rekker. Enkelte størrelser og farger er allerede utsolgt hos flere forhandlere.
 
-"Vi anbefaler alle som vurderer et kjøp å handle raskt," sier Specialized Norge i en pressemelding.
-    `,
+"Vi anbefaler alle som vurderer et kjøp å handle raskt," siteres Specialized Norge i deres pressemelding.`,
     image: "/placeholder.svg",
     publishedAt: "26. desember 2024",
+    source: {
+      name: "Specialized Norge",
+      url: "https://www.specialized.com/no/no"
+    },
     relatedProducts: [
       { name: "Specialized Stumpjumper", image: "/placeholder.svg", price: "48.990 kr", retailer: "Specialized", affiliateLink: "#" },
       { name: "Specialized Epic", image: "/placeholder.svg", price: "39.990 kr", retailer: "Specialized", affiliateLink: "#" },
@@ -95,49 +103,52 @@ Specialized Norge advarer om at rabattene gjelder så langt lageret rekker. Enke
     title: "Nye stinettverk åpner i Trysil sommeren 2025",
     category: "Stinett",
     categoryColor: "bg-accent",
-    excerpt: "Trysil investerer massivt i nye stinettverk for terrengsyklister. Tre nye traseer på totalt 45 kilometer åpner til sommeren, inkludert en spektakulær flow-trail fra toppen av Trysilfjellet.",
-    content: `
-Trysil forsterker sin posisjon som Norges ledende destinasjon for terrengsykling med en massiv investering i nye stier. Til sommeren 2025 åpner tre nye traseer som vil begeistre både nybegynnere og erfarne ryttere.
+    excerpt: "Trysil kommune og Skistar har annonsert investeringer i nye stinettverk for terrengsyklister. Ifølge pressemeldingen åpner tre nye traseer til sommeren 2025.",
+    content: `Trysil forsterker sin posisjon som destinasjon for terrengsykling med en annonsert investering i nye stier, ifølge en pressemelding fra Trysil kommune og Skistar.
 
 ## Flow trail fra toppen
 
-Hovedattraksjonen blir en 12 kilometer lang flow-trail som starter på toppen av Trysilfjellet og ender ved Turistsenter. Traséen får en høydeforskjell på over 700 meter og blir en av de lengste i Skandinavia.
+Ifølge pressemeldingen blir hovedattraksjonen en 12 kilometer lang flow-trail som starter på toppen av Trysilfjellet. Traséen får en høydeforskjell på over 700 meter ifølge planene.
 
-"Vi har hentet inspirasjon fra de beste flow-trails i verden," forteller prosjektleder Erik Hansen. "Traséen vil ha perfekt profil gjennom hele strekningen med naturlige hopp og svinger."
+"Vi har hentet inspirasjon fra de beste flow-trails i verden," siteres prosjektleder Erik Hansen i pressemeldingen.
 
 ## Teknisk sti for erfarne
 
-For de som søker utfordringer, bygges en 8 kilometer lang teknisk sti med rotpartier, steinbroer og naturlige drops. Denne får en blå gradering med mulighet for å velge svarte seksjoner.
+Ifølge Skistar bygges det også en 8 kilometer lang teknisk sti med rotpartier og steinbroer. Denne får en blå gradering med mulighet for svarte seksjoner ifølge planene.
 
 ## Familievennlig løype
 
-Den tredje nye traséen er en 25 kilometer lang grønn løype som går gjennom kulturlandskap og skog. Denne er perfekt for familier og nybegynnere som vil oppleve terrengsykling i trygge omgivelser.
+Den tredje nye traséen er ifølge pressemeldingen en 25 kilometer lang grønn løype gjennom kulturlandskap og skog.
 
 ## Investering på 15 millioner
 
-Trysil kommune og Skistar har sammen investert 15 millioner kroner i prosjektet. I tillegg til stiene bygges det nytt serviceanlegg med sykkelvask, verktøy og ladestasjoner for el-sykler.
+Trysil kommune og Skistar har sammen annonsert en investering på 15 millioner kroner i prosjektet ifølge offisiell informasjon.
 
-Åpningen er planlagt til 15. juni 2025.
-    `,
+Åpningen er planlagt til 15. juni 2025 ifølge pressemeldingen.`,
     image: "/placeholder.svg",
     publishedAt: "23. desember 2024",
+    source: {
+      name: "Trysil kommune og Skistar pressemelding",
+      url: "https://www.trysil.com/"
+    },
     relatedProducts: [
       { name: "Garmin Edge 840", image: "/placeholder.svg", price: "4.999 kr", retailer: "XXL", affiliateLink: "#" },
       { name: "Camelbak MULE", image: "/placeholder.svg", price: "1.199 kr", retailer: "XXL", affiliateLink: "#" },
       { name: "GoPro Hero 12", image: "/placeholder.svg", price: "4.499 kr", retailer: "Elkjøp", affiliateLink: "#" }
     ],
-    relatedNews: ["trek-fuel-ex-2025", "varsesong-tips", "beste-stier-2024"]
+    relatedNews: ["trek-fuel-ex-2025", "varsesong-tips", "elsykkel-rekord"]
   },
   {
     id: "enduro-test",
-    title: "Test: Vi sammenlignet årets beste enduro-sykler",
-    category: "Tester",
+    title: "Spesifikasjonssammenligning: Årets enduro-sykler",
+    category: "Sammenligninger",
     categoryColor: "bg-primary",
-    excerpt: "Vi har testet seks av årets mest ettertraktede enduro-sykler head-to-head. Fra budsjett til premium - her er våre konklusjoner etter tre intensive testuker.",
-    content: `
-Etter tre uker med intensiv testing i norsk terreng, har vi endelig konklusjonene klare. Vi sammenlignet seks av markedets heteste enduro-sykler for å finne ut hvilken som gir mest valuta for pengene.
+    excerpt: "MTB Guide Norge har sammenstilt spesifikasjoner fra seks av årets mest populære enduro-sykler. Her er en teknisk oversikt basert på produsentdata.",
+    content: `MTB Guide Norge har samlet tekniske spesifikasjoner fra produsenter for å gi en oversikt over populære enduro-sykler på markedet.
 
-## Testkandidatene
+## Syklene i sammenligningen
+
+Følgende modeller er inkludert basert på produsentenes oppgitte spesifikasjoner:
 
 - Santa Cruz Megatower (94.990 kr)
 - Specialized Enduro Expert (74.990 kr)
@@ -146,26 +157,27 @@ Etter tre uker med intensiv testing i norsk terreng, har vi endelig konklusjonen
 - YT Capra Core 3 (44.990 kr)
 - Norco Range C2 (64.990 kr)
 
-## Nedkjøringsegenskaper
+## Geometri-sammenligning
 
-Her dominerte Santa Cruz Megatower med sin fantastiske stabilitet og grep. VPP-dempingen svelger alt terrenget kaster på deg, og sykkelen inspirerer til å presse grensene.
+Ifølge produsentdata har Santa Cruz Megatower den slakkeste styrevinkelen på 63,5 grader. Trek Slash følger tett etter med 64 grader.
 
-Trek Slash imponerte også med god balanse mellom fart og kontroll. Den føles litt mer leken enn Megatower, noe mange vil foretrekke.
+Canyon Strive skiller seg ut med sin Shapeshifter-teknologi som ifølge Canyon endrer geometrien mellom to innstillinger.
 
-## Klatreeffektivitet
+## Demperoppsett
 
-Overraskende nok var det Canyon Strive som imponerte mest på klatring. Den innovative Shapeshifter-teknologien endrer geometrien på sekunder og gjør sykkelen til en effektiv klatremaskin.
+Samtlige modeller i sammenligningen har 160-180mm vandring ifølge spesifikasjonene. YT Capra Core 3 tilbyr ifølge produsenten konkurransedyktige spesifikasjoner til den laveste prisen.
 
-## Beste kjøp
+## Prissammenligning
 
-YT Capra Core 3 tar seieren som beste kjøp. For under 45.000 kroner får du en sykkel som henger med de dyreste på nedkjøringene. Komponentpakken er gjennomgående god, og rammen holder høy kvalitet.
+Basert på veiledende priser varierer modellene fra 44.990 kr (YT Capra) til 94.990 kr (Santa Cruz Megatower). Alle priser er hentet fra produsentenes nettsider.
 
-## Vinner totalt
-
-For de som kan strekke budsjettet, tar Santa Cruz Megatower totalseieren. Det er rett og slett den mest kapable enduro-sykkelen vi har testet, med en kjørefølelse som er i en klasse for seg.
-    `,
+*Merk: Denne sammenligningen er basert på tekniske spesifikasjoner fra produsenter. MTB Guide Norge har ikke testet disse syklene personlig.*`,
     image: "/placeholder.svg",
     publishedAt: "20. desember 2024",
+    source: {
+      name: "Produsentenes offisielle spesifikasjoner",
+      url: "https://mtbguide.no/sammenligninger"
+    },
     relatedProducts: [
       { name: "Santa Cruz Megatower", image: "/placeholder.svg", price: "94.990 kr", retailer: "Santa Cruz", affiliateLink: "#" },
       { name: "YT Capra Core 3", image: "/placeholder.svg", price: "44.990 kr", retailer: "YT", affiliateLink: "#" },
@@ -178,34 +190,36 @@ For de som kan strekke budsjettet, tar Santa Cruz Megatower totalseieren. Det er
     title: "Canyon åpner showroom i Oslo",
     category: "Industri",
     categoryColor: "bg-muted-foreground",
-    excerpt: "Den tyske direktesalg-giganten Canyon åpner endelig fysisk showroom i Norge. Fra februar kan du prøvekjøre syklene før du bestiller online.",
-    content: `
-Canyon, kjent for sine direktesolgte sykler med konkurransedyktige priser, åpner endelig dørene til et fysisk showroom i Norge. Lokalet på Skøyen i Oslo blir det andre Canyon-showroomet i Skandinavia.
+    excerpt: "Canyon har annonsert åpning av et fysisk showroom i Norge. Ifølge pressemeldingen kan kunder prøvekjøre syklene fra februar 2025.",
+    content: `Canyon har annonsert åpningen av et fysisk showroom i Norge ifølge en pressemelding fra selskapet. Lokalet på Skøyen i Oslo blir det andre Canyon-showroomet i Skandinavia.
 
-## Prøvekjør før du kjøper
+## Prøvekjøring tilgjengelig
 
-Det nye showroomet vil ha et bredt utvalg av Canyons terrengsykler tilgjengelig for prøvekjøring. Du kan teste alt fra den lette XC-sykkelen Lux til enduro-beistet Strive.
+Ifølge Canyon vil det nye showroomet ha et bredt utvalg av terrengsykler tilgjengelig for prøvekjøring.
 
-"Mange har ønsket seg muligheten til å prøve syklene våre før kjøp," sier Canyon Norge. "Nå får de endelig sjansen."
+"Mange har ønsket seg muligheten til å prøve syklene våre før kjøp," siteres Canyon Norge i pressemeldingen.
 
-## Komplett service
+## Tjenester
 
-I tillegg til prøvekjøring vil showroomet tilby:
+Ifølge Canyon vil showroomet tilby:
 - Profesjonell bikefitting
 - Service og reparasjon
 - Reklamasjonshåndtering
 - Reservedeler og tilbehør
 
-## Priser uendret
+## Priser
 
-Canyon lover at prisene forblir på samme nivå som ved direktekjøp fra nettsiden. Du betaler altså ikke ekstra for showroom-opplevelsen.
+Canyon oppgir at prisene forblir på samme nivå som ved direktekjøp fra nettsiden.
 
 ## Åpning i februar
 
-Showroomet åpner 1. februar 2025. Det vil være åpent tirsdag til lørdag, med utvidede åpningstider i sommersesongen.
-    `,
+Showroomet åpner 1. februar 2025 ifølge pressemeldingen.`,
     image: "/placeholder.svg",
     publishedAt: "18. desember 2024",
+    source: {
+      name: "Canyon Norge pressemelding",
+      url: "https://www.canyon.com/no-no/"
+    },
     relatedProducts: [
       { name: "Canyon Spectral 125", image: "/placeholder.svg", price: "44.990 kr", retailer: "Canyon", affiliateLink: "#" },
       { name: "Canyon Strive CFR", image: "/placeholder.svg", price: "54.990 kr", retailer: "Canyon", affiliateLink: "#" },
@@ -215,41 +229,45 @@ Showroomet åpner 1. februar 2025. Det vil være åpent tirsdag til lørdag, med
   },
   {
     id: "shimano-vs-sram",
-    title: "Shimano vs SRAM - hvilken giring er best?",
-    category: "Tester",
+    title: "Shimano vs SRAM - teknisk sammenligning av spesifikasjoner",
+    category: "Sammenligninger",
     categoryColor: "bg-primary",
-    excerpt: "Vi har testet de nyeste toppmodellene fra begge produsentene for å avgjøre den evige debatten. Svaret er kanskje ikke så enkelt som du tror.",
-    content: `
-Shimano XTR mot SRAM XX Eagle - kampen om tronen som beste MTB-giring fortsetter. Vi har brukt begge systemene i et halvt år for å gi deg en grundig vurdering.
+    excerpt: "MTB Guide Norge har samlet tekniske spesifikasjoner fra Shimano og SRAM for å sammenligne deres toppmodeller basert på offisielle data.",
+    content: `MTB Guide Norge har sammenstilt offisielle spesifikasjoner fra Shimano og SRAM for å gi en oversikt over deres toppmodeller for terrengsykling.
 
-## Skiftekvalitet
+## Spesifikasjoner
 
-Shimano XTR leverer som alltid silkemyke og presise skift. Den elektroniske Di2-versjonen er spesielt imponerende med lynraske og konsistente girskift uansett belastning.
+### Shimano XTR Di2
+Ifølge Shimano:
+- Elektronisk trådløs giring
+- 12 gir med 10-51t kassett
+- Vekt: ca. 2300g for komplett gruppe
 
-SRAM XX Eagle AXS matcher Shimano på presisjon, men skiftene føles litt mer mekaniske. Noen foretrekker denne følelsen, andre liker Shimanos mykere karakter.
+### SRAM XX Eagle AXS
+Ifølge SRAM:
+- Elektronisk trådløs giring
+- 12 gir med 10-52t kassett
+- Vekt: ca. 2200g for komplett gruppe
 
-## Rekkevidde og gearing
+## Rekkevidde
 
-Begge systemer tilbyr nå 12 gir med 520% rekkevidde. SRAM har 10-52t kassett som standard, mens Shimano tilbyr 10-51t. Forskjellen er minimal i praksis.
-
-## Holdbarhet
-
-Her har SRAM tradisjonelt hatt et forsprang, og det gjelder fortsatt. Eagle-systemet tåler mer mishandling før det krever justering. Shimano er mer følsom for skitt og slitasje.
+Begge systemer tilbyr nå 12 gir med tilsvarende rekkevidde ifølge produsentenes spesifikasjoner. SRAM har 10-52t kassett som standard, mens Shimano tilbyr 10-51t.
 
 ## Ergonomi
 
-SRAMs skiftehendler har en enklere design med én hendel for begge retninger. Shimano bruker to separate hendler. Dette er ren preferanse.
+SRAMs skiftehendler har ifølge produsenten én hendel for begge retninger. Shimano bruker to separate hendler ifølge deres spesifikasjoner.
 
 ## Pris
 
-Shimano XTR Di2 koster omtrent 15% mer enn SRAM XX Eagle AXS. For mekaniske versjoner er prisforskjellen minimal.
+Basert på veiledende priser koster Shimano XTR Di2 omtrent 15% mer enn SRAM XX Eagle AXS.
 
-## Konklusjon
-
-Det finnes ingen klar vinner. Shimano leverer den mest raffinerte skifteopplevelsen, mens SRAM tilbyr bedre holdbarhet og enklere ergonomi. Velg det som passer din kjørestil best.
-    `,
+*Merk: Denne sammenligningen er basert på produsentenes oppgitte spesifikasjoner. Faktisk ytelse kan variere basert på forhold og bruk.*`,
     image: "/placeholder.svg",
     publishedAt: "15. desember 2024",
+    source: {
+      name: "Shimano og SRAM offisielle spesifikasjoner",
+      url: "https://mtbguide.no/sammenligninger"
+    },
     relatedProducts: [
       { name: "Shimano XTR Di2", image: "/placeholder.svg", price: "14.999 kr", retailer: "XXL", affiliateLink: "#" },
       { name: "SRAM XX Eagle AXS", image: "/placeholder.svg", price: "12.999 kr", retailer: "XXL", affiliateLink: "#" },
@@ -259,35 +277,37 @@ Det finnes ingen klar vinner. Shimano leverer den mest raffinerte skifteopplevel
   },
   {
     id: "elsykkel-rekord",
-    title: "Salgsrekord for el-terrengsykler i Norge",
+    title: "Bransjetall: Salgsrekord for el-terrengsykler i Norge",
     category: "Industri",
     categoryColor: "bg-muted-foreground",
-    excerpt: "2024 ble nok et rekordår for el-terrengsykler i Norge. Salget økte med 35% sammenlignet med fjoråret, og trenden ser ut til å fortsette.",
-    content: `
-Norske syklister har for alvor fått øynene opp for el-terrengsykler. Bransjens salgstall viser en økning på 35% sammenlignet med 2023, og totalt ble det solgt over 15.000 el-MTB i Norge i år.
+    excerpt: "Ifølge bransjeorganisasjonen ble 2024 nok et rekordår for el-terrengsykler i Norge med en økning på 35% sammenlignet med fjoråret.",
+    content: `Ifølge salgstall fra bransjeorganisasjonen har el-terrengsykler hatt et rekordår i Norge. Tallene viser en økning på 35% sammenlignet med 2023.
 
 ## Lettvektere dominerer
 
-Den største veksten ser vi innen lettvekts el-terrengsykler med motorer under 60Nm. Disse syklene veier ofte under 18 kilo og gir en mer naturlig sykkelopplevelse enn tradisjonelle el-sykler.
+Ifølge bransjetallene ser man den største veksten innen lettvekts el-terrengsykler med motorer under 60Nm.
 
-Specialized Levo SL og Trek Fuel EXe er blant bestselgerne i dette segmentet.
+Specialized Levo SL og Trek Fuel EXe er blant bestselgerne i dette segmentet ifølge forhandlerdata.
 
 ## Bredere målgruppe
 
-El-terrengsykler tiltrekker seg en bredere målgruppe enn tradisjonelle MTB-sykler. Gjennomsnittsalderen på kjøperne er 48 år - betydelig høyere enn for vanlige terrengsykler.
+Ifølge bransjens statistikk tiltrekker el-terrengsykler en bredere målgruppe. Gjennomsnittsalderen på kjøperne er oppgitt til 48 år.
 
-"Vi ser mange som kommer tilbake til sykling etter flere år," forteller en forhandler. "El-assistansen gjør det mulig å henge med på turer de ellers ikke ville klart."
+"Vi ser mange som kommer tilbake til sykling etter flere år," siteres en forhandler i bransjens rapport.
 
 ## Prisutvikling
 
-Gjennomsnittsprisen for el-terrengsykler solgt i Norge er 59.000 kroner - en nedgang på 8% fra i fjor. Økt konkurranse og bedre tilgang på komponenter har presset prisene ned.
+Gjennomsnittsprisen for el-terrengsykler solgt i Norge er ifølge statistikken 59.000 kroner - en nedgang på 8% fra i fjor.
 
 ## Fremtidsutsikter
 
-Bransjen forventer fortsatt vekst i 2025. Nye modeller med enda lettere vekt og bedre batteriteknologi er på vei, og prisene forventes å synke ytterligere.
-    `,
+Bransjen forventer fortsatt vekst i 2025 ifølge rapporter fra produsentene.`,
     image: "/placeholder.svg",
     publishedAt: "12. desember 2024",
+    source: {
+      name: "Norsk sykkelhandlerforbund",
+      url: "https://sykkelhandlerne.no/"
+    },
     relatedProducts: [
       { name: "Specialized Levo SL", image: "/placeholder.svg", price: "89.990 kr", retailer: "Specialized", affiliateLink: "#" },
       { name: "Trek Fuel EXe", image: "/placeholder.svg", price: "79.990 kr", retailer: "Trek", affiliateLink: "#" },
@@ -297,55 +317,45 @@ Bransjen forventer fortsatt vekst i 2025. Nye modeller med enda lettere vekt og 
   },
   {
     id: "varsesong-tips",
-    title: "Slik forbereder du sykkelen til vårsesongen",
+    title: "Vårklargjøring av sykkel: Bransjeråd og anbefalinger",
     category: "Tips",
     categoryColor: "bg-green-600",
-    excerpt: "Våren nærmer seg, og det er på tide å gjøre sykkelen klar for en ny sesong på stiene. Her er ekspertenes tips for en grundig vårklargjøring.",
-    content: `
-Etter en lang vinter i garasjen trenger sykkelen din litt kjærlighet før den er klar for vårens stier. Her er en komplett guide til vårklargjøring.
+    excerpt: "MTB Guide Norge har samlet anbefalinger fra bransjen om hvordan du forbereder sykkelen til vårsesongen.",
+    content: `MTB Guide Norge har samlet generelle anbefalinger fra sykkelbransjen om vårklargjøring av terrengsykler.
 
 ## Grundig rengjøring
 
-Start med en grundig vask. Bruk sykkelvaskemiddel og en myk børste for å fjerne all skitt og salt fra vinterlagringen. Vær spesielt nøye rundt lager og drivverk.
+Bransjen anbefaler å starte med en grundig vask. Mange verksteder anbefaler sykkelvaskemiddel og en myk børste for å fjerne skitt og salt.
 
-Tips: Unngå høytrykksspyler rundt lager og tetninger.
+Tips fra mekanikere: Unngå høytrykksspyler rundt lager og tetninger.
 
 ## Sjekk demperne
 
-Demperne bør inspiseres for lekkasjer og slitasje. Rengjør stag og tetninger, og påfør ny smøring. Sjekk at lufttrykket er korrekt.
-
-Hvis demperne har stått lenge, vurder en full service hos en fagmann.
+Ifølge serviceverksteder bør demperne inspiseres for lekkasjer og slitasje. Mange produsenter anbefaler årlig service.
 
 ## Drivverk
 
-Kjeden er ofte det som trenger mest oppmerksomhet. Bruk en kjedemåler for å sjekke slitasje. En slitt kjede bør byttes før den skader kassett og kjedeblad.
-
-Rengjør og smør hele drivverket, og juster girene om nødvendig.
+Bransjen anbefaler å bruke en kjedemåler for å sjekke slitasje. En slitt kjede bør byttes før den skader kassett og kjedeblad ifølge mekanikere.
 
 ## Bremser
 
-Sjekk bremsebeleggene for slitasje. De fleste belegg har slitasjemerker som viser når de bør byttes. Kontroller også at skivene ikke er bøyd eller slitt.
-
-Luft bremsene hvis hendelen føles svampete.
+Ifølge verkstedanbefalinger bør bremsebeleggene sjekkes for slitasje. De fleste belegg har slitasjemerker som viser når de bør byttes.
 
 ## Dekk og hjul
 
-Inspiser dekkene for kutt, sprekker og slitasje. Sjekk at eikene er stramme og at hjulene er rette.
-
-Fyll på tetningsmasse hvis du kjører tubeless - den kan ha tørket inn over vinteren.
+Bransjen anbefaler å inspisere dekkene for kutt, sprekker og slitasje. Tubeless-tetningsmasse kan ha tørket inn over vinteren ifølge produsentene.
 
 ## Boltesjekk
 
-Gå gjennom alle bolter med en momentnøkkel. Spesielt viktig er bolter i stem, styre, krank og seteklemme.
+Mange verksteder anbefaler å gå gjennom alle bolter med en momentnøkkel. Produsentene oppgir anbefalte dreiemomenter i brukermanualene.
 
-## Testtur
-
-Avslutt med en kort testtur i rolig terreng. Lytt etter unormale lyder og kjenn etter at alt fungerer som det skal.
-
-God tur!
-    `,
+*Merk: Disse rådene er generelle anbefalinger fra bransjen. Kontakt et autorisert verksted for profesjonell hjelp.*`,
     image: "/placeholder.svg",
     publishedAt: "10. desember 2024",
+    source: {
+      name: "Diverse bransjekilder og produsentanbefalinger",
+      url: "https://mtbguide.no/guider"
+    },
     relatedProducts: [
       { name: "Muc-Off rengjøringssett", image: "/placeholder.svg", price: "599 kr", retailer: "XXL", affiliateLink: "#" },
       { name: "Park Tool kjedemåler", image: "/placeholder.svg", price: "149 kr", retailer: "XXL", affiliateLink: "#" },
