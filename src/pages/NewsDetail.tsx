@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { ChevronRight, Calendar, ExternalLink } from "lucide-react";
+import { ChevronRight, Calendar, ExternalLink, FileText } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsCard from "@/components/NewsCard";
@@ -7,6 +7,7 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import { getNewsById, newsArticles } from "@/data/newsArticles";
 
 const NewsDetail = () => {
@@ -95,6 +96,22 @@ const NewsDetail = () => {
       <section className="py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
+            {/* Source Citation */}
+            <Alert className="mb-6 border-secondary/30 bg-secondary/10">
+              <FileText className="h-4 w-4 text-secondary" />
+              <AlertDescription className="text-sm">
+                📰 Kilde:{" "}
+                <a 
+                  href={article.source.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-secondary hover:underline font-medium"
+                >
+                  {article.source.name}
+                </a>
+              </AlertDescription>
+            </Alert>
+            
             <div className="flex items-center gap-4 mb-4">
               <Badge className={`${article.categoryColor} text-white`}>
                 {article.category}
@@ -168,6 +185,22 @@ const NewsDetail = () => {
                 }
                 return null;
               })}
+            </div>
+            
+            {/* Original Source Link */}
+            <div className="mt-8 p-4 bg-muted/50 rounded-lg border border-border">
+              <p className="text-sm text-muted-foreground">
+                Les hele den originale artikkelen hos{" "}
+                <a 
+                  href={article.source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary hover:underline font-medium inline-flex items-center"
+                >
+                  {article.source.name}
+                  <ExternalLink className="h-3 w-3 ml-1" />
+                </a>
+              </p>
             </div>
           </article>
         </div>
