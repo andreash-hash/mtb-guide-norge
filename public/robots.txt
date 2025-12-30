@@ -1,8 +1,13 @@
+# MTB Guide Norge - robots.txt
+# https://mtbguide.no
+
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 2
 
 User-agent: Twitterbot
 Allow: /
@@ -12,3 +17,11 @@ Allow: /
 
 User-agent: *
 Allow: /
+Crawl-delay: 5
+
+# Sitemap location
+Sitemap: https://mtbguide.no/sitemap.xml
+
+# Disallow admin/private paths (if any in future)
+# Disallow: /admin/
+# Disallow: /api/
