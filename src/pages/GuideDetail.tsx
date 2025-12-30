@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { ChevronRight, Clock, ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getGuideById, guides } from "@/data/guides";
@@ -13,6 +14,11 @@ const GuideDetail = () => {
   if (!guide) {
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Guide ikke funnet | MTB Guide Norge"
+          description="Beklager, vi fant ikke guiden du leter etter."
+          canonicalUrl="/guider"
+        />
         <Header />
         <div className="pt-24 pb-16 container mx-auto px-4 text-center">
           <h1 className="text-3xl font-bold text-primary mb-4">Guide ikke funnet</h1>
@@ -28,6 +34,29 @@ const GuideDetail = () => {
     );
   }
 
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": guide.title,
+    "description": guide.intro,
+    "author": {
+      "@type": "Organization",
+      "name": "MTB Guide Norge"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MTB Guide Norge",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mtbguide.no/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://mtbguide.no/guider/${guide.id}`
+    }
+  };
+
   const relatedGuideData = guide.relatedGuides
     .map(id => guides.find(g => g.id === id))
     .filter(Boolean);
@@ -36,6 +65,14 @@ const GuideDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={`${guide.title} | MTB Guide Norge`}
+        description={guide.intro}
+        keywords={`${guide.title.toLowerCase()}, mtb guide, terrengsykkel tips`}
+        canonicalUrl={`/guider/${guide.id}`}
+        ogType="article"
+        structuredData={articleStructuredData}
+      />
       <Header />
       
       {/* Breadcrumbs */}
