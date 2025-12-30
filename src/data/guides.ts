@@ -1,0 +1,921 @@
+import { Bike, Map, Wrench, Mountain, Backpack, BookOpen } from "lucide-react";
+
+export interface Guide {
+  id: string;
+  title: string;
+  icon: typeof Bike;
+  intro: string;
+  readTime: number;
+  content: string;
+  tableOfContents: { id: string; title: string }[];
+  relatedProducts: {
+    name: string;
+    image: string;
+    price: string;
+    retailer: string;
+    affiliateLink: string;
+  }[];
+  relatedGuides: string[];
+}
+
+export const guides: Guide[] = [
+  {
+    id: "velg-riktig-terrengsykkel",
+    title: "Velg riktig terrengsykkel 2025",
+    icon: Bike,
+    intro: "Hardtail vs fulldemper, hjulstørrelser og geometri forklart",
+    readTime: 8,
+    tableOfContents: [
+      { id: "introduksjon", title: "Introduksjon" },
+      { id: "hardtail-vs-fulldemper", title: "Hardtail vs Fulldemper" },
+      { id: "hjulstorrelser", title: "Hjulstørrelser" },
+      { id: "geometri", title: "Geometri forklart" },
+      { id: "prisklasser", title: "Prisklasser" },
+      { id: "konklusjon", title: "Konklusjon" },
+    ],
+    content: `
+## Introduksjon
+
+Å velge riktig terrengsykkel kan virke overveldende med alle valgmulighetene som finnes på markedet i dag. Denne guiden hjelper deg å navigere gjennom de viktigste beslutningene du må ta når du skal kjøpe din neste stisykkel.
+
+Enten du er nybegynner som kjøper din første terrengsykkel, eller en erfaren rytter som vil oppgradere, er det viktig å forstå forskjellene mellom de ulike typene sykler og hva som passer best for din kjørestil og lokale terreng.
+
+## Hardtail vs Fulldemper
+
+### Hardtail
+En hardtail har kun demping foran (i gaffelen) og en stiv bakramme. Dette gir deg:
+
+- **Lavere vekt** - Ingen bakdemper betyr færre komponenter
+- **Enklere vedlikehold** - Mindre som kan gå i stykker
+- **Bedre kraftoverføring** - Mer effektiv på klatring
+- **Lavere pris** - Får mer sykkel for pengene
+
+Hardtails er ideelle for:
+- Nybegynnere som vil lære teknikk
+- XC-orientert sykling
+- Mindre teknisk terreng
+- De med begrenset budsjett
+
+### Fulldemper
+En fulldemper har demping både foran og bak, noe som gir:
+
+- **Bedre komfort** - Absorberer støt fra begge hjul
+- **Økt grep** - Hjulene følger terrenget bedre
+- **Mer kontroll** - Sikrere på tekniske partier
+- **Høyere hastighet** - Kan kjøre raskere i røft terreng
+
+Fulldemper passer best for:
+- Tekniske stier med røtter og steiner
+- Lengre nedkjøringer
+- Bikeparker og aggressive kjørestiler
+- Erfarne ryttere som vil presse grensene
+
+## Hjulstørrelser
+
+### 29-tommers hjul
+Det mest populære valget i dag. Store hjul ruller lettere over hindringer og holder bedre fart. Passer de fleste ryttere over 165 cm.
+
+### 27.5-tommers hjul
+Mer kvikke og lekne enn 29ere. Bedre for mindre ryttere og de som prioriterer manøvrerbarhet. Fortsatt populært på aggressive stisykler.
+
+### Mullet (miksede hjul)
+Kombinerer et 29-tommers forhjul med 27.5 bak. Gir god rullemotstand foran og kvikk bakende. Stadig mer populært på moderne stisykler.
+
+## Geometri forklart
+
+Moderne terrengsykler har gjennomgått en geometri-revolusjon de siste årene. Her er de viktigste målingene:
+
+### Styrevinkel
+Vinkelen på gaffelen målt fra bakken. Slakkere vinkel (65-66°) gir mer stabilitet i bratt terreng. Brattere vinkel (68-70°) er mer kvikk og effektiv på klatring.
+
+### Reach
+Horisontal avstand fra kranken til toppen av styre-røret. Lengre reach gir mer stabil kjøreposisjon og plass til å bevege seg på sykkelen.
+
+### Setevinkel
+Vinkelen på seterøret. Brattere vinkel (76-78°) plasserer deg mer over kranken for effektiv klatring.
+
+## Prisklasser
+
+### Budsjett (15.000-25.000 kr)
+Gode hardtails og enkle fulldempere. Ofte aluminiumsramme med komponenter fra Shimano Deore eller tilsvarende. Perfekt for nybegynnere.
+
+### Mellomklasse (25.000-50.000 kr)
+Her får du seriøse fulldempere med god demping og pålitelige komponenter. Ofte aluminiumsramme med XT-nivå deler.
+
+### Premium (50.000-80.000 kr)
+Karbonrammer, Fox/RockShox-demping i høyere serier, og gjennomgående kvalitetskomponenter. For entusiaster som vil ha det beste.
+
+### Ultra-premium (80.000+ kr)
+Toppspesifiserte sykler med de letteste og mest avanserte komponentene. For racere og de som krever det absolutt beste.
+
+## Konklusjon
+
+Det finnes ingen "perfekt" terrengsykkel - bare den sykkelen som passer best for deg og ditt bruk. Tenk nøye gjennom:
+
+1. Hva slags terreng sykler du mest på?
+2. Hva er ditt budsjett?
+3. Hvor viktig er vekt vs komfort?
+4. Vil du kjøre konkurranser eller bare ha det gøy?
+
+Ta deg tid, prøvekjør hvis mulig, og ikke vær redd for å spørre om råd i sykkelbutikken eller på nettforum.
+    `,
+    relatedProducts: [
+      {
+        name: "Trek Fuel EX 7",
+        image: "/placeholder.svg",
+        price: "39.990 kr",
+        retailer: "Trek",
+        affiliateLink: "#"
+      },
+      {
+        name: "Canyon Spectral 125",
+        image: "/placeholder.svg",
+        price: "44.990 kr",
+        retailer: "Canyon",
+        affiliateLink: "#"
+      },
+      {
+        name: "Norco Fluid FS 1",
+        image: "/placeholder.svg",
+        price: "24.990 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      }
+    ],
+    relatedGuides: ["mtb-for-nybegynnere", "terrengsykkel-terminologi"]
+  },
+  {
+    id: "mtb-for-nybegynnere",
+    title: "MTB for nybegynnere - komplett guide",
+    icon: Map,
+    intro: "Alt du må vite før du starter med terrengsykling",
+    readTime: 12,
+    tableOfContents: [
+      { id: "kom-i-gang", title: "Kom i gang" },
+      { id: "grunnleggende-teknikk", title: "Grunnleggende teknikk" },
+      { id: "sikkerhet", title: "Sikkerhet først" },
+      { id: "finn-stier", title: "Finn stier" },
+      { id: "trening", title: "Bygg opp styrke" },
+      { id: "fellesskap", title: "Bli med i fellesskapet" },
+    ],
+    content: `
+## Kom i gang
+
+Gratulerer med beslutningen om å starte med terrengsykling! Dette er en fantastisk sport som kombinerer trening, naturopplevelser og ren glede. Denne guiden gir deg alt du trenger for å komme i gang på en trygg og morsom måte.
+
+Det første du trenger er selvfølgelig en sykkel. Som nybegynner trenger du ikke den dyreste sykkelen - en god hardtail i mellomklassen gir deg alt du trenger for å lære grunnleggende teknikk og utforske lokale stier.
+
+I tillegg til sykkelen trenger du:
+- Hjelm (obligatorisk!)
+- Hansker
+- Sykkelbriller
+- Passende klær
+- Vann og litt mat
+- Reparasjonsutstyr (slange, pumpe, multitool)
+
+## Grunnleggende teknikk
+
+### Kroppsstilling
+Den viktigste teknikken å mestre er riktig kroppsstilling. Hold albuer og knær lett bøyd, og la sykkelen bevege seg under deg mens kroppen din forblir relativt stabil. Tenk på deg selv som en støtdemper.
+
+### Blikk
+Se dit du vil - ikke på hindringene du vil unngå. Sykkelen følger blikket ditt, så fokuser på linjen du vil ta, ikke steinene du vil unngå.
+
+### Bremsing
+Bruk begge bremser, men husk at forbremsen er mest effektiv. Bremser du for hardt foran kan du gå over styret. Øv på progressiv bremsing og flytt vekten bakover i bratte nedkjøringer.
+
+### Giring
+Lær å forutse terrenget og gir ned i god tid før bakker. Det er lettere å gire når du ikke trår hardt.
+
+### Balanse
+Øv på å stå stille på sykkelen (trackstand) og kjøre sakte. God balanse i lav hastighet gjør deg til en bedre rytter på alle nivåer.
+
+## Sikkerhet først
+
+Terrengsykling har iboende risiko, men med riktig tilnærming kan du minimere sjansen for skader:
+
+- **Bruk alltid hjelm** - Ingen unntak
+- **Start enkelt** - Velg stier som matcher ferdighetsnivået ditt
+- **Kjør med andre** - Spesielt i begynnelsen
+- **Fortell noen hvor du er** - Del turplanen din
+- **Ha med telefon** - For nødsituasjoner
+- **Sjekk sykkelen** - Bremser, dekk og bolter før hver tur
+- **Kjenn dine grenser** - Det er OK å gå av og gå vanskelige partier
+
+## Finn stier
+
+Norge har fantastiske muligheter for terrengsykling. Her er noen måter å finne stier på:
+
+### Apper og nettsider
+- Trailforks
+- Strava
+- MTB Project
+- Lokale sykkelklubbers nettsider
+
+### Lokale sykkelklubber
+Bli medlem i en lokal klubb for å lære stier og møte andre syklister. De fleste klubber arrangerer nybegynner-turer.
+
+### Bikeparker
+Mange skisteder har bikepark om sommeren med tilrettelagte stier for alle nivåer. Perfekt for å øve teknikk i trygge omgivelser.
+
+## Bygg opp styrke
+
+Terrengsykling er fysisk krevende, men du trenger ikke være i toppform for å starte. Kondisjon og styrke kommer naturlig når du sykler regelmessig.
+
+Tips for å bygge opp form:
+- Start med kortere turer (1-2 timer)
+- Øk gradvis distanse og vanskelighetsgrad
+- Hvil mellom turene
+- Supplér med styrketrening for core og bein
+- Spis godt og sov nok
+
+## Bli med i fellesskapet
+
+MTB-miljøet er kjent for å være inkluderende og hjelpsomt. Måter å bli med:
+
+- Delta på klubbturer
+- Følg lokale grupper på sosiale medier
+- Besøk lokale sykkelbutikker - de kjenner ofte miljøet
+- Delta på arrangementer og ritt
+- Hjelp andre når du kan
+
+Velkommen til terrengsykling!
+    `,
+    relatedProducts: [
+      {
+        name: "Giro Switchblade hjelm",
+        image: "/placeholder.svg",
+        price: "2.499 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      },
+      {
+        name: "Fox Ranger hansker",
+        image: "/placeholder.svg",
+        price: "399 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      },
+      {
+        name: "Camelbak MULE ryggsekk",
+        image: "/placeholder.svg",
+        price: "1.199 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      }
+    ],
+    relatedGuides: ["velg-riktig-terrengsykkel", "riktig-utstyr"]
+  },
+  {
+    id: "vedlikehold",
+    title: "Vedlikehold av terrengsykkel",
+    icon: Wrench,
+    intro: "Hold sykkelen din i toppform hele sesongen",
+    readTime: 10,
+    tableOfContents: [
+      { id: "etter-tur", title: "Etter hver tur" },
+      { id: "ukentlig", title: "Ukentlig vedlikehold" },
+      { id: "manedlig", title: "Månedlig service" },
+      { id: "arlig", title: "Årlig hovedservice" },
+      { id: "verktoykasse", title: "Verktøykassen din" },
+      { id: "tips", title: "Ekstra tips" },
+    ],
+    content: `
+## Etter hver tur
+
+Det tar bare noen minutter etter turen å gjøre enkelt vedlikehold som forlenger levetiden på sykkelen betydelig:
+
+### Rengjøring
+- Skyll av grov skitt med vann (unngå høytrykk på lager og tetninger)
+- Tørk av ramme og komponenter
+- La sykkelen lufttørke eller tørk med klut
+
+### Rask inspeksjon
+- Sjekk dekk for kutt eller skader
+- Lytt etter unormale lyder når du spinner hjulene
+- Kontroller at bremsene fungerer
+- Se etter løse bolter
+
+### Smøring
+Etter våte turer, påfør litt olje på kjeden mens den fortsatt er ren.
+
+## Ukentlig vedlikehold
+
+Sett av 15-20 minutter en gang i uken til dette:
+
+### Kjede
+- Rengjør kjeden grundig med avfetter
+- Tørk av og påfør ny olje
+- Tørk av overflødig olje
+
+### Bremser
+- Sjekk bremsebelegg for slitasje
+- Rengjør skiver med bremserens
+- Kontroller at bremsene er sentrerte
+
+### Dekk
+- Sjekk lufttrykk
+- Se etter slitasje og skader
+- Kontroller at dekkene sitter ordentlig på felgene
+
+### Gir
+- Sjekk at girene skifter rent
+- Juster kabel-stramming om nødvendig
+- Rengjør og smør girwirer
+
+## Månedlig service
+
+En gang i måneden bør du gjøre en mer grundig gjennomgang:
+
+### Suspensjon
+- Rengjør og smør dempestag (gaffel og bakdemper)
+- Sjekk lufttrykk i luftdempere
+- Kontroller at rebound og compression fungerer
+
+### Bolter
+- Gå gjennom alle bolter med moment-nøkkel
+- Spesielt viktig: stem, styre, krank, bremsecalipere
+- Bruk riktig moment (sjekk spesifikasjoner)
+
+### Hjul
+- Sjekk eiker for spenning
+- Kontroller at hjulene er rette
+- Se etter slitasje på felger (for felgbremser)
+
+### Lager
+- Kjenn etter spill i hodelager, kranklager og nav
+- Lytt etter knirk eller uvanlige lyder
+
+## Årlig hovedservice
+
+Minst en gang i året bør sykkelen få en komplett service. Mange velger å gjøre dette hos en profesjonell, men du kan også gjøre mye selv:
+
+### Full demontering
+- Ta fra hverandre og rengjør alle komponenter
+- Inspiser ramme for sprekker eller skader
+- Bytt slitte lager og tetninger
+
+### Suspensjon-service
+- Bytt olje i gaffel og demper
+- Skift tetninger og o-ringer
+- Dette anbefales å gjøre hos autorisert verksted
+
+### Drivverk
+- Bytt kjede, kassett og kjedeblad om nødvendig
+- Rengjør og smør alle girkomponenter
+- Juster frontgir og bakgir fra bunnen av
+
+### Bremser
+- Lufting av hydrauliske bremser
+- Bytt bremsevæske
+- Nye belegg hvis slitt
+
+## Verktøykassen din
+
+Grunnleggende verktøy du bør ha hjemme:
+
+- Unbrakonøkler (2-8mm)
+- Moment-nøkkel
+- Kjedeverktøy og kjedepisk
+- Dekkjern
+- Pumpe med manometer
+- Kabelkutter
+- Avfetter og kjedeolje
+- Rengjøringsmidler
+- Lapper og slanger
+- Multitool
+
+## Ekstra tips
+
+- **Før lagring**: Rengjør og smør sykkelen grundig før vinterlagring
+- **Dokumenter**: Ta bilder av innstillinger før du justerer
+- **Lær gradvis**: Start med enkle oppgaver og bygg opp kompetansen
+- **YouTube**: Gode videoguider for nesten alt av sykkelvedlikehold
+- **Spør**: Ikke vær redd for å spørre i butikken eller på forum
+- **Forebygging**: Regelmessig vedlikehold er billigere enn reparasjoner
+    `,
+    relatedProducts: [
+      {
+        name: "Park Tool IB-3 Multitool",
+        image: "/placeholder.svg",
+        price: "399 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      },
+      {
+        name: "Muc-Off rengjøringssett",
+        image: "/placeholder.svg",
+        price: "599 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      },
+      {
+        name: "PRO moment-nøkkelsett",
+        image: "/placeholder.svg",
+        price: "799 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      }
+    ],
+    relatedGuides: ["velg-riktig-terrengsykkel", "riktig-utstyr"]
+  },
+  {
+    id: "beste-stier-norge",
+    title: "Beste MTB-stier i Norge",
+    icon: Mountain,
+    intro: "Våre favoritt-destinasjoner for terrengsykling",
+    readTime: 15,
+    tableOfContents: [
+      { id: "ostlandet", title: "Østlandet" },
+      { id: "vestlandet", title: "Vestlandet" },
+      { id: "trondelag", title: "Trøndelag" },
+      { id: "sorlandet", title: "Sørlandet" },
+      { id: "nord-norge", title: "Nord-Norge" },
+      { id: "bikeparker", title: "Bikeparker" },
+    ],
+    content: `
+## Østlandet
+
+Østlandet byr på et enormt utvalg av stier, fra milde skogstier til tekniske fjellstier.
+
+### Tryvann, Oslo
+Norges mest populære MTB-destinasjon med et omfattende stinett. Wyller-løypa og Linderudkollen er klassikere. Tryvann bikepark har tilrettelagte stier for alle nivåer.
+
+**Highlights:**
+- Wyller Enduro - Teknisk og morsom nedkjøring
+- Grefsenkollen - Perfekt for nybegynnere
+- Tryvann Bikepark - Liftet sykling hele sommeren
+
+### Ringkollen, Hønefoss
+Et skjult perle med fantastiske stier og mindre folkemengder enn Oslo-marka. Flyt-stier og tekniske seksjoner i skjønn forening.
+
+**Highlights:**
+- Ringkollen rundt - Episk heldagstur
+- Nordmarka-tilkobling - Kombiner med Oslo-stier
+
+### Hafjell
+Skandinavias største bikepark med over 40 traseer. Fra grønne nybegynnertraseer til svarte proff-løyper.
+
+**Highlights:**
+- Olympialøypa - World Cup-standard nedkjøring
+- Familietraseer - Perfekt for barn og nybegynnere
+
+## Vestlandet
+
+Dramatisk natur og utfordrende terreng gjør Vestlandet til en drøm for eventyrlystne stisyklister.
+
+### Bergen og omegn
+Fløyen og Ulriken byr på spektakulære stier med utsikt over byen. Teknisk terreng med røtter og stein.
+
+**Highlights:**
+- Ulriken ned - Bratt og teknisk klassiker
+- Fløyen trails - Mer tilgjengelige stier
+
+### Voss
+Ekstremsporthovedstaden har også fantastisk stisykling. Kombinér med rafting og fallskjermhopping!
+
+**Highlights:**
+- Hangurstoppen - Episk utsikt og gode stier
+- Voss Resort - Liftet sykling om sommeren
+
+## Trøndelag
+
+Trøndelag har et voksende MTB-miljø med stadig flere tilrettelagte stier.
+
+### Trondheim
+Bymarka og Estenstadmarka byr på timevis med stisykling rett utenfor sentrum.
+
+**Highlights:**
+- Lianvatnet rundt - Populær afterwork-tur
+- Gråkallen - Tekniske stier med utsikt
+
+### Oppdal
+Alpint fjellterreng og lange nedkjøringer. Kjørt med bil til toppen for maksimal nedkjøringstid.
+
+**Highlights:**
+- Vangslia - Tekniske fjellstier
+- Stølen - Flyt og fart
+
+## Sørlandet
+
+Sørlandet overrasker med variert terreng og godt vær.
+
+### Kristiansand
+Baneheia og Ravnedalen byr på morsomme stier i kort avstand fra sentrum.
+
+**Highlights:**
+- Baneheia trails - Perfekt for kveldstur
+- Søgne-stiene - Tekniske og underholdende
+
+### Evje
+Setesdal har fantastiske muligheter for de som søker eventyr. Kombinér med klatring og padling.
+
+## Nord-Norge
+
+Midnattsol-sykling og spektakulær natur gjør Nord-Norge til en unik opplevelse.
+
+### Tromsø
+Sykling i midnattssol er en opplevelse utenom det vanlige. Flott terreng i nærheten av byen.
+
+**Highlights:**
+- Fløya - Panoramautsikt over Tromsø
+- Kvaløya - Eventyrlige øy-stier
+
+### Lofoten
+Kanskje Norges vakreste kulisse for stisykling. Krevende terreng belønnes med uforglemmelige opplevelser.
+
+**Highlights:**
+- Henningsvær-stiene - Teknisk i vakker natur
+- Svolvær og omegn - Variert terreng
+
+## Bikeparker
+
+Norge har et voksende antall bikeparker med liftet sykling:
+
+### Topp 5 bikeparker:
+1. **Hafjell** - Størst og mest variert
+2. **Trysil** - Flotte flow-trails
+3. **Geilo** - Teknisk og utfordrende
+4. **Nesbyen** - Familievennlig og morsomt
+5. **Oppdal** - Alpint terreng
+
+De fleste bikeparker har sykkelutleie, så du trenger ikke eget utstyr for å prøve.
+    `,
+    relatedProducts: [
+      {
+        name: "Garmin Edge 840",
+        image: "/placeholder.svg",
+        price: "4.999 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      },
+      {
+        name: "Osprey Raptor 14 ryggsekk",
+        image: "/placeholder.svg",
+        price: "1.599 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      },
+      {
+        name: "GoPro Hero 12",
+        image: "/placeholder.svg",
+        price: "4.499 kr",
+        retailer: "Elkjøp",
+        affiliateLink: "#"
+      }
+    ],
+    relatedGuides: ["mtb-for-nybegynnere", "riktig-utstyr"]
+  },
+  {
+    id: "riktig-utstyr",
+    title: "Riktig utstyr til terrengsykling",
+    icon: Backpack,
+    intro: "Hjelm, beskyttelse, klær og tilbehør du trenger",
+    readTime: 9,
+    tableOfContents: [
+      { id: "hjelm", title: "Hjelm" },
+      { id: "beskyttelse", title: "Beskyttelse" },
+      { id: "klaer", title: "Klær" },
+      { id: "sko", title: "Sko og pedaler" },
+      { id: "tilbehor", title: "Tilbehør" },
+      { id: "ryggsekk", title: "Ryggsekk" },
+    ],
+    content: `
+## Hjelm
+
+Hjelmen er det viktigste utstyret du kjøper. Aldri sykle uten!
+
+### Typer hjelmer
+
+**XC/Trail-hjelm**
+Lett og godt ventilert. Passer for de fleste stisyklister. Har ofte avtakbar skjerm.
+
+**Enduro-hjelm (halvskall)**
+Mer dekning bak og på sidene. God balanse mellom beskyttelse og vekt.
+
+**Fullface-hjelm**
+Maksimal beskyttelse med halebeskyttelse. Nødvendig for bikepark og aggressive nedkjøringer.
+
+**Konvertibel hjelm**
+Avtakbar halebeskyttelse gir fleksibilitet. Fin for de som vil ha én hjelm til alt.
+
+### Hva du skal se etter
+- MIPS eller tilsvarende rotasjonsbeskyttelse
+- God passform (prøv flere merker)
+- Tilstrekkelig ventilasjon
+- Sertifisering (CE, CPSC, ASTM)
+
+## Beskyttelse
+
+Ekstra beskyttelse gir trygghet til å presse grensene.
+
+### Knebeskyttere
+Nesten obligatorisk for stisykling. Velg mellom:
+- **Lette pads** - For XC og lett stisykling
+- **Soft shell** - God beskyttelse, fleksible
+- **Hard shell** - Maksimal beskyttelse, litt mer volum
+
+### Albuebeskyttere
+Viktig for teknisk sykling og bikepark. Samme kategorier som kne.
+
+### Brystbeskyttelse
+For bikepark og downhill. Beskytter rygg og bryst mot treff.
+
+### Ryggbeskytter
+Integrert i ryggsekk eller separat vest. Viktig for aggressive kjørestiler.
+
+## Klær
+
+Riktige klær gjør turen mer komfortabel i alle forhold.
+
+### Overdel
+- **Sykkeltrøye** - Pustende og hurtigtørkende
+- **Vindjakke** - Lett og pakkbar for nedkjøringer
+- **Regnjakke** - Vanntett for norske forhold
+
+### Underdel
+- **Sykkelshorts med padding** - Under baggy shorts
+- **Baggy shorts** - Slitesterke og med lommer
+- **Langbukse** - For kaldere dager
+
+### Lag-på-lag
+Bruk flere tynne lag fremfor ett tykt. Gjør det enkelt å regulere temperaturen.
+
+## Sko og pedaler
+
+Valget mellom flate pedaler og klikkpedaler er personlig.
+
+### Flate pedaler
+- Enklere å hoppe av ved problemer
+- Bra for å lære teknikk
+- Mer bevegelsesfrihet
+- Krever sko med stiv såle og godt grep
+
+### Klikkpedaler
+- Bedre kraftoverføring
+- Foten sitter fast i røft terreng
+- Krever øvelse å bli komfortabel med
+- SPD-systemet er mest populært for MTB
+
+### Sko
+- Stiv såle for kraft
+- Godt grep på pedalen
+- Beskyttelse for tær
+- Drenering for våte forhold
+
+## Tilbehør
+
+### Briller
+Beskytter øynene mot grener, insekter og søle. Velg klare glass for skog og mørke glass for sol.
+
+### Hansker
+- Beskytter hender ved fall
+- Bedre grep på styret
+- Demper vibrasjoner
+
+### Lys
+Nødvendig for høst- og vintertrening. Velg kraftig frontlys (1000+ lumen) for skogstier.
+
+### Verktøy
+Ha alltid med:
+- Multitool
+- Pumpe eller CO2-patron
+- Slange eller lappesaker
+- Kjedelås
+
+## Ryggsekk
+
+En god ryggsekk er uvurderlig på lengre turer.
+
+### Hva du skal se etter
+- 8-15 liter kapasitet for dagstur
+- Væskeblære-kompatibel
+- Ventilert ryggpanel
+- Hjelm-feste
+- Verktøylomme
+
+### Populære valg
+- **Camelbak MULE** - Klassiker med god væskekapasitet
+- **Osprey Raptor** - Lett og komfortabel
+- **Evoc Trail Pro** - Med integrert ryggbeskytter
+    `,
+    relatedProducts: [
+      {
+        name: "Fox Speedframe Pro hjelm",
+        image: "/placeholder.svg",
+        price: "2.199 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      },
+      {
+        name: "POC VPD knebeskyttere",
+        image: "/placeholder.svg",
+        price: "899 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      },
+      {
+        name: "Five Ten Freerider sko",
+        image: "/placeholder.svg",
+        price: "1.299 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      }
+    ],
+    relatedGuides: ["mtb-for-nybegynnere", "vedlikehold"]
+  },
+  {
+    id: "terrengsykkel-terminologi",
+    title: "Terrengsykkel-terminologi",
+    icon: BookOpen,
+    intro: "Ordliste: Travel, geometry, dropper post og mer",
+    readTime: 6,
+    tableOfContents: [
+      { id: "ramme", title: "Ramme og geometri" },
+      { id: "suspensjon", title: "Suspensjon" },
+      { id: "drivverk", title: "Drivverk" },
+      { id: "hjul-dekk", title: "Hjul og dekk" },
+      { id: "bremser", title: "Bremser" },
+      { id: "diverse", title: "Diverse" },
+    ],
+    content: `
+## Ramme og geometri
+
+**Reach**
+Horisontal avstand fra midten av kranken til toppen av styrerøret. Lengre reach = mer stabil sykkel.
+
+**Stack**
+Vertikal avstand fra midten av kranken til toppen av styrerøret. Høyere stack = mer oppreist sittestilling.
+
+**Styrevinkel (Head angle)**
+Vinkelen på gaffelen målt fra bakken. Slakkere vinkel = mer stabil i bratt terreng.
+
+**Setevinkel (Seat angle)**
+Vinkelen på seterøret. Brattere vinkel = bedre klatreposisjon.
+
+**Chainstay**
+Lengden fra kranken til baknavet. Kortere = mer leken, lengre = mer stabil.
+
+**Wheelbase**
+Total lengde fra forhjul til bakhjul. Lengre = mer stabil i fart.
+
+**BB drop/height**
+Hvor lavt kranken sitter i forhold til akselhøyden. Lavere = lavere tyngdepunkt.
+
+**Hardtail**
+Sykkel uten bakdemper - kun demping i gaffelen.
+
+**Fulldemper/Full suspension**
+Sykkel med demping både foran og bak.
+
+## Suspensjon
+
+**Travel/Vandring**
+Hvor langt demperen kan komprimeres, målt i millimeter.
+
+**Rebound**
+Hastigheten demperen returnerer til utgangsposisjonen.
+
+**Compression**
+Motstand mot inntrykking av demperen.
+
+**Sag**
+Hvor mye demperen synker inn med rytterens vekt. Vanligvis 25-30% av total travel.
+
+**Lockout**
+Mulighet til å låse demperen for effektiv klatring.
+
+**Air spring**
+Demper som bruker lufttrykk som fjær.
+
+**Coil spring**
+Demper med metalspiral som fjær.
+
+**Progressive/linear**
+Hvordan demperen blir hardere utover i slaget.
+
+## Drivverk
+
+**Drivetrain**
+Alle delene som overfører kraft til bakhjulet: kranker, kjede, kassett, girskiftere.
+
+**1x (one-by)**
+Drivverk med kun ett kjedeblad foran og én kassett bak.
+
+**Kassett**
+Tannhjulene på bakhjulet.
+
+**Kjedeblad**
+Tannhjulet på kranken.
+
+**Narrow-wide**
+Kjedeblad-profil designet for å holde kjeden på plass uten fremre derailleur.
+
+**Clutch derailleur**
+Bakgir med demping som holder kjeden stram.
+
+**Range**
+Forskjellen mellom største og minste gir, ofte oppgitt i prosent.
+
+## Hjul og dekk
+
+**29er**
+Sykkel med 29-tommers hjul (622mm felgdiameter).
+
+**27.5 / 650b**
+Sykkel med 27.5-tommers hjul (584mm felgdiameter).
+
+**Mullet**
+Sykkel med 29" forhjul og 27.5" bakhjul.
+
+**Tubeless**
+Dekk uten slange, med tetningsmasse.
+
+**TPI (Threads Per Inch)**
+Antall tråder i dekkets vev. Høyere = lettere og mer fleksibelt.
+
+**Boost spacing**
+Bredere nav-standard (110mm foran, 148mm bak) for stivere hjul.
+
+**Compound**
+Gummiblandingen i dekket - mykere = mer grep, raskere slitasje.
+
+## Bremser
+
+**Hydrauliske skivebremser**
+Standard for moderne MTB - bruker væske for å overføre kraft.
+
+**Rotor/skive**
+Metallskiven som klemmes av bremsebelegget.
+
+**Caliper**
+Bremsekalipperen som holder bremsebeleggene.
+
+**2-pot/4-pot**
+Antall stempler i bremseklossen. Flere = mer kraft.
+
+**Bite point**
+Punktet hvor bremsene begynner å ta tak.
+
+**Modulation**
+Hvor finjustert kontroll du har over bremsekraften.
+
+## Diverse
+
+**Dropper post**
+Setepinne som kan senkes og heves med en knapp på styret.
+
+**Stem**
+Styrestamme - koblingen mellom gaffel og styre.
+
+**Riser bar**
+Styre som buer oppover fra stammen.
+
+**Sweep**
+Hvor mye styret bøyer bakover.
+
+**Thru-axle**
+Gjennomgående aksel som skrus fast - stivere enn quick release.
+
+**Enduro**
+Sykkelstil/konkurranseform med tidtatte nedkjøringer og ubestemte klatringer.
+
+**XC (Cross-country)**
+Kondisjonsorientert sykling med vekt på effektivitet.
+
+**Trail**
+Allround stisykling - den mest populære kategorien.
+
+**Flow trail**
+Sti bygget for jevn fart med naturlige svinger og hopp.
+    `,
+    relatedProducts: [
+      {
+        name: "Park Tool Big Blue Book",
+        image: "/placeholder.svg",
+        price: "349 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      },
+      {
+        name: "Shimano Deore XT drivetrain",
+        image: "/placeholder.svg",
+        price: "4.999 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      },
+      {
+        name: "RockShox Reverb dropper",
+        image: "/placeholder.svg",
+        price: "3.499 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      }
+    ],
+    relatedGuides: ["velg-riktig-terrengsykkel", "vedlikehold"]
+  }
+];
+
+export const getGuideById = (id: string): Guide | undefined => {
+  return guides.find(guide => guide.id === id);
+};
