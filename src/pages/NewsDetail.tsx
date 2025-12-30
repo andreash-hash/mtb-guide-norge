@@ -3,6 +3,7 @@ import { ChevronRight, Calendar, ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsCard from "@/components/NewsCard";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,6 +16,11 @@ const NewsDetail = () => {
   if (!article) {
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Artikkel ikke funnet | MTB Guide Norge"
+          description="Beklager, vi fant ikke artikkelen du leter etter."
+          canonicalUrl="/nyheter"
+        />
         <Header />
         <div className="pt-24 pb-16 container mx-auto px-4 text-center">
           <h1 className="text-3xl font-bold text-primary mb-4">Artikkel ikke funnet</h1>
@@ -30,6 +36,31 @@ const NewsDetail = () => {
     );
   }
 
+  const newsArticleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": article.title,
+    "description": article.excerpt,
+    "image": `https://mtbguide.no${article.image}`,
+    "datePublished": article.publishedAt,
+    "author": {
+      "@type": "Organization",
+      "name": "MTB Guide Norge"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MTB Guide Norge",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mtbguide.no/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://mtbguide.no/nyheter/${article.id}`
+    }
+  };
+
   const relatedArticles = article.relatedNews
     .map(id => newsArticles.find(a => a.id === id))
     .filter(Boolean)
@@ -37,6 +68,14 @@ const NewsDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={`${article.title} | MTB Guide Norge`}
+        description={article.excerpt}
+        keywords={`${article.category.toLowerCase()}, mtb nyheter, terrengsykkel`}
+        canonicalUrl={`/nyheter/${article.id}`}
+        ogType="article"
+        structuredData={newsArticleStructuredData}
+      />
       <Header />
       
       {/* Breadcrumbs */}

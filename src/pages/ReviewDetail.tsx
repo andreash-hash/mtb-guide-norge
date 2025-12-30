@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { Star, ExternalLink, ArrowLeft, Check, X } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { getBikeById, bikeReviews } from "@/data/bikeReviews";
 import BikeReviewCard from "@/components/BikeReviewCard";
@@ -13,6 +14,11 @@ const ReviewDetail = () => {
   if (!bike) {
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Anmeldelse ikke funnet | MTB Guide Norge"
+          description="Beklager, vi kunne ikke finne denne anmeldelsen."
+          canonicalUrl="/anmeldelser"
+        />
         <Header />
         <div className="pt-24 pb-16 container mx-auto px-4 text-center">
           <h1 className="text-3xl font-bold text-primary mb-4">
@@ -29,6 +35,36 @@ const ReviewDetail = () => {
       </div>
     );
   }
+
+  const productStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": bike.name,
+    "brand": {
+      "@type": "Brand",
+      "name": bike.brand
+    },
+    "description": bike.shortDescription,
+    "image": `https://mtbguide.no${bike.image}`,
+    "review": {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": bike.rating,
+        "bestRating": 5
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "MTB Guide Norge"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": bike.rating,
+      "bestRating": 5,
+      "ratingCount": 1
+    }
+  };
 
   const renderStars = (rating: number) => {
     const stars = [];
@@ -57,6 +93,14 @@ const ReviewDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={`${bike.name} anmeldelse - ${bike.rating}/5 | MTB Guide Norge`}
+        description={bike.shortDescription}
+        keywords={`${bike.name} test, ${bike.brand} anmeldelse, ${bike.name} pris, terrengsykkel test`}
+        canonicalUrl={`/anmeldelser/${bike.id}`}
+        ogType="article"
+        structuredData={productStructuredData}
+      />
       <Header />
 
       <main className="pt-24 pb-16">
