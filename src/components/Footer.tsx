@@ -2,7 +2,7 @@ const Footer = () => {
   const menuItems = [
     { name: "Anmeldelser", href: "/anmeldelser" },
     { name: "Nyheter", href: "/nyheter" },
-    { name: "Guider", href: "#guider" },
+    { name: "Guider", href: "/guider" },
     { name: "Butikk", href: "/butikk" },
     { name: "Om oss", href: "#om-oss" },
     { name: "Kontakt", href: "#kontakt" },
