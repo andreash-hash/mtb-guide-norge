@@ -1,6 +1,6 @@
 const Footer = () => {
   const menuItems = [
-    { name: "Tester", href: "#tester" },
+    { name: "Anmeldelser", href: "/anmeldelser" },
     { name: "Nyheter", href: "/nyheter" },
     { name: "Guider", href: "#guider" },
     { name: "Butikk", href: "/butikk" },
