@@ -6,7 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { name: "Anmeldelser", href: "/anmeldelser" },
+    { name: "Sammenligninger", href: "/sammenligninger" },
     { name: "Nyheter", href: "/nyheter" },
     { name: "Guider", href: "/guider" },
     { name: "Butikk", href: "/butikk" },
@@ -19,7 +19,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary">mtb-test</h1>
+            <h1 className="text-2xl font-bold text-primary">MTB Guide</h1>
           </div>
 
           {/* Desktop Navigation */}

@@ -8,8 +8,8 @@ import Index from "./pages/Index";
 import News from "./pages/News";
 import NewsDetail from "./pages/NewsDetail";
 import Shop from "./pages/Shop";
-import Reviews from "./pages/Reviews";
-import ReviewDetail from "./pages/ReviewDetail";
+import Comparisons from "./pages/Comparisons";
+import ComparisonDetail from "./pages/ComparisonDetail";
 import Guides from "./pages/Guides";
 import GuideDetail from "./pages/GuideDetail";
 import NotFound from "./pages/NotFound";
@@ -28,8 +28,8 @@ const App = () => (
             <Route path="/nyheter" element={<News />} />
             <Route path="/nyheter/:newsId" element={<NewsDetail />} />
             <Route path="/butikk" element={<Shop />} />
-            <Route path="/anmeldelser" element={<Reviews />} />
-            <Route path="/anmeldelser/:bikeId" element={<ReviewDetail />} />
+            <Route path="/sammenligninger" element={<Comparisons />} />
+            <Route path="/sammenligninger/:bikeId" element={<ComparisonDetail />} />
             <Route path="/guider" element={<Guides />} />
             <Route path="/guider/:guideId" element={<GuideDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
