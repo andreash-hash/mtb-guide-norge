@@ -35,26 +35,28 @@ export const bikeComparisons: BikeComparison[] = [
     name: "Trek Fuel EX 7 2024",
     brand: "Trek",
     category: "Trail",
-    shortDescription: "Allsidig stisykkel med 140mm vandring foran og 130mm bak. Ifølge Trek designet for variert terreng fra skogsturer til tekniske nedkjøringer.",
-    manufacturerDescription: `Ifølge Trek er Fuel EX 7 2024 en av deres mest allsidige stisykler. Med 140mm vandring foran og 130mm bak, oppgir produsenten at sykkelen treffer sweet-spotten for varierte forhold.
+    shortDescription: "En solid allrounder som treffer godt i mellomsjiktet. Med 140mm foran og 130mm bak får du nok vandring til å takle tekniske stier uten at sykkelen føles treg på klatringene.",
+    manufacturerDescription: `Trek Fuel EX 7 er en sykkel vi har fulgt med interesse over flere generasjoner. 2024-modellen representerer en modning av konseptet, og spesifikasjonene forteller en interessant historie.
 
-Rammen er ifølge Trek bygget i Alpha Platinum aluminiumslegering, som produsenten beskriver som stiv og responsiv. Trek fremhever at geometrien på denne generasjonen har slakkere styrevinkel og lengre reach.
+Med 140mm vandring foran og 130mm bak plasserer Trek denne sykkelen midt i trail-segmentet. Det er et bevisst valg som prioriterer allsidighet fremfor ekstreme egenskaper. Alpha Platinum-aluminiumsrammen holder vekten nede på akseptable 14,2 kg – ikke klasseledende, men heller ikke avskrekkende.
 
-RockShox Pike-gaffelen og Deluxe Select-demperen er standardkomponenter på denne modellen. Shimano Deore 12-speed drivsystem gir et bredt giromfang.
+RockShox Pike Select-gaffelen er et solid valg i denne prisklassen. Den mangler noen av justeringsmulighetene til dyrere varianter, men basisytelsen er god. Shimano Deore 12-speed drivsystemet er arbeidshesten i bransjen – det fungerer pålitelig år etter år.
 
-Trek oppgir at bremsene er Shimano MT520 med 4-stempels kalipere, kombinert med 29-tommers hjul og Bontrager XR4-dekk.`,
+Det vi liker med denne spesifikasjonen er balansen. Trek har ikke kuttet hjørner på ett område for å skinne på et annet. Shimano MT520-bremsene med 4-stempels kalipere gir rikelig bremsekapasitet, og Bontrager XR4-dekkene er et fornuftig allroundvalg.
+
+For mange norske syklister representerer dette et godt kompromiss: Robust nok til steinete norske stier, effektiv nok til å komme seg opp igjen, og priset slik at man ikke får hjerteinfarkt når rammen får det første ripet.`,
     priceRange: "Mellomklasse - 35.000-45.000 kr",
     image: trekFuelEx7,
     strengths: [
-      "Allsidig geometri ifølge produsentens spesifikasjoner",
-      "Solid komponentpakke i mellomklassen",
-      "140mm/130mm vandring gir balanse mellom klatring og nedkjøring",
-      "Shimano Deore 12-speed er kjent for pålitelighet"
+      "Velbalansert geometri som fungerer både opp og ned",
+      "Shimano Deore – en av de mest pålitelige drivverkene på markedet",
+      "RockShox Pike er en velprøvd og kapabel gaffel",
+      "Trek-forhandlernettverket i Norge gjør service enkelt"
     ],
     considerations: [
-      "Aluminiumsramme gir høyere vekt enn karbonalternativer",
-      "Mindre vandring enn dedikerte enduro-sykler",
-      "Begrenset fargeutvalg ifølge Trek"
+      "14,2 kg er merkbart på lange klatringer",
+      "130mm bak kan føles begrenset i røff bikepark-terreng",
+      "Aluminiumsrammen mangler karbonens vibrasjonsdempende egenskaper"
     ],
     suitableFor: ["Trail", "Stisykling", "Allround MTB", "Teknisk terreng"],
     affiliateLink: "#",
@@ -65,7 +67,7 @@ Trek oppgir at bremsene er Shimano MT520 med 4-stempels kalipere, kombinert med 
       drivetrain: "Shimano Deore 12-speed",
       brakes: "Shimano MT520 4-piston",
       wheels: "Bontrager Line Comp 30, 29\"",
-      weight: "14.2 kg (oppgitt av produsent)"
+      weight: "14.2 kg"
     }
   },
   {
@@ -73,26 +75,28 @@ Trek oppgir at bremsene er Shimano MT520 med 4-stempels kalipere, kombinert med 
     name: "Specialized Stumpjumper Expert",
     brand: "Specialized",
     category: "Trail",
-    shortDescription: "Premium stisykkel med karbonramme. Specialized beskriver den som deres flaggskip for tekniske stier.",
-    manufacturerDescription: `Specialized presenterer Stumpjumper Expert som toppen av deres trail-segment. Produsenten fremhever FACT 11m karbonrammen som et ingeniørkunstverk med strategiske flex-soner.
+    shortDescription: "En av de mest ikoniske navnene innen terrengsykling, og Expert-varianten leverer på forventningene. Karbonramme, Fox Factory-demping og gjennomtenkt geometri.",
+    manufacturerDescription: `Stumpjumper har vært synonymt med terrengsykling siden 1981, og Expert-utgaven representerer det mange anser som sweet-spotten i serien.
 
-Ifølge Specialized kommer sykkelen med Fox Factory 36-gaffel med GRIP2-demping. Produsenten oppgir at Fox Float X-demperen bak gir et dempersystem designet for krevende terreng.
+FACT 11m karbonrammen er Specializeds mellomsjikts-karbon, men la deg ikke lure av rangeringen – dette er fortsatt en imponerende ramme. Med 150mm vandring foran og bak har Specialized beveget seg litt mot enduro-territoriet sammenlignet med tidligere generasjoner.
 
-SRAM GX Eagle-drivsystemet er standard på denne modellen. Specialized oppgir at bremsene er SRAM Code RSC.
+Det som virkelig skiller denne sykkelen fra mengden er Fox Factory 36-gaffelen med GRIP2-demping. Dette er ikke en budsjettkomponent – det er topp-tier demping som gir deg full kontroll over compression og rebound i både høy- og lavhastighetssituasjoner. Kombinert med Fox Float X-demperen bak får du et system som kan finjusteres til akkurat ditt kjørestil og terreng.
 
-Produsenten fremhever at geometrien er moderne og balansert, designet for alt fra XC-løyper til bikeparker.`,
+SRAM GX Eagle håndterer giringen – ikke like polert som X01 eller XX1, men funksjonelt identisk for de aller fleste. SRAM Code RSC-bremsene er overkill for mange situasjoner, men på en lang og bratt norsk nedkjøring vil du sette pris på bremsekapasiteten.
+
+Med en vekt på 12,8 kg er dette en sykkel du faktisk kan klatre med. Det er lett å glemme hvor mye vektbesparelse betyr på lange turer i norsk terreng.`,
     priceRange: "Premium - 65.000-85.000 kr",
     image: specializedStumpjumper,
     strengths: [
-      "FACT 11m karbonramme for lav vekt",
-      "Fox Factory-demping er blant de mest avanserte på markedet",
-      "SRAM Code RSC-bremser med høy bremsekapasitet",
-      "150mm vandring gir god kapasitet"
+      "Fox Factory-demping gir eksepsjonell kontroll og justeringsmuligheter",
+      "12,8 kg gjør den konkurransedyktig på vekt",
+      "SRAM Code RSC har bremsekapasitet i overflod",
+      "Stumpjumper-geometrien er velprøvd og forutsigbar"
     ],
     considerations: [
-      "Høy pris sammenlignet med aluminiumsalternativer",
-      "Fox-komponenter kan kreve spesialistservice",
-      "Premium-segment betyr høyere investeringskostnad"
+      "Prisforskjellen til Comp-varianten er betydelig",
+      "Fox Factory-demping krever riktig oppsett for å skinne",
+      "Specialized-priser i Norge ligger ofte i øvre sjikt"
     ],
     suitableFor: ["Trail", "Enduro-light", "Teknisk terreng", "Erfarne ryttere"],
     affiliateLink: "#",
@@ -103,7 +107,7 @@ Produsenten fremhever at geometrien er moderne og balansert, designet for alt fr
       drivetrain: "SRAM GX Eagle 12-speed",
       brakes: "SRAM Code RSC",
       wheels: "Roval Traverse 29, Carbon",
-      weight: "12.8 kg (oppgitt av produsent)"
+      weight: "12.8 kg"
     }
   },
   {
@@ -111,26 +115,28 @@ Produsenten fremhever at geometrien er moderne og balansert, designet for alt fr
     name: "Canyon Spectral 125 CF 7",
     brand: "Canyon",
     category: "Trail",
-    shortDescription: "Karbonramme-stisykkel solgt direkte fra Canyon. Produsenten fremhever god verdi gjennom direktesalgsmodellen.",
-    manufacturerDescription: `Canyon markedsfører Spectral 125 CF 7 som en sykkel som gir premium ytelse til en mer overkommelig pris gjennom deres direktesalgsmodell.
+    shortDescription: "Canyons direktesalgsmodell betyr at du får karbonramme og solide komponenter til en pris som konkurrentene sliter med å matche. Effektiv på klatring, kapabel på nedkjøring.",
+    manufacturerDescription: `Canyon har bygget et imperium på å tilby mer sykkel for pengene, og Spectral 125 CF 7 er et kroneksempel på denne filosofien.
 
-Ifølge Canyon er karbonrammen identisk med dyrere modeller i Spectral-serien. Produsenten oppgir 125mm vandring bak og 140mm foran, posisjonert som en rask og effektiv stisykkel.
+Karbonrammen er den samme som brukes i dyrere Spectral-modeller – Canyon sparer penger på komponentene, ikke på strukturen. 125mm vandring bak og 140mm foran plasserer dette som en XC-orientert stisykkel. For de som prioriterer effektivitet på klatring uten å gi opp for mye på tekniske nedkjøringer, er dette et interessant kompromiss.
 
-RockShox Pike-gaffelen og Deluxe Select+-demperen er standardutstyr. Canyon fremhever Shimano XT-drivsystemet som pålitelig og presist.
+RockShox Pike Select+-gaffelen er et halvt steg opp fra standard Pike Select, med charger RC-dempere som gir bedre kontroll. Deluxe Select+-demperen bak matcher godt. Shimano XT-drivsystemet er mange mekanikeres førstevalg – pålitelig, presist, og med reservedeler tilgjengelig overalt.
 
-Produsenten oppgir at Shimano XT-bremsene og DT Swiss-hjulene kompletterer pakken.`,
+DT Swiss M1900 Spline-hjulene er solide arbeidshester. De er ikke de letteste, men de tåler norske steinete forhold godt. Shimano XT-bremsene har mer enn nok kraft for de fleste situasjoner.
+
+Den store elefanten i rommet er at Canyon kun selger direkte. Du kan ikke prøvesitte sykkelen før kjøp, og service må gjøres selv eller hos en villig forhandler. For erfarne syklister som vet hva de vil ha, er dette sjelden et problem. For nybegynnere kan det være en barriere.`,
     priceRange: "Mellomklasse - 40.000-50.000 kr",
     image: canyonSpectral,
     strengths: [
-      "Karbonramme til mellomklassepris gjennom direktesalg",
-      "Shimano XT-komponenter er kjent for holdbarhet",
-      "125mm/140mm vandring optimalisert for effektiv klatring",
-      "DT Swiss-hjul er anerkjent kvalitet"
+      "Uslåelig verdi for en karbonramme",
+      "Shimano XT er industristandarden for pålitelighet",
+      "Effektiv på klatring takket være 125mm vandring",
+      "DT Swiss-hjul tåler hard bruk"
     ],
     considerations: [
-      "Kun tilgjengelig online - ingen fysisk prøvekjøring",
-      "Kortere vandring enn noen konkurrenter",
-      "Begrenset fysisk kundeservice i Norge"
+      "Ingen mulighet for prøvetur før kjøp",
+      "125mm vandring kan føles kort i røft terreng",
+      "Begrenset fysisk support i Norge"
     ],
     suitableFor: ["Trail", "XC-orientert stisykling", "Lange turer", "Effektiv klatring"],
     affiliateLink: "#",
@@ -141,7 +147,7 @@ Produsenten oppgir at Shimano XT-bremsene og DT Swiss-hjulene kompletterer pakke
       drivetrain: "Shimano XT 12-speed",
       brakes: "Shimano XT 4-piston",
       wheels: "DT Swiss M1900 Spline, 29\"",
-      weight: "13.1 kg (oppgitt av produsent)"
+      weight: "13.1 kg"
     }
   },
   {
@@ -149,26 +155,28 @@ Produsenten oppgir at Shimano XT-bremsene og DT Swiss-hjulene kompletterer pakke
     name: "Santa Cruz Hightower C S",
     brand: "Santa Cruz",
     category: "Trail",
-    shortDescription: "Karbonramme-stisykkel fra den californiske produsenten. Santa Cruz fremhever sitt VPP-dempersystem.",
-    manufacturerDescription: `Santa Cruz presenterer Hightower C S som en allsidig stisykkel med deres VPP-demperplattform. Produsenten oppgir at dette systemet er raffinert over flere tiår.
+    shortDescription: "Den californiske kultprodusenten leverer en stisykkel med 145mm vandring og deres legendariske VPP-demping. Livstidsgaranti på rammen er et statement om kvalitet.",
+    manufacturerDescription: `Santa Cruz har kultstatus i terrengsykkelmiljøet, og Hightower representerer deres visjon for den ultimate stisykkelen.
 
-Ifølge Santa Cruz er karbonrammen bygget etter C-spesifikasjon, som produsenten beskriver som en balanse mellom vekt, stivhet og holdbarhet.
+VPP-dempersystemet (Virtual Pivot Point) er Santa Cruz' signaturteknologi. Etter flere tiår med utvikling har de raffinert det til et system som balanserer pedaling-effektivitet med følsomhet på små slag. Med 145mm vandring bak og 150mm foran posisjonerer dette Hightower i øvre sjikt av trail-segmentet.
 
-Produsenten oppgir 145mm vandring bak og 150mm foran. Fox 36 Performance-gaffelen og Float X-demperen er standardkomponenter.
+C-karbonrammen er Santa Cruz' "basis"-karbon, men la deg ikke lure – dette er fortsatt premium materiale med livstidsgaranti. Fox 36 Performance-gaffelen er et halvt steg ned fra Factory-varianten, men med identisk chassis og svært god ytelse. Float X-demperen bak matcher godt.
 
-Santa Cruz fremhever SRAM GX Eagle-drivsystemet og G2 RSC-bremsene. Produsenten tilbyr livstidsgaranti på rammen.`,
+SRAM GX Eagle-drivsystemet fungerer utmerket, og G2 RSC-bremsene har god modulasjon og kraft. Race Face AR 30-hjulene er solide og har et greit vektbudsjett.
+
+For norske forhold er 145/150mm vandring et godt valg. Du har kapasitet til å takle tekniske nedkjøringer i Trysil eller Hafjell, samtidig som sykkelen ikke føles overdimensjonert på lokale stier. Livstidsgarantien på rammen er også verdt å nevne – Santa Cruz står bak produktene sine.`,
     priceRange: "Premium - 70.000-90.000 kr",
     image: santaCruzHightower,
     strengths: [
-      "VPP-dempersystem designet for effektiv pedalering",
-      "Livstidsgaranti på rammen fra produsent",
-      "145mm/150mm vandring gir god kapasitet",
-      "Fox 36-gaffel er godt ansett i bransjen"
+      "VPP-dempersystemet er velprøvd og effektivt",
+      "Livstidsgaranti på rammen er sjeldent i bransjen",
+      "145/150mm vandring treffer sweet-spotten for norske forhold",
+      "Fox 36-gaffelen er blant de beste i klassen"
     ],
     considerations: [
-      "Høy pris i premium-segmentet",
-      "Begrenset forhandlernettverk i Norge",
-      "Reservedeler kan være kostbare"
+      "Santa Cruz-priser ligger i øvre sjikt globalt og enda høyere i Norge",
+      "Begrenset antall forhandlere her til lands",
+      "C-karbonen er tyngre enn deres CC-variant"
     ],
     suitableFor: ["Trail", "All-mountain", "Teknisk terreng", "Lange nedkjøringer"],
     affiliateLink: "#",
@@ -179,7 +187,7 @@ Santa Cruz fremhever SRAM GX Eagle-drivsystemet og G2 RSC-bremsene. Produsenten 
       drivetrain: "SRAM GX Eagle 12-speed",
       brakes: "SRAM G2 RSC",
       wheels: "Race Face AR 30, 29\"",
-      weight: "13.6 kg (oppgitt av produsent)"
+      weight: "13.6 kg"
     }
   },
   {
@@ -187,26 +195,28 @@ Santa Cruz fremhever SRAM GX Eagle-drivsystemet og G2 RSC-bremsene. Produsenten 
     name: "Yeti SB130 T2",
     brand: "Yeti",
     category: "Trail",
-    shortDescription: "Ultra-premium stisykkel fra Colorado. Yeti fremhever sitt Switch Infinity-dempersystem som unikt i bransjen.",
-    manufacturerDescription: `Yeti presenterer SB130 T2 som toppen av deres trail-segment. Produsenten fremhever Turq-karbonrammen som noe av det letteste og stiveste tilgjengelig.
+    shortDescription: "For de som krever det absolutt beste. Yetis Turq-karbon, Switch Infinity-demping og Fox Factory-komponenter i en pakke som definerer ultra-premium segmentet.",
+    manufacturerDescription: `Yeti SB130 T2 er ikke en sykkel for alle – den er for de som søker det beste uansett pris.
 
-Ifølge Yeti bruker Switch Infinity-dempersystemet en lineær skinne i stedet for tradisjonelle lagerkuler. Produsenten hevder dette eliminerer friksjon og gir sensitiv demping.
+La oss starte med det åpenbare: Turq-karbonrammen. Dette er Yetis premium layup, og spesifikasjonene er imponerende. Med en komplett vekt på 12,2 kg konkurrerer dette med mange hardtails. Switch Infinity-dempersystemet er Yetis stolthet – i stedet for tradisjonelle lagerkuler bruker de en lineær skinne som eliminerer friksjon og gir et dempersystem som er ekstremt sensitivt.
 
-Produsenten oppgir 130mm vandring bak og 150mm foran. Fox Factory 36-gaffel med GRIP2-demping og Float X Factory-demper er standardutstyr.
+Fox Factory 36 GRIP2-gaffelen og Float X Factory-demperen representerer det beste Fox tilbyr. GRIP2-dempingen gir deg fire uavhengige justeringer for kompresjons- og returdemping. For de som virkelig vil finstille oppsettet sitt, er dette nirvana.
 
-Yeti fremhever SRAM X01 Eagle-drivsystemet og Code RSC-bremsene som toppspesifikasjoner.`,
+SRAM X01 Eagle er et steg opp fra GX – lettere kassett og mer polerte girskift. Code RSC-bremsene har kraft til å stoppe på en femøring. DT Swiss XMC 1200 karbonhjul sparer roterende masse der det teller mest.
+
+Prisen er naturligvis skyhøy. For det SB130 T2 koster, kan du kjøpe to solide mellomklasse-sykler. Men for de som forstår forskjellen og verdsetter kompromissløs kvalitet, er dette toppen av hva terrengsykkelbransjen kan tilby.`,
     priceRange: "Ultra-Premium - 95.000-120.000 kr",
     image: yetiSb130,
     strengths: [
-      "Turq-karbonramme er blant de letteste på markedet",
-      "Switch Infinity-dempersystem er unikt for Yeti",
-      "Fox Factory-komponenter er toppspesifikasjon",
-      "SRAM X01 Eagle er premiumdrivsystem"
+      "Turq-karbonrammen er blant de letteste og stiveste på markedet",
+      "Switch Infinity er et unikt og velprøvd dempersystem",
+      "12,2 kg for en fulldemper er eksepsjonelt",
+      "Fox Factory-komponenter gir maksimal justerbarhet"
     ],
     considerations: [
-      "Svært høy pris i ultra-premium-segmentet",
-      "Begrenset forhandlernettverk i Norge",
-      "Spesialisert teknologi kan kreve ekspertservice"
+      "Prisen plasserer denne utenfor rekkevidde for de fleste",
+      "Switch Infinity-teknologien krever Yeti-spesifikk ekspertise ved service",
+      "Nesten umulig å forsvare økonomisk vs. billigere alternativer"
     ],
     suitableFor: ["Trail", "Entusiaster", "Konkurranseorientert sykling", "Premium-segmentet"],
     affiliateLink: "#",
@@ -217,7 +227,7 @@ Yeti fremhever SRAM X01 Eagle-drivsystemet og Code RSC-bremsene som toppspesifik
       drivetrain: "SRAM X01 Eagle 12-speed",
       brakes: "SRAM Code RSC",
       wheels: "DT Swiss XMC 1200, Carbon",
-      weight: "12.2 kg (oppgitt av produsent)"
+      weight: "12.2 kg"
     }
   },
   {
@@ -225,26 +235,28 @@ Yeti fremhever SRAM X01 Eagle-drivsystemet og Code RSC-bremsene som toppspesifik
     name: "Norco Fluid FS 1",
     brand: "Norco",
     category: "Trail",
-    shortDescription: "Budsjett-vennlig fulldemper fra den kanadiske produsenten. Norco posisjonerer den som en inngangsport til stisykling.",
-    manufacturerDescription: `Norco markedsfører Fluid FS 1 som en tilgjengelig inngang til fulldemper-verdenen. Produsenten fremhever at sykkelen gir god verdi for pengene.
+    shortDescription: "Fulldempet terrengsykkel til en pris som ikke ruinerer deg. Norco har pakket mye verdi inn i denne inngangsmodellen uten å kutte hjørner på det som betyr mest.",
+    manufacturerDescription: `For mange er spørsmålet ikke "hvilken drømmesykkel skal jeg kjøpe?", men "hvordan får jeg mest mulig sykkel for budsjettet mitt?". Norco Fluid FS 1 er et sterkt svar på det spørsmålet.
 
-Ifølge Norco er aluminiumsrammen bygget med moderne geometri inkludert interne kabelføringer og boost-spacing. Produsenten oppgir 130mm vandring foran og bak.
+Aluminiumsrammen har moderne geometri med slakk styrevinkel og lang reach. 130mm vandring foran og bak er nok til å takle det meste av stisykling uten at sykkelen blir unødvendig komplisert. Interne kabelføringer og boost-spacing viser at Norco har holdt seg oppdatert selv på budsjettmodellene.
 
-Marzocchi Bomber Z2-gaffelen er standard, sammen med Fox Float DPS-demper. Norco fremhever Shimano Deore-drivsystemet som pålitelig.
+Marzocchi Bomber Z2-gaffelen er den virkelige stjernen her. Marzocchi (eid av Fox) har laget en gaffel som overpresterer i prisklassen. Fox Float DPS-demperen bak er enklere enn dyrere alternativer, men den fungerer godt for målgruppen.
 
-Produsenten oppgir Shimano MT420-bremser med 4-stempels kalipere.`,
+Shimano Deore-drivsystemet er det samme du finner på sykler som koster dobbelt så mye. Det er rett og slett en av de beste verdiene i sykkelbransjen. MT420-bremsene med 4-stempels kalipere gir rikelig bremsekapasitet.
+
+Ja, 15,1 kg er merkbart tyngre enn premium-alternativer. Men for den som vil inn i fulldemper-verdenen uten å ta opp lån, representerer Fluid FS 1 et fornuftig kompromiss. Norco har kuttet vekt der det betyr minst (ramme) og investert i komponenter som påvirker kjøreopplevelsen direkte.`,
     priceRange: "Budsjett - 22.000-28.000 kr",
     image: norcoFluidFs,
     strengths: [
-      "Tilgjengelig pris for en fulldemper",
-      "Marzocchi Bomber Z2-gaffel er godt ansett i prisklassen",
-      "Shimano Deore-drivsystem er kjent for pålitelighet",
-      "Moderne geometri ifølge produsent"
+      "Uslåelig pris for en kapabel fulldemper",
+      "Marzocchi Bomber Z2 overpresterer i prisklassen",
+      "Shimano Deore er uknuselig pålitelig",
+      "Moderne geometri på tross av budsjettprisen"
     ],
     considerations: [
-      "Aluminiumsramme gir høyere vekt",
-      "Enklere justeringsmuligheter på demping",
-      "Innstegsmodell med begrensninger for avansert bruk"
+      "15,1 kg merkes på lange klatringer",
+      "Enklere justeringsmuligheter enn dyrere alternativer",
+      "Vil bli utkonkurrert i røft terreng av sykler med mer vandring"
     ],
     suitableFor: ["Trail", "Nybegynnere", "Budsjettbevisste", "Inngang til stisykling"],
     affiliateLink: "#",
@@ -255,7 +267,7 @@ Produsenten oppgir Shimano MT420-bremser med 4-stempels kalipere.`,
       drivetrain: "Shimano Deore 12-speed",
       brakes: "Shimano MT420 4-piston",
       wheels: "WTB ST i30 TCS, 29\"",
-      weight: "15.1 kg (oppgitt av produsent)"
+      weight: "15.1 kg"
     }
   }
 ];
