@@ -52,16 +52,16 @@ export function generateSitemapUrls(): SitemapUrl[] {
   // Hovedsider
   urls.push(
     { loc: `${SITE_URL}/`, lastmod: currentDate, changefreq: 'daily', priority: 1.0 },
-    { loc: `${SITE_URL}/anmeldelser`, lastmod: currentDate, changefreq: 'weekly', priority: 0.9 },
+    { loc: `${SITE_URL}/sammenligninger`, lastmod: currentDate, changefreq: 'weekly', priority: 0.9 },
     { loc: `${SITE_URL}/guider`, lastmod: currentDate, changefreq: 'weekly', priority: 0.9 },
     { loc: `${SITE_URL}/nyheter`, lastmod: currentDate, changefreq: 'daily', priority: 0.8 },
     { loc: `${SITE_URL}/butikk`, lastmod: currentDate, changefreq: 'weekly', priority: 0.8 }
   );
 
-  // Anmeldelser
+  // Sammenligninger
   reviewIds.forEach((id) => {
     urls.push({
-      loc: `${SITE_URL}/anmeldelser/${id}`,
+      loc: `${SITE_URL}/sammenligninger/${id}`,
       lastmod: currentDate,
       changefreq: 'monthly',
       priority: 0.7,

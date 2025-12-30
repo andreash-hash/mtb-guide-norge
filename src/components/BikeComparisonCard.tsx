@@ -1,36 +1,13 @@
-import { Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import type { BikeReview } from "@/data/bikeReviews";
+import { Badge } from "@/components/ui/badge";
+import type { BikeComparison } from "@/data/bikeComparisons";
 
-interface BikeReviewCardProps {
-  bike: BikeReview;
+interface BikeComparisonCardProps {
+  bike: BikeComparison;
 }
 
-const BikeReviewCard = ({ bike }: BikeReviewCardProps) => {
-  const renderStars = (rating: number) => {
-    const stars = [];
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 >= 0.5;
-
-    for (let i = 0; i < 5; i++) {
-      if (i < fullStars) {
-        stars.push(
-          <Star key={i} className="h-5 w-5 fill-accent text-accent" />
-        );
-      } else if (i === fullStars && hasHalfStar) {
-        stars.push(
-          <Star key={i} className="h-5 w-5 fill-accent/50 text-accent" />
-        );
-      } else {
-        stars.push(
-          <Star key={i} className="h-5 w-5 text-muted-foreground/30" />
-        );
-      }
-    }
-    return stars;
-  };
-
+const BikeComparisonCard = ({ bike }: BikeComparisonCardProps) => {
   return (
     <article className="bg-card rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden group border border-border">
       <div className="aspect-[4/3] overflow-hidden bg-muted">
@@ -54,19 +31,18 @@ const BikeReviewCard = ({ bike }: BikeReviewCardProps) => {
           {bike.priceRange}
         </p>
 
-        <div className="flex items-center gap-1 mb-4">
-          {renderStars(bike.rating)}
-          <span className="ml-2 text-sm text-muted-foreground">
-            {bike.rating}/5
-          </span>
+        <div className="flex flex-wrap gap-1 mb-4">
+          <Badge variant="outline" className="text-xs">
+            {bike.category}
+          </Badge>
         </div>
 
         <Button variant="cta" className="w-full" asChild>
-          <Link to={`/anmeldelser/${bike.id}`}>Les anmeldelse</Link>
+          <Link to={`/sammenligninger/${bike.id}`}>Se sammenligning</Link>
         </Button>
       </div>
     </article>
   );
 };
 
-export default BikeReviewCard;
+export default BikeComparisonCard;

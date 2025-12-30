@@ -28,9 +28,9 @@ const Hero = () => {
               variant="cta" 
               size="lg"
               className="text-lg px-8 py-4"
-              onClick={() => document.getElementById('tester')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('sammenligninger')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Se siste tester
+              Se sammenligninger
             </Button>
           </div>
         </div>

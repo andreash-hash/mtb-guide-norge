@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import SectionTitle from "@/components/SectionTitle";
-import BikeReviewCard from "@/components/BikeReviewCard";
+import BikeComparisonCard from "@/components/BikeComparisonCard";
 import GuideCard from "@/components/GuideCard";
 import NewsCard from "@/components/NewsCard";
 import FeaturedProducts from "@/components/FeaturedProducts";
@@ -13,7 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Bike, Wrench, Shirt, BookOpen } from "lucide-react";
 import { guides } from "@/data/guides";
 import { newsArticles } from "@/data/newsArticles";
-import { bikeReviews } from "@/data/bikeReviews";
+import { bikeComparisons } from "@/data/bikeComparisons";
 
 const Index = () => {
   const websiteStructuredData = {
@@ -72,34 +72,34 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="MTB Guide Norge - Terrengsykkel anmeldelser, guider og tips 2024"
-        description="Finn din neste terrengsykkel. Grundige tester, ekspertguider og ærlige anmeldelser av MTB-utstyr. Oppdatert 2024."
-        keywords="terrengsykkel, mtb norge, terrengsykkel test, beste terrengsykkel, mtb guide"
+        title="MTB Guide Norge - Terrengsykkel sammenligninger, guider og tips 2024"
+        description="Sammenlign terrengsykler basert på tekniske spesifikasjoner. Faktabaserte guider og informasjon om MTB-utstyr. Oppdatert 2024."
+        keywords="terrengsykkel, mtb norge, terrengsykkel sammenligning, beste terrengsykkel, mtb guide"
         canonicalUrl="/"
         structuredData={[websiteStructuredData, organizationStructuredData]}
       />
       <Header />
       <Hero />
       
-      {/* Popular Reviews Section */}
-      <section className="py-20 bg-background">
+      {/* Popular Comparisons Section */}
+      <section id="sammenligninger" className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle 
-            subtitle="Grundige analyser av de nyeste terrengsyklene"
+            subtitle="Sammenlign tekniske spesifikasjoner fra ulike produsenter"
           >
-            Populære anmeldelser
+            Populære sammenligninger
           </SectionTitle>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {bikeReviews.slice(0, 3).map((bike) => (
-              <BikeReviewCard key={bike.id} bike={bike} />
+            {bikeComparisons.slice(0, 3).map((bike) => (
+              <BikeComparisonCard key={bike.id} bike={bike} />
             ))}
           </div>
 
           <div className="text-center mt-10">
-            <Link to="/anmeldelser">
+            <Link to="/sammenligninger">
               <Button variant="outline" size="lg">
-                Se alle anmeldelser
+                Se alle sammenligninger
               </Button>
             </Link>
           </div>
@@ -141,7 +141,7 @@ const Index = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle 
-            subtitle="Guider, nyheter og tips fra våre eksperter"
+            subtitle="Nyttige guider og nyheter fra MTB-verdenen"
           >
             Siste fra bloggen
           </SectionTitle>
@@ -195,14 +195,32 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
               Om MTB Guide Norge
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Vi er et team av lidenskapelige terrengsyklister som deler vår kunnskap og erfaring 
-              for å hjelpe deg med å finne den perfekte sykkelen og det beste utstyret for dine eventyr på stiene.
-            </p>
-            <p className="text-muted-foreground">
-              Våre grundige tester, ærlige anmeldelser og praktiske guider er basert på 
-              hundrevis av timer på stinettet i norsk natur.
-            </p>
+            <div className="text-left space-y-6">
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Hva vi gjør</h3>
+                <p className="text-muted-foreground">
+                  MTB Guide Norge samler og sammenligner informasjon om terrengsykler og utstyr. Vi baserer vårt innhold på 
+                  tekniske spesifikasjoner fra produsenter, offisiell produktinformasjon og tilgjengelig bransjekunnskap.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Hvordan vi jobber</h3>
+                <ul className="text-muted-foreground space-y-1">
+                  <li>✅ Vi sammenligner tekniske data fra produsenter</li>
+                  <li>✅ Vi presenterer faktabasert informasjon</li>
+                  <li>✅ Vi viser tydelig når vi siterer kilder</li>
+                  <li>❌ Vi utgir oss IKKE for å ha testet produkter selv</li>
+                </ul>
+              </div>
+              <div className="bg-accent/10 border border-accent/20 rounded-lg p-4 text-left">
+                <h3 className="font-semibold text-foreground mb-2">Affiliate-informasjon</h3>
+                <p className="text-sm text-muted-foreground">
+                  MTB Guide Norge er en affiliate-side. Det betyr at vi kan motta provisjon når du kjøper produkter 
+                  gjennom våre lenker, uten ekstra kostnad for deg. Våre sammenligninger er basert på tekniske fakta 
+                  og spesifikasjoner, ikke på hvilke produkter som gir best provisjon.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
