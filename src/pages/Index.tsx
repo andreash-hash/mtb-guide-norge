@@ -6,6 +6,7 @@ import GuideCard from "@/components/GuideCard";
 import NewsCard from "@/components/NewsCard";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import Footer from "@/components/Footer";
+import { guides } from "@/data/guides";
 
 // Import bike images
 import trekMarlin from "@/assets/trek-marlin-8.jpg";
@@ -57,18 +58,9 @@ const Index = () => {
           </SectionTitle>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <GuideCard
-              title="De 5 beste terrengsyklene i 2025"
-              description="Vår utvalgte liste over årets beste terrengsykler i ulike prisklasser. Fra budsjettmodeller til toppspesifikasjoner."
-            />
-            <GuideCard
-              title="Hva du bør se etter når du kjøper terrengsykkel"
-              description="En omfattende kjøpeguide som dekker alt fra rammetørrelse og giring til hjulstørrelse og federingsløsninger."
-            />
-            <GuideCard
-              title="Utstyrsguiden: Hjelmer, sko og verneutstyr for MTB"
-              description="Alt du trenger å vite om sikkerhets- og komfortutstyr for terrengsykling. Tips til valg av hjelm, sko og beskyttelsesutstyr."
-            />
+            {guides.slice(0, 3).map((guide) => (
+              <GuideCard key={guide.id} guide={guide} />
+            ))}
           </div>
         </div>
       </section>
