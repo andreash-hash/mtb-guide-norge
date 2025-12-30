@@ -2,11 +2,27 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/SectionTitle";
 import BikeReviewCard from "@/components/BikeReviewCard";
+import SEO from "@/components/SEO";
 import { bikeReviews } from "@/data/bikeReviews";
 
 const Reviews = () => {
+  const reviewsStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Terrengsykkel anmeldelser",
+    "description": "Grundige tester og anmeldelser av terrengsykler",
+    "url": "https://mtbguide.no/anmeldelser"
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Terrengsykkel anmeldelser 2024 - Grundige tester | MTB Guide"
+        description="Vi tester terrengsykler fra Trek, Specialized, Canyon og flere. Les våre ærlige anmeldelser før du kjøper."
+        keywords="terrengsykkel test, mtb anmeldelse, sykkeltest, trek test, specialized test"
+        canonicalUrl="/anmeldelser"
+        structuredData={reviewsStructuredData}
+      />
       <Header />
 
       {/* Hero Section */}
