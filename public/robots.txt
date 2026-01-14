@@ -1,5 +1,5 @@
-# MTB Guide Norge - robots.txt
-# https://mtbguide.no
+# MTB Test Norge - robots.txt
+# https://mtbtest.no
 
 User-agent: Googlebot
 Allow: /
@@ -20,7 +20,7 @@ Allow: /
 Crawl-delay: 5
 
 # Sitemap location
-Sitemap: https://mtbguide.no/sitemap.xml
+Sitemap: https://mtbtest.no/sitemap.xml
 
 # Disallow admin/private paths (if any in future)
 # Disallow: /admin/
