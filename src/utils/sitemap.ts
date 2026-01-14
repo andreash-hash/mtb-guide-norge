@@ -1,5 +1,5 @@
 // Sitemap data - separate from main data files to avoid image import issues during build
-const SITE_URL = 'https://mtb-guide-norge.lovable.app';
+const SITE_URL = 'https://mtbtest.no';
 
 interface SitemapUrl {
   loc: string;
