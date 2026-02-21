@@ -1,0 +1,54 @@
+# MTB Test Norge – Komplett oversikt
+
+> Din guide til terrengsykling i Norge – sammenligninger, nyheter og guider
+
+## Om MTB Test Norge
+
+MTB Test Norge er en norsk nettside dedikert til terrengsykling. Vi sammenligner terrengsykler basert på tekniske spesifikasjoner fra produsenter, publiserer faktabaserte guider og deler nyheter fra sykkelbransjen.
+
+**Viktig:** Vi tester IKKE produkter selv. All informasjon er basert på produsentdata, pressemeldinger og offisielle spesifikasjoner. Kilder siteres eksplisitt i alle artikler.
+
+Vi er en affiliate-side og kan motta provisjon på kjøp via våre lenker, uten ekstra kostnad for leseren.
+
+## Sidestruktur
+
+### Forsiden (/)
+Hovedsiden med oversikt over populære sammenligninger, guider, nyheter og kategorier.
+
+### Sammenligninger (/sammenligninger)
+Tekniske sammenligninger av terrengsykler basert på produsentspesifikasjoner. Inkluderer:
+- Trek Fuel EX 7
+- Specialized Stumpjumper
+- Canyon Spectral 125
+- Santa Cruz Hightower
+- Yeti SB130
+- Norco Fluid FS
+- Trek Marlin 8
+- Specialized Rockhopper
+- Scott Scale 970
+
+### Nyheter (/nyheter)
+Nyhetsartikler om terrengsykling, inkludert:
+- Produktlanseringer fra Trek, Specialized, Canyon, Fox, SRAM, Shimano, m.fl.
+- Stinyheter fra Trysil, Nesbyen, Hafjell
+- Bransjeoppdateringer og salgstall
+- Tips og råd fra bransjen
+
+### Guider (/guider)
+Omfattende guider for terrengsyklister:
+- Velg riktig terrengsykkel 2025
+- MTB for nybegynnere
+- Vedlikehold av terrengsykkel
+- Beste MTB-stier i Norge
+- Riktig utstyr for stisykling
+- Terrengsykkel-terminologi
+
+### Butikk (/butikk)
+Anbefalte produkter med affiliate-lenker til norske forhandlere.
+
+## Teknisk informasjon
+
+- Nettside: https://mtbtest.no
+- Språk: Norsk (bokmål)
+- Sitemap: https://mtbtest.no/sitemap.xml
+- Robots: https://mtbtest.no/robots.txt

@@ -22,7 +22,9 @@ export interface NewsArticle {
   relatedNews: string[];
 }
 
-export const newsArticles: NewsArticle[] = [
+import { newNewsArticles } from "./newsArticlesNew";
+
+const originalArticles: NewsArticle[] = [
   {
     id: "trek-fuel-ex-2025",
     title: "Trek lanserer Fuel EX 2025 - større endringer enn noensinne",
@@ -364,6 +366,8 @@ Mange verksteder anbefaler å gå gjennom alle bolter med en momentnøkkel. Prod
     relatedNews: ["shimano-vs-sram", "trysil-stier", "enduro-test"]
   }
 ];
+
+export const newsArticles: NewsArticle[] = [...originalArticles, ...newNewsArticles];
 
 export const getNewsById = (id: string): NewsArticle | undefined => {
   return newsArticles.find(article => article.id === id);
