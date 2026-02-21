@@ -19,7 +19,7 @@ const SEO = ({
   ogType = "website",
   structuredData,
 }: SEOProps) => {
-  const siteUrl = "https://mtbguide.no";
+  const siteUrl = "https://mtbtest.no";
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
 
   return (
@@ -36,7 +36,7 @@ const SEO = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={`${siteUrl}${ogImage}`} />
-      <meta property="og:site_name" content="MTB Guide Norge" />
+      <meta property="og:site_name" content="MTB Test Norge" />
       <meta property="og:locale" content="nb_NO" />
 
       {/* Twitter */}
@@ -49,7 +49,7 @@ const SEO = ({
       {/* Additional SEO */}
       <meta name="robots" content="index, follow" />
       <meta name="language" content="Norwegian" />
-      <meta name="author" content="MTB Guide Norge" />
+      <meta name="author" content="MTB Test Norge" />
 
       {/* Structured Data */}
       {structuredData && (

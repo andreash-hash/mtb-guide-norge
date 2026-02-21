@@ -46,7 +46,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1: Logo & Description */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">MTB Guide</h2>
+            <h2 className="text-2xl font-bold mb-4">MTB Test</h2>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Din guide til terrengsykling i Norge. Vi sammenligner sykler basert på 
               tekniske spesifikasjoner og deler guider for å hjelpe deg finne riktig utstyr.
@@ -136,7 +136,7 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-primary-foreground/60">
-            <p>© 2024 MTB Guide Norge</p>
+            <p>© 2025 MTB Test Norge</p>
             <p className="text-center md:text-right">
               Affiliate-informasjon: Vi kan motta provisjon på kjøp via våre lenker, uten ekstra kostnad for deg. 
               Våre sammenligninger er basert på tekniske fakta, ikke provisjon.
