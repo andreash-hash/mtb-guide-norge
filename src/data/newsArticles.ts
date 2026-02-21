@@ -145,8 +145,8 @@ Trysil kommune og Skistar har sammen annonsert en investering på 15 millioner k
     title: "Spesifikasjonssammenligning: Årets enduro-sykler",
     category: "Sammenligninger",
     categoryColor: "bg-primary",
-    excerpt: "MTB Guide Norge har sammenstilt spesifikasjoner fra seks av årets mest populære enduro-sykler. Her er en teknisk oversikt basert på produsentdata.",
-    content: `MTB Guide Norge har samlet tekniske spesifikasjoner fra produsenter for å gi en oversikt over populære enduro-sykler på markedet.
+    excerpt: "MTB Test Norge har sammenstilt spesifikasjoner fra seks av årets mest populære enduro-sykler. Her er en teknisk oversikt basert på produsentdata.",
+    content: `MTB Test Norge har samlet tekniske spesifikasjoner fra produsenter for å gi en oversikt over populære enduro-sykler på markedet.
 
 ## Syklene i sammenligningen
 
@@ -173,12 +173,12 @@ Samtlige modeller i sammenligningen har 160-180mm vandring ifølge spesifikasjon
 
 Basert på veiledende priser varierer modellene fra 44.990 kr (YT Capra) til 94.990 kr (Santa Cruz Megatower). Alle priser er hentet fra produsentenes nettsider.
 
-*Merk: Denne sammenligningen er basert på tekniske spesifikasjoner fra produsenter. MTB Guide Norge har ikke testet disse syklene personlig.*`,
+*Merk: Denne sammenligningen er basert på tekniske spesifikasjoner fra produsenter. MTB Test Norge har ikke testet disse syklene personlig.*`,
     image: "/placeholder.svg",
     publishedAt: "20. desember 2024",
     source: {
       name: "Produsentenes offisielle spesifikasjoner",
-      url: "https://mtbguide.no/sammenligninger"
+      url: "https://mtbtest.no/sammenligninger"
     },
     relatedProducts: [
       { name: "Santa Cruz Megatower", image: "/placeholder.svg", price: "94.990 kr", retailer: "Santa Cruz", affiliateLink: "#" },
@@ -234,8 +234,8 @@ Showroomet åpner 1. februar 2025 ifølge pressemeldingen.`,
     title: "Shimano vs SRAM - teknisk sammenligning av spesifikasjoner",
     category: "Sammenligninger",
     categoryColor: "bg-primary",
-    excerpt: "MTB Guide Norge har samlet tekniske spesifikasjoner fra Shimano og SRAM for å sammenligne deres toppmodeller basert på offisielle data.",
-    content: `MTB Guide Norge har sammenstilt offisielle spesifikasjoner fra Shimano og SRAM for å gi en oversikt over deres toppmodeller for terrengsykling.
+    excerpt: "MTB Test Norge har samlet tekniske spesifikasjoner fra Shimano og SRAM for å sammenligne deres toppmodeller basert på offisielle data.",
+    content: `MTB Test Norge har sammenstilt offisielle spesifikasjoner fra Shimano og SRAM for å gi en oversikt over deres toppmodeller for terrengsykling.
 
 ## Spesifikasjoner
 
@@ -268,7 +268,7 @@ Basert på veiledende priser koster Shimano XTR Di2 omtrent 15% mer enn SRAM XX 
     publishedAt: "15. desember 2024",
     source: {
       name: "Shimano og SRAM offisielle spesifikasjoner",
-      url: "https://mtbguide.no/sammenligninger"
+      url: "https://mtbtest.no/sammenligninger"
     },
     relatedProducts: [
       { name: "Shimano XTR Di2", image: "/placeholder.svg", price: "14.999 kr", retailer: "XXL", affiliateLink: "#" },
@@ -322,8 +322,8 @@ Bransjen forventer fortsatt vekst i 2025 ifølge rapporter fra produsentene.`,
     title: "Vårklargjøring av sykkel: Bransjeråd og anbefalinger",
     category: "Tips",
     categoryColor: "bg-green-600",
-    excerpt: "MTB Guide Norge har samlet anbefalinger fra bransjen om hvordan du forbereder sykkelen til vårsesongen.",
-    content: `MTB Guide Norge har samlet generelle anbefalinger fra sykkelbransjen om vårklargjøring av terrengsykler.
+    excerpt: "MTB Test Norge har samlet anbefalinger fra bransjen om hvordan du forbereder sykkelen til vårsesongen.",
+    content: `MTB Test Norge har samlet generelle anbefalinger fra sykkelbransjen om vårklargjøring av terrengsykler.
 
 ## Grundig rengjøring
 
@@ -356,7 +356,7 @@ Mange verksteder anbefaler å gå gjennom alle bolter med en momentnøkkel. Prod
     publishedAt: "10. desember 2024",
     source: {
       name: "Diverse bransjekilder og produsentanbefalinger",
-      url: "https://mtbguide.no/guider"
+      url: "https://mtbtest.no/guider"
     },
     relatedProducts: [
       { name: "Muc-Off rengjøringssett", image: "/placeholder.svg", price: "599 kr", retailer: "XXL", affiliateLink: "#" },
