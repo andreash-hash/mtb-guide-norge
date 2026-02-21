@@ -1,9 +1,10 @@
 import { useParams, Link } from "react-router-dom";
-import { ChevronRight, Calendar, ExternalLink, FileText } from "lucide-react";
+import { Calendar, ExternalLink, FileText } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import NewsCard from "@/components/NewsCard";
-import SEO from "@/components/SEO";
+import SEOHead, { createArticleSchema } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,50 +18,36 @@ const NewsDetail = () => {
   if (!article) {
     return (
       <div className="min-h-screen bg-background">
-        <SEO 
-          title="Artikkel ikke funnet | MTB Guide Norge"
+        <SEOHead
+          title="Artikkel ikke funnet | MTB Test Norge"
           description="Beklager, vi fant ikke artikkelen du leter etter."
           canonicalUrl="/nyheter"
+          noindex
         />
         <Header />
         <div className="pt-24 pb-16 container mx-auto px-4 text-center">
           <h1 className="text-3xl font-bold text-primary mb-4">Artikkel ikke funnet</h1>
-          <p className="text-muted-foreground mb-8">
-            Beklager, vi fant ikke artikkelen du leter etter.
-          </p>
-          <Link to="/nyheter">
-            <Button>Tilbake til nyheter</Button>
-          </Link>
+          <p className="text-muted-foreground mb-8">Beklager, vi fant ikke artikkelen du leter etter.</p>
+          <Link to="/nyheter"><Button>Tilbake til nyheter</Button></Link>
         </div>
         <Footer />
       </div>
     );
   }
 
-  const newsArticleStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "NewsArticle",
-    "headline": article.title,
-    "description": article.excerpt,
-    "image": `https://mtbguide.no${article.image}`,
-    "datePublished": article.publishedAt,
-    "author": {
-      "@type": "Organization",
-      "name": "MTB Guide Norge"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "MTB Guide Norge",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://mtbguide.no/logo.png"
-      }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://mtbguide.no/nyheter/${article.id}`
-    }
-  };
+  const breadcrumbs = [
+    { name: "Hjem", path: "/" },
+    { name: "Nyheter", path: "/nyheter" },
+    { name: article.title, path: `/nyheter/${article.id}` },
+  ];
+
+  const articleSchema = createArticleSchema({
+    title: article.title,
+    description: article.excerpt,
+    image: article.image,
+    publishedAt: article.publishedAt,
+    path: `/nyheter/${article.id}`,
+  });
 
   const relatedArticles = article.relatedNews
     .map(id => newsArticles.find(a => a.id === id))
@@ -69,64 +56,40 @@ const NewsDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title={`${article.title} | MTB Guide Norge`}
+      <SEOHead
+        title={`${article.title} | MTB Test Norge`}
         description={article.excerpt}
-        keywords={`${article.category.toLowerCase()}, mtb nyheter, terrengsykkel`}
+        keywords={`${article.category.toLowerCase()}, mtb nyheter, terrengsykkel, stisykling`}
         canonicalUrl={`/nyheter/${article.id}`}
         ogType="article"
-        structuredData={newsArticleStructuredData}
+        breadcrumbs={breadcrumbs}
+        structuredData={articleSchema}
       />
       <Header />
-      
-      {/* Breadcrumbs */}
-      <div className="pt-20 bg-card border-b border-border">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <nav className="flex items-center text-sm text-muted-foreground">
-            <Link to="/" className="hover:text-secondary transition-colors">Hjem</Link>
-            <ChevronRight className="h-4 w-4 mx-2" />
-            <Link to="/nyheter" className="hover:text-secondary transition-colors">Nyheter</Link>
-            <ChevronRight className="h-4 w-4 mx-2" />
-            <span className="text-foreground line-clamp-1">{article.title}</span>
-          </nav>
-        </div>
-      </div>
+      <Breadcrumbs items={breadcrumbs} />
 
       {/* Article Header */}
       <section className="py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            {/* Source Citation */}
             <Alert className="mb-6 border-secondary/30 bg-secondary/10">
               <FileText className="h-4 w-4 text-secondary" />
               <AlertDescription className="text-sm">
                 📰 Kilde:{" "}
-                <a 
-                  href={article.source.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-secondary hover:underline font-medium"
-                >
+                <a href={article.source.url} target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline font-medium">
                   {article.source.name}
                 </a>
               </AlertDescription>
             </Alert>
-            
             <div className="flex items-center gap-4 mb-4">
-              <Badge className={`${article.categoryColor} text-white`}>
-                {article.category}
-              </Badge>
+              <Badge className={`${article.categoryColor} text-white`}>{article.category}</Badge>
               <div className="flex items-center text-muted-foreground text-sm">
                 <Calendar className="h-4 w-4 mr-1" />
                 <span>{article.publishedAt}</span>
               </div>
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
-              {article.title}
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              {article.excerpt}
-            </p>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">{article.title}</h1>
+            <p className="text-xl text-muted-foreground">{article.excerpt}</p>
           </div>
         </div>
       </section>
@@ -136,11 +99,7 @@ const NewsDetail = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-              <img 
-                src={article.image} 
-                alt={article.title}
-                className="w-full h-full object-cover"
-              />
+              <img src={article.image} alt={article.title} className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -153,52 +112,30 @@ const NewsDetail = () => {
             <div className="prose prose-lg max-w-none">
               {article.content.split('\n\n').map((paragraph, index) => {
                 if (paragraph.startsWith('## ')) {
-                  return (
-                    <h2 key={index} className="text-2xl font-bold text-primary mt-8 mb-4">
-                      {paragraph.replace('## ', '')}
-                    </h2>
-                  );
+                  return <h2 key={index} className="text-2xl font-bold text-primary mt-8 mb-4">{paragraph.replace('## ', '')}</h2>;
                 }
                 if (paragraph.startsWith('### ')) {
-                  return (
-                    <h3 key={index} className="text-xl font-semibold text-foreground mt-6 mb-3">
-                      {paragraph.replace('### ', '')}
-                    </h3>
-                  );
+                  return <h3 key={index} className="text-xl font-semibold text-foreground mt-6 mb-3">{paragraph.replace('### ', '')}</h3>;
                 }
                 if (paragraph.startsWith('- ')) {
                   const items = paragraph.split('\n').filter(line => line.startsWith('- '));
                   return (
                     <ul key={index} className="list-disc list-inside space-y-2 text-muted-foreground ml-4 my-4">
-                      {items.map((item, i) => (
-                        <li key={i}>{item.replace('- ', '')}</li>
-                      ))}
+                      {items.map((item, i) => <li key={i}>{item.replace('- ', '')}</li>)}
                     </ul>
                   );
                 }
                 if (paragraph.trim()) {
-                  return (
-                    <p key={index} className="text-muted-foreground leading-relaxed mb-4">
-                      {paragraph}
-                    </p>
-                  );
+                  return <p key={index} className="text-muted-foreground leading-relaxed mb-4">{paragraph}</p>;
                 }
                 return null;
               })}
             </div>
-            
-            {/* Original Source Link */}
             <div className="mt-8 p-4 bg-muted/50 rounded-lg border border-border">
               <p className="text-sm text-muted-foreground">
                 Les hele den originale artikkelen hos{" "}
-                <a 
-                  href={article.source.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary hover:underline font-medium inline-flex items-center"
-                >
-                  {article.source.name}
-                  <ExternalLink className="h-3 w-3 ml-1" />
+                <a href={article.source.url} target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline font-medium inline-flex items-center">
+                  {article.source.name}<ExternalLink className="h-3 w-3 ml-1" />
                 </a>
               </p>
             </div>
@@ -216,30 +153,18 @@ const NewsDetail = () => {
                 <Card key={index} className="border-border bg-background hover:shadow-md transition-shadow">
                   <CardContent className="p-4">
                     <div className="aspect-square bg-muted rounded-lg mb-3 flex items-center justify-center">
-                      <img 
-                        src={product.image} 
-                        alt={product.name}
-                        className="max-h-full max-w-full object-contain p-4"
-                      />
+                      <img src={product.image} alt={product.name} className="max-h-full max-w-full object-contain p-4" loading="lazy" />
                     </div>
                     <h3 className="font-semibold text-foreground text-sm mb-1">{product.name}</h3>
                     <p className="text-secondary font-bold mb-2">{product.price}</p>
-                    <a 
-                      href={product.affiliateLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm text-muted-foreground hover:text-secondary transition-colors"
-                    >
-                      Kjøp hos {product.retailer}
-                      <ExternalLink className="h-3 w-3 ml-1" />
+                    <a href={product.affiliateLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm text-muted-foreground hover:text-secondary transition-colors">
+                      Kjøp hos {product.retailer}<ExternalLink className="h-3 w-3 ml-1" />
                     </a>
                   </CardContent>
                 </Card>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground mt-4">
-              Reklame for samarbeidspartnere (affiliate). Vi kan tjene en liten kommisjon når du handler via våre lenker.
-            </p>
+            <p className="text-xs text-muted-foreground mt-4">Reklame for samarbeidspartnere (affiliate).</p>
           </div>
         </div>
       </section>
@@ -253,26 +178,14 @@ const NewsDetail = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {relatedArticles.map((relatedArticle) => (
                   relatedArticle && (
-                    <Link 
-                      key={relatedArticle.id} 
-                      to={`/nyheter/${relatedArticle.id}`}
-                      className="group"
-                    >
+                    <Link key={relatedArticle.id} to={`/nyheter/${relatedArticle.id}`} className="group">
                       <Card className="border-border bg-card hover:shadow-md transition-all hover:-translate-y-1 h-full">
                         <div className="aspect-video bg-muted overflow-hidden rounded-t-lg">
-                          <img 
-                            src={relatedArticle.image} 
-                            alt={relatedArticle.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          />
+                          <img src={relatedArticle.image} alt={relatedArticle.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                         </div>
                         <CardContent className="p-4">
-                          <Badge className={`${relatedArticle.categoryColor} text-white text-xs mb-2`}>
-                            {relatedArticle.category}
-                          </Badge>
-                          <h3 className="font-semibold text-foreground group-hover:text-secondary transition-colors text-sm line-clamp-2">
-                            {relatedArticle.title}
-                          </h3>
+                          <Badge className={`${relatedArticle.categoryColor} text-white text-xs mb-2`}>{relatedArticle.category}</Badge>
+                          <h3 className="font-semibold text-foreground group-hover:text-secondary transition-colors text-sm line-clamp-2">{relatedArticle.title}</h3>
                         </CardContent>
                       </Card>
                     </Link>

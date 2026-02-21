@@ -8,37 +8,28 @@ interface SitemapUrl {
   priority: number;
 }
 
-// Static list of content IDs for sitemap generation
 const reviewIds = [
-  'trek-fuel-ex-7',
-  'specialized-stumpjumper', 
-  'canyon-spectral',
-  'santa-cruz-hightower',
-  'yeti-sb130',
-  'norco-fluid-fs',
-  'trek-marlin-8',
-  'specialized-rockhopper',
-  'scott-scale-970'
+  'trek-fuel-ex-7', 'specialized-stumpjumper', 'canyon-spectral',
+  'santa-cruz-hightower', 'yeti-sb130', 'norco-fluid-fs',
+  'trek-marlin-8', 'specialized-rockhopper', 'scott-scale-970'
 ];
 
 const guideIds = [
-  'velg-riktig-terrengsykkel',
-  'mtb-for-nybegynnere',
-  'vedlikehold',
-  'beste-stier-norge',
-  'riktig-utstyr',
-  'terrengsykkel-terminologi'
+  'velg-riktig-terrengsykkel', 'mtb-for-nybegynnere', 'vedlikehold',
+  'beste-stier-norge', 'riktig-utstyr', 'terrengsykkel-terminologi'
 ];
 
 const newsIds = [
-  'trek-fuel-ex-2025',
-  'specialized-priskutt',
-  'trysil-stier',
-  'enduro-test',
-  'canyon-oslo',
-  'shimano-vs-sram',
-  'elsykkel-rekord',
-  'varsesong-tips'
+  'trek-fuel-ex-2025', 'specialized-priskutt', 'trysil-stier',
+  'enduro-test', 'canyon-oslo', 'shimano-vs-sram', 'elsykkel-rekord',
+  'varsesong-tips',
+  // New articles
+  'fox-36-2025', 'norco-range-2025', 'sram-eagle-transmission',
+  'nesbyen-bikepark-utvidelse', 'rockshox-zeb-ultimate-2025',
+  'scott-spark-2025', 'mtb-forsikring-tips', 'shimano-deore-xt-2025',
+  'mtb-sesongstart-2025', 'e-mtb-lettvekt-test', 'dekkguide-sesong',
+  'mtb-trening-vinter', 'giant-trance-x-2025', 'stisykling-allemannsrett',
+  'maxxis-nye-dekk-2025'
 ];
 
 export function getCurrentDate(): string {
@@ -49,7 +40,6 @@ export function generateSitemapUrls(): SitemapUrl[] {
   const currentDate = getCurrentDate();
   const urls: SitemapUrl[] = [];
 
-  // Hovedsider
   urls.push(
     { loc: `${SITE_URL}/`, lastmod: currentDate, changefreq: 'daily', priority: 1.0 },
     { loc: `${SITE_URL}/sammenligninger`, lastmod: currentDate, changefreq: 'weekly', priority: 0.9 },
@@ -58,34 +48,16 @@ export function generateSitemapUrls(): SitemapUrl[] {
     { loc: `${SITE_URL}/butikk`, lastmod: currentDate, changefreq: 'weekly', priority: 0.8 }
   );
 
-  // Sammenligninger
   reviewIds.forEach((id) => {
-    urls.push({
-      loc: `${SITE_URL}/sammenligninger/${id}`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: 0.7,
-    });
+    urls.push({ loc: `${SITE_URL}/sammenligninger/${id}`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 });
   });
 
-  // Guider
   guideIds.forEach((id) => {
-    urls.push({
-      loc: `${SITE_URL}/guider/${id}`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: 0.7,
-    });
+    urls.push({ loc: `${SITE_URL}/guider/${id}`, lastmod: currentDate, changefreq: 'monthly', priority: 0.7 });
   });
 
-  // Nyheter
   newsIds.forEach((id) => {
-    urls.push({
-      loc: `${SITE_URL}/nyheter/${id}`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: 0.6,
-    });
+    urls.push({ loc: `${SITE_URL}/nyheter/${id}`, lastmod: currentDate, changefreq: 'monthly', priority: 0.6 });
   });
 
   return urls;
@@ -93,17 +65,12 @@ export function generateSitemapUrls(): SitemapUrl[] {
 
 export function generateSitemapXml(): string {
   const urls = generateSitemapUrls();
-  
-  const urlEntries = urls
-    .map(
-      (url) => `  <url>
+  const urlEntries = urls.map((url) => `  <url>
     <loc>${url.loc}</loc>
     <lastmod>${url.lastmod}</lastmod>
     <changefreq>${url.changefreq}</changefreq>
     <priority>${url.priority}</priority>
-  </url>`
-    )
-    .join('\n');
+  </url>`).join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

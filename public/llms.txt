@@ -1,0 +1,23 @@
+# MTB Test Norge
+
+> Din guide til terrengsykling i Norge – sammenligninger, nyheter og guider
+
+MTB Test Norge er en norsk nettside som sammenligner terrengsykler basert på tekniske spesifikasjoner fra produsenter. Vi publiserer faktabaserte guider, nyhetsartikler og produktsammenligninger for terrengsyklister i Norge.
+
+## Innhold
+
+- [Sammenligninger](https://mtbtest.no/sammenligninger): Tekniske sammenligninger av terrengsykler basert på produsentdata
+- [Nyheter](https://mtbtest.no/nyheter): Produktnyheter, stiutbygging og bransjeoppdateringer
+- [Guider](https://mtbtest.no/guider): Guider om valg av sykkel, vedlikehold, teknikk og stier
+- [Butikk](https://mtbtest.no/butikk): Anbefalte produkter med affiliate-lenker
+
+## Viktig informasjon
+
+- Vi tester IKKE produkter selv – all informasjon er basert på produsentdata
+- Vi er en affiliate-side og kan motta provisjon på kjøp via lenker
+- Alle kilder siteres eksplisitt i artiklene
+- Innholdet er på norsk (bokmål)
+
+## Kontakt
+
+- Nettside: https://mtbtest.no
