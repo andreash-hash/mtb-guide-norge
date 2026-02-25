@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-mtb.jpg";
-import mtbSilhouette from "@/assets/mtb-silhouette.png";
 
 const Hero = () => {
   return (
@@ -18,9 +17,8 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-80"></div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
-        {/* Left: Text */}
-        <div className="fade-in text-center lg:text-left lg:max-w-2xl">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div className="fade-in">
           <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-accent/40 bg-accent/10 backdrop-blur-sm">
             <span className="text-accent text-sm font-semibold tracking-wide uppercase">Norges MTB-ressurs</span>
           </div>
@@ -33,11 +31,11 @@ const Hero = () => {
             SYKLER
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-xl font-medium">
+          <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-xl mx-auto font-medium">
             Mer flyt. Mer glede. Mer sykling.
           </p>
 
-          <div className="slide-up flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div className="slide-up flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               variant="cta" 
               size="lg"
@@ -54,19 +52,6 @@ const Hero = () => {
             >
               Om oss
             </Button>
-          </div>
-        </div>
-
-        {/* Right: Silhouette */}
-        <div className="hidden lg:block fade-in relative">
-          <div className="relative w-[420px] h-[420px]">
-            {/* Glow behind silhouette */}
-            <div className="absolute inset-0 rounded-full bg-accent/15 blur-3xl scale-75"></div>
-            <img 
-              src={mtbSilhouette} 
-              alt="Mountain biker silhouette" 
-              className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_40px_rgba(245,124,0,0.3)]"
-            />
           </div>
         </div>
       </div>
