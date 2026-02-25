@@ -12,6 +12,12 @@ import eMtb from "@/assets/news/e-mtb.jpg";
 import bikeTire from "@/assets/news/bike-tire.jpg";
 import indoorCycling from "@/assets/news/indoor-cycling.jpg";
 import mtbForestTrail from "@/assets/news/mtb-forest-trail.jpg";
+import rockshoxFork from "@/assets/news/rockshox-fork.jpg";
+import bikeparkConstruction from "@/assets/news/bikepark-construction.jpg";
+import sramTransmission from "@/assets/news/sram-transmission.jpg";
+import shimanoDeraill from "@/assets/news/shimano-derailleur.jpg";
+import scottXcTrail from "@/assets/news/scott-xc-trail.jpg";
+import emtbComparison from "@/assets/news/emtb-comparison.jpg";
 
 export const newNewsArticles: NewsArticle[] = [
   {
@@ -102,7 +108,7 @@ Ifølge SRAM tilbys systemet i tre nivåer:
 GX Eagle AXS T-Type starter på 8.999 kr ifølge SRAM, mens toppmodellen XX koster 18.999 kr.
 
 *Kilde: SRAM pressemelding*`,
-    image: bikeComponents,
+    image: sramTransmission,
     publishedAt: "10. januar 2025",
     source: { name: "SRAM pressemelding", url: "https://www.sram.com/" },
     relatedNews: ["shimano-vs-sram", "trek-fuel-ex-2025", "enduro-test"]
@@ -133,7 +139,7 @@ Nesbyen kommune og private investorer har sammen annonsert en investering på 25
 Åpning er planlagt til 1. juni 2025 ifølge pressemeldingen.
 
 *Kilde: Nesbyen bikepark pressemelding*`,
-    image: bikeparkTrail,
+    image: bikeparkConstruction,
     publishedAt: "8. januar 2025",
     source: { name: "Nesbyen bikepark pressemelding", url: "https://www.nesbyen.com/" },
     relatedNews: ["trysil-stier", "trek-fuel-ex-2025", "elsykkel-rekord"]
@@ -166,7 +172,7 @@ Ifølge produsentens spesifikasjoner:
 Veiledende pris er 10.999 kr ifølge SRAM.
 
 *Kilde: SRAM/RockShox pressemelding*`,
-    image: mtbSuspension,
+    image: rockshoxFork,
     publishedAt: "5. januar 2025",
     source: { name: "SRAM/RockShox pressemelding", url: "https://www.sram.com/rockshox" },
     relatedNews: ["fox-36-2025", "enduro-test", "sram-eagle-transmission"]
@@ -195,7 +201,7 @@ Ifølge Scott sine spesifikasjoner har den nye Spark fått:
 Scott Spark RC Comp starter på 39.990 kr ifølge produsenten. Toppmodellen Spark RC SL koster 119.990 kr.
 
 *Kilde: Scott Sports pressemelding*`,
-    image: trailBikeAction,
+    image: scottXcTrail,
     publishedAt: "3. januar 2025",
     source: { name: "Scott Sports pressemelding", url: "https://www.scott-sports.com/" },
     relatedNews: ["trek-fuel-ex-2025", "specialized-priskutt", "enduro-test"]
@@ -259,7 +265,7 @@ XT M8200-bremsene har ifølge Shimano fått nye bremsecalipere med bedre varmeav
 Komplett XT M8200-gruppe koster ifølge Shimano ca. 8.500 kr. Bremser selges separat fra 1.899 kr per sett.
 
 *Kilde: Shimano pressemelding*`,
-    image: bikeComponents,
+    image: shimanoDeraill,
     publishedAt: "28. desember 2024",
     source: { name: "Shimano pressemelding", url: "https://bike.shimano.com/" },
     relatedNews: ["shimano-vs-sram", "sram-eagle-transmission", "trek-fuel-ex-2025"]
@@ -342,7 +348,7 @@ Letteste modell ifølge produsent er Specialized Levo SL på 16,8 kg. Tyngste er
 Scott Lumen eRide er billigst med 74.990 kr, mens Specialized Levo SL er dyrest med 89.990 kr ifølge veiledende priser.
 
 *Merk: Basert på produsentenes oppgitte spesifikasjoner.*`,
-    image: eMtb,
+    image: emtbComparison,
     publishedAt: "22. desember 2024",
     source: { name: "Produsentenes offisielle spesifikasjoner", url: "https://mtbtest.no/sammenligninger" },
     relatedNews: ["elsykkel-rekord", "trek-fuel-ex-2025", "specialized-priskutt"]
