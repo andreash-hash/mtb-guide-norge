@@ -16,10 +16,10 @@ import { bikeComparisons } from "@/data/bikeComparisons";
 
 const Index = () => {
   const categories = [
-    { name: "Sammenligninger", icon: Bike, href: "/sammenligninger", description: "Sammenlign terrengsykler" },
-    { name: "Nyheter", icon: Wrench, href: "/nyheter", description: "Siste fra MTB-verdenen" },
-    { name: "Guider", icon: BookOpen, href: "/guider", description: "Lær alt om MTB" },
-  ];
+  { name: "Sammenligninger", icon: Bike, href: "/sammenligninger", description: "Sammenlign terrengsykler" },
+  { name: "Nyheter", icon: Wrench, href: "/nyheter", description: "Siste fra MTB-verdenen" },
+  { name: "Guider", icon: BookOpen, href: "/guider", description: "Lær alt om MTB" }];
+
 
   return (
     <div className="min-h-screen">
@@ -28,8 +28,8 @@ const Index = () => {
         description="Sammenlign terrengsykler basert på tekniske spesifikasjoner. Faktabaserte guider og nyheter om stisykling i Norge."
         keywords="terrengsykkel, mtb norge, terrengsykkel sammenligning, beste terrengsykkel, stisykling"
         canonicalUrl="/"
-        structuredData={[websiteSchema, organizationSchema]}
-      />
+        structuredData={[websiteSchema, organizationSchema]} />
+
       <Header />
       <Hero />
 
@@ -40,9 +40,9 @@ const Index = () => {
             Populære sammenligninger
           </SectionTitle>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {bikeComparisons.slice(0, 3).map((bike) => (
-              <BikeComparisonCard key={bike.id} bike={bike} />
-            ))}
+            {bikeComparisons.slice(0, 3).map((bike) =>
+            <BikeComparisonCard key={bike.id} bike={bike} />
+            )}
           </div>
           <div className="text-center mt-10">
             <Link to="/sammenligninger">
@@ -57,8 +57,8 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle subtitle="Utforsk vårt innhold etter kategori">Kategorier</SectionTitle>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {categories.map((category) => (
-              <Link key={category.name} to={category.href}>
+            {categories.map((category) =>
+            <Link key={category.name} to={category.href}>
                 <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group cursor-pointer border-border bg-card text-center">
                   <CardContent className="p-6 flex flex-col items-center">
                     <div className="p-4 rounded-full bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors mb-4">
@@ -69,7 +69,7 @@ const Index = () => {
                   </CardContent>
                 </Card>
               </Link>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -84,9 +84,9 @@ const Index = () => {
                 <BookOpen className="h-5 w-5 mr-2" />Guider
               </h3>
               <div className="space-y-4">
-                {guides.slice(0, 2).map((guide) => (
-                  <GuideCard key={guide.id} guide={guide} />
-                ))}
+                {guides.slice(0, 2).map((guide) =>
+                <GuideCard key={guide.id} guide={guide} />
+                )}
               </div>
             </div>
             <div>
@@ -94,9 +94,9 @@ const Index = () => {
                 <Bike className="h-5 w-5 mr-2" />Nyheter
               </h3>
               <div className="space-y-4">
-                {newsArticles.slice(0, 2).map((article) => (
-                  <NewsCard key={article.id} article={article} />
-                ))}
+                {newsArticles.slice(0, 2).map((article) =>
+                <NewsCard key={article.id} article={article} />
+                )}
               </div>
             </div>
           </div>
@@ -123,10 +123,10 @@ const Index = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Hvordan vi jobber</h3>
                 <ul className="text-muted-foreground space-y-1">
-                  <li>✅ Vi sammenligner tekniske data fra produsenter</li>
-                  <li>✅ Vi presenterer faktabasert informasjon</li>
-                  <li>✅ Vi viser tydelig når vi siterer kilder</li>
-                  <li>❌ Vi utgir oss IKKE for å ha testet produkter selv</li>
+                  <li> Vi sammenligner tekniske data fra produsenter</li>
+                  <li> Vi presenterer faktabasert informasjon</li>
+                  <li> Vi viser tydelig når vi siterer kilder</li>
+                  <li> Vi utgir oss IKKE for å ha testet produkter selv</li>
                 </ul>
               </div>
             </div>
@@ -135,8 +135,8 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;

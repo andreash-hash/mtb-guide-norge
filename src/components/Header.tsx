@@ -23,10 +23,10 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo with silhouette */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img
-              src={mtbSilhouette}
-              alt="MTB Test logo"
-              className="h-14 w-14 transition-transform group-hover:scale-110 object-contain" />
+            
+
+
+
 
             <div className="flex flex-col leading-none">
               <span className="text-2xl font-extrabold text-primary tracking-tight">MTB Test</span>
