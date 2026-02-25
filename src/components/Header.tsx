@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import mtbSilhouette from "@/assets/mtb-silhouette-dark.png";
 
@@ -21,7 +22,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo with silhouette */}
-          <a href="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <img 
               src={mtbSilhouette} 
               alt="MTB Test logo" 
@@ -31,7 +32,7 @@ const Header = () => {
               <span className="text-2xl font-extrabold text-primary tracking-tight">MTB Test</span>
               <span className="text-xs font-semibold text-accent uppercase tracking-widest">Norge</span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-2">
@@ -39,7 +40,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="px-4 py-2 rounded-md text-foreground hover:text-accent hover:bg-accent/5 transition-all duration-200 font-semibold text-base"
+                className="px-4 py-2 rounded-md text-foreground hover:text-accent hover:bg-accent/5 transition-all duration-200 font-semibold text-lg"
               >
                 {item.name}
               </a>
