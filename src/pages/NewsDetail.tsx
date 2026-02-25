@@ -143,31 +143,7 @@ const NewsDetail = () => {
         </div>
       </section>
 
-      {/* Related Products */}
-      <section className="py-12 bg-card border-y border-border">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-primary mb-6">Relaterte produkter</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {article.relatedProducts.map((product, index) => (
-                <Card key={index} className="border-border bg-background hover:shadow-md transition-shadow">
-                  <CardContent className="p-4">
-                    <div className="aspect-square bg-muted rounded-lg mb-3 flex items-center justify-center">
-                      <img src={product.image} alt={product.name} className="max-h-full max-w-full object-contain p-4" loading="lazy" />
-                    </div>
-                    <h3 className="font-semibold text-foreground text-sm mb-1">{product.name}</h3>
-                    <p className="text-secondary font-bold mb-2">{product.price}</p>
-                    <a href={product.affiliateLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm text-muted-foreground hover:text-secondary transition-colors">
-                      Kjøp hos {product.retailer}<ExternalLink className="h-3 w-3 ml-1" />
-                    </a>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            <p className="text-xs text-muted-foreground mt-4">Reklame for samarbeidspartnere (affiliate).</p>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Related News */}
       {relatedArticles.length > 0 && (

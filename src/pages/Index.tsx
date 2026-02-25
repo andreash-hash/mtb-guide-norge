@@ -5,7 +5,6 @@ import SectionTitle from "@/components/SectionTitle";
 import BikeComparisonCard from "@/components/BikeComparisonCard";
 import GuideCard from "@/components/GuideCard";
 import NewsCard from "@/components/NewsCard";
-import FeaturedProducts from "@/components/FeaturedProducts";
 import Footer from "@/components/Footer";
 import SEOHead, { organizationSchema, websiteSchema } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
@@ -17,9 +16,8 @@ import { bikeComparisons } from "@/data/bikeComparisons";
 
 const Index = () => {
   const categories = [
-    { name: "Terrengsykler", icon: Bike, href: "/butikk?kategori=sykler", description: "Finn din neste sykkel" },
-    { name: "Utstyr", icon: Wrench, href: "/butikk?kategori=utstyr", description: "Deler og vedlikehold" },
-    { name: "Klær", icon: Shirt, href: "/butikk?kategori=klaer", description: "Bekledning for alle forhold" },
+    { name: "Sammenligninger", icon: Bike, href: "/sammenligninger", description: "Sammenlign terrengsykler" },
+    { name: "Nyheter", icon: Wrench, href: "/nyheter", description: "Siste fra MTB-verdenen" },
     { name: "Guider", icon: BookOpen, href: "/guider", description: "Lær alt om MTB" },
   ];
 
@@ -58,7 +56,7 @@ const Index = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle subtitle="Utforsk vårt innhold etter kategori">Kategorier</SectionTitle>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {categories.map((category) => (
               <Link key={category.name} to={category.href}>
                 <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group cursor-pointer border-border bg-card text-center">
@@ -109,8 +107,6 @@ const Index = () => {
         </div>
       </section>
 
-      <FeaturedProducts />
-
       {/* About Us Section */}
       <section id="om-oss" className="py-20 bg-card">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,14 +128,6 @@ const Index = () => {
                   <li>✅ Vi viser tydelig når vi siterer kilder</li>
                   <li>❌ Vi utgir oss IKKE for å ha testet produkter selv</li>
                 </ul>
-              </div>
-              <div className="bg-accent/10 border border-accent/20 rounded-lg p-4 text-left">
-                <h3 className="font-semibold text-foreground mb-2">Affiliate-informasjon</h3>
-                <p className="text-sm text-muted-foreground">
-                  MTB Test Norge er en affiliate-side. Det betyr at vi kan motta provisjon når du kjøper produkter
-                  gjennom våre lenker, uten ekstra kostnad for deg. Våre sammenligninger er basert på tekniske fakta
-                  og spesifikasjoner, ikke på hvilke produkter som gir best provisjon.
-                </p>
               </div>
             </div>
           </div>

@@ -9,7 +9,6 @@ const Header = () => {
     { name: "Sammenligninger", href: "/sammenligninger" },
     { name: "Nyheter", href: "/nyheter" },
     { name: "Guider", href: "/guider" },
-    { name: "Butikk", href: "/butikk" },
     { name: "Om oss", href: "#om-oss" },
   ];
 
