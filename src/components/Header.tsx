@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import mtbSilhouette from "@/assets/mtb-silhouette-dark.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,20 +15,31 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+      {/* Accent top line */}
+      <div className="h-0.5 bg-gradient-to-r from-accent via-secondary to-accent"></div>
+      
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary">MTB Test</h1>
-          </div>
+          {/* Logo with silhouette */}
+          <a href="/" className="flex items-center gap-2 group">
+            <img 
+              src={mtbSilhouette} 
+              alt="MTB Test logo" 
+              className="h-10 w-10 object-contain transition-transform group-hover:scale-110"
+            />
+            <div className="flex flex-col leading-none">
+              <span className="text-xl font-extrabold text-primary tracking-tight">MTB Test</span>
+              <span className="text-[10px] font-semibold text-accent uppercase tracking-widest">Norge</span>
+            </div>
+          </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-1">
             {menuItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-secondary transition-colors duration-200 font-medium"
+                className="px-4 py-2 rounded-md text-foreground hover:text-accent hover:bg-accent/5 transition-all duration-200 font-medium text-sm"
               >
                 {item.name}
               </a>
@@ -55,7 +67,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-secondary hover:bg-muted rounded-md transition-colors duration-200"
+                  className="block px-3 py-2 text-foreground hover:text-accent hover:bg-accent/5 rounded-md transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
