@@ -8,11 +8,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { name: "Sammenligninger", href: "/sammenligninger" },
-    { name: "Nyheter", href: "/nyheter" },
-    { name: "Guider", href: "/guider" },
-    { name: "Om oss", href: "#om-oss" },
-  ];
+  { name: "Sammenligninger", href: "/sammenligninger" },
+  { name: "Nyheter", href: "/nyheter" },
+  { name: "Guider", href: "/guider" },
+  { name: "Om oss", href: "#om-oss" }];
+
 
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
@@ -23,11 +23,11 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo with silhouette */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img 
-              src={mtbSilhouette} 
-              alt="MTB Test logo" 
-              className="h-14 w-14 object-contain transition-transform group-hover:scale-110"
-            />
+            <img
+              src={mtbSilhouette}
+              alt="MTB Test logo"
+              className="h-14 w-14 transition-transform group-hover:scale-110 object-contain" />
+
             <div className="flex flex-col leading-none">
               <span className="text-2xl font-extrabold text-primary tracking-tight">MTB Test</span>
               <span className="text-xs font-semibold text-accent uppercase tracking-widest">Norge</span>
@@ -36,15 +36,15 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-2">
-            {menuItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="px-4 py-2 rounded-md text-foreground hover:text-accent hover:bg-accent/5 transition-all duration-200 font-semibold text-lg"
-              >
+            {menuItems.map((item) =>
+            <a
+              key={item.name}
+              href={item.href}
+              className="px-4 py-2 rounded-md text-foreground hover:text-accent hover:bg-accent/5 transition-all duration-200 font-semibold text-lg">
+
                 {item.name}
               </a>
-            ))}
+            )}
           </nav>
 
           {/* Mobile menu button */}
@@ -53,33 +53,33 @@ const Header = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
+              aria-label="Toggle menu">
+
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
+        {isMenuOpen &&
+        <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
-              {menuItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-accent hover:bg-accent/5 rounded-md transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+              {menuItems.map((item) =>
+            <a
+              key={item.name}
+              href={item.href}
+              className="block px-3 py-2 text-foreground hover:text-accent hover:bg-accent/5 rounded-md transition-colors duration-200"
+              onClick={() => setIsMenuOpen(false)}>
+
                   {item.name}
                 </a>
-              ))}
+            )}
             </div>
           </div>
-        )}
+        }
       </div>
-    </header>
-  );
+    </header>);
+
 };
 
 export default Header;
