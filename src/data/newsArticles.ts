@@ -1,3 +1,18 @@
+import trailBikeAction from "@/assets/news/trail-bike-action.jpg";
+import mtbForestTrail from "@/assets/news/mtb-forest-trail.jpg";
+import bikeComponents from "@/assets/news/bike-components.jpg";
+import mountainBiking from "@/assets/news/mountain-biking.jpg";
+import bikeMaintenance from "@/assets/news/bike-maintenance.jpg";
+import bikeparkTrail from "@/assets/news/bikepark-trail.jpg";
+import eMtb from "@/assets/news/e-mtb.jpg";
+import cyclingNature from "@/assets/news/cycling-nature.jpg";
+import mtbRider from "@/assets/news/mtb-rider.jpg";
+import bikeTire from "@/assets/news/bike-tire.jpg";
+import indoorCycling from "@/assets/news/indoor-cycling.jpg";
+import mtbSuspension from "@/assets/news/mtb-suspension.jpg";
+import bikeShop from "@/assets/news/bike-shop.jpg";
+import mountainLandscape from "@/assets/news/mountain-landscape.jpg";
+
 export interface NewsArticle {
   id: string;
   title: string;
@@ -12,13 +27,6 @@ export interface NewsArticle {
     name: string;
     url: string;
   };
-  relatedProducts: {
-    name: string;
-    image: string;
-    price: string;
-    retailer: string;
-    affiliateLink: string;
-  }[];
   relatedNews: string[];
 }
 
@@ -50,18 +58,13 @@ Trek har også introdusert en ny "Mino Link" som ifølge spesifikasjonene lar de
 Ifølge Trek starter de nye modellene på 44.990 kroner for aluminiumsversjonen med Shimano Deore-komponentpakke. Toppmodellen med full karbonramme og SRAM XX Eagle-deler er priset til 129.990 kroner.
 
 Syklene forventes i norske butikker fra mars 2025 ifølge produsenten.`,
-    image: "/placeholder.svg",
+    image: trailBikeAction,
     publishedAt: "28. desember 2024",
     isFeatured: true,
     source: {
       name: "Trek Bikes pressemelding",
       url: "https://www.trekbikes.com/no/no_NO/"
     },
-    relatedProducts: [
-      { name: "Trek Fuel EX 7", image: "/placeholder.svg", price: "44.990 kr", retailer: "Trek", affiliateLink: "#" },
-      { name: "Trek Fuel EX 9.8", image: "/placeholder.svg", price: "89.990 kr", retailer: "Trek", affiliateLink: "#" },
-      { name: "Fox 36 Performance", image: "/placeholder.svg", price: "8.999 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["specialized-priskutt", "shimano-vs-sram", "elsykkel-rekord"]
   },
   {
@@ -87,17 +90,12 @@ For XC-entusiaster er Epic Comp nå priset til 39.990 kroner, ned fra 54.990 kro
 Specialized Norge opplyser at rabattene gjelder så langt lageret rekker. Enkelte størrelser og farger er allerede utsolgt hos flere forhandlere.
 
 "Vi anbefaler alle som vurderer et kjøp å handle raskt," siteres Specialized Norge i deres pressemelding.`,
-    image: "/placeholder.svg",
+    image: bikeShop,
     publishedAt: "26. desember 2024",
     source: {
       name: "Specialized Norge",
       url: "https://www.specialized.com/no/no"
     },
-    relatedProducts: [
-      { name: "Specialized Stumpjumper", image: "/placeholder.svg", price: "48.990 kr", retailer: "Specialized", affiliateLink: "#" },
-      { name: "Specialized Epic", image: "/placeholder.svg", price: "39.990 kr", retailer: "Specialized", affiliateLink: "#" },
-      { name: "Specialized Rockhopper", image: "/placeholder.svg", price: "9.990 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["trek-fuel-ex-2025", "canyon-oslo", "elsykkel-rekord"]
   },
   {
@@ -127,17 +125,12 @@ Den tredje nye traséen er ifølge pressemeldingen en 25 kilometer lang grønn l
 Trysil kommune og Skistar har sammen annonsert en investering på 15 millioner kroner i prosjektet ifølge offisiell informasjon.
 
 Åpningen er planlagt til 15. juni 2025 ifølge pressemeldingen.`,
-    image: "/placeholder.svg",
+    image: bikeparkTrail,
     publishedAt: "23. desember 2024",
     source: {
       name: "Trysil kommune og Skistar pressemelding",
       url: "https://www.trysil.com/"
     },
-    relatedProducts: [
-      { name: "Garmin Edge 840", image: "/placeholder.svg", price: "4.999 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "Camelbak MULE", image: "/placeholder.svg", price: "1.199 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "GoPro Hero 12", image: "/placeholder.svg", price: "4.499 kr", retailer: "Elkjøp", affiliateLink: "#" }
-    ],
     relatedNews: ["trek-fuel-ex-2025", "varsesong-tips", "elsykkel-rekord"]
   },
   {
@@ -174,17 +167,12 @@ Samtlige modeller i sammenligningen har 160-180mm vandring ifølge spesifikasjon
 Basert på veiledende priser varierer modellene fra 44.990 kr (YT Capra) til 94.990 kr (Santa Cruz Megatower). Alle priser er hentet fra produsentenes nettsider.
 
 *Merk: Denne sammenligningen er basert på tekniske spesifikasjoner fra produsenter. MTB Test Norge har ikke testet disse syklene personlig.*`,
-    image: "/placeholder.svg",
+    image: mtbRider,
     publishedAt: "20. desember 2024",
     source: {
       name: "Produsentenes offisielle spesifikasjoner",
       url: "https://mtbtest.no/sammenligninger"
     },
-    relatedProducts: [
-      { name: "Santa Cruz Megatower", image: "/placeholder.svg", price: "94.990 kr", retailer: "Santa Cruz", affiliateLink: "#" },
-      { name: "YT Capra Core 3", image: "/placeholder.svg", price: "44.990 kr", retailer: "YT", affiliateLink: "#" },
-      { name: "Canyon Strive CFR", image: "/placeholder.svg", price: "54.990 kr", retailer: "Canyon", affiliateLink: "#" }
-    ],
     relatedNews: ["trek-fuel-ex-2025", "specialized-priskutt", "shimano-vs-sram"]
   },
   {
@@ -216,17 +204,12 @@ Canyon oppgir at prisene forblir på samme nivå som ved direktekjøp fra nettsi
 ## Åpning i februar
 
 Showroomet åpner 1. februar 2025 ifølge pressemeldingen.`,
-    image: "/placeholder.svg",
+    image: bikeShop,
     publishedAt: "18. desember 2024",
     source: {
       name: "Canyon Norge pressemelding",
       url: "https://www.canyon.com/no-no/"
     },
-    relatedProducts: [
-      { name: "Canyon Spectral 125", image: "/placeholder.svg", price: "44.990 kr", retailer: "Canyon", affiliateLink: "#" },
-      { name: "Canyon Strive CFR", image: "/placeholder.svg", price: "54.990 kr", retailer: "Canyon", affiliateLink: "#" },
-      { name: "Canyon Neuron", image: "/placeholder.svg", price: "29.990 kr", retailer: "Canyon", affiliateLink: "#" }
-    ],
     relatedNews: ["specialized-priskutt", "elsykkel-rekord", "trek-fuel-ex-2025"]
   },
   {
@@ -264,17 +247,12 @@ SRAMs skiftehendler har ifølge produsenten én hendel for begge retninger. Shim
 Basert på veiledende priser koster Shimano XTR Di2 omtrent 15% mer enn SRAM XX Eagle AXS.
 
 *Merk: Denne sammenligningen er basert på produsentenes oppgitte spesifikasjoner. Faktisk ytelse kan variere basert på forhold og bruk.*`,
-    image: "/placeholder.svg",
+    image: bikeComponents,
     publishedAt: "15. desember 2024",
     source: {
       name: "Shimano og SRAM offisielle spesifikasjoner",
       url: "https://mtbtest.no/sammenligninger"
     },
-    relatedProducts: [
-      { name: "Shimano XTR Di2", image: "/placeholder.svg", price: "14.999 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "SRAM XX Eagle AXS", image: "/placeholder.svg", price: "12.999 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "SRAM GX Eagle", image: "/placeholder.svg", price: "3.999 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["enduro-test", "trek-fuel-ex-2025", "varsesong-tips"]
   },
   {
@@ -304,17 +282,12 @@ Gjennomsnittsprisen for el-terrengsykler solgt i Norge er ifølge statistikken 5
 ## Fremtidsutsikter
 
 Bransjen forventer fortsatt vekst i 2025 ifølge rapporter fra produsentene.`,
-    image: "/placeholder.svg",
+    image: eMtb,
     publishedAt: "12. desember 2024",
     source: {
       name: "Norsk sykkelhandlerforbund",
       url: "https://sykkelhandlerne.no/"
     },
-    relatedProducts: [
-      { name: "Specialized Levo SL", image: "/placeholder.svg", price: "89.990 kr", retailer: "Specialized", affiliateLink: "#" },
-      { name: "Trek Fuel EXe", image: "/placeholder.svg", price: "79.990 kr", retailer: "Trek", affiliateLink: "#" },
-      { name: "Canyon Neuron:ON", image: "/placeholder.svg", price: "54.990 kr", retailer: "Canyon", affiliateLink: "#" }
-    ],
     relatedNews: ["canyon-oslo", "specialized-priskutt", "trek-fuel-ex-2025"]
   },
   {
@@ -352,17 +325,12 @@ Bransjen anbefaler å inspisere dekkene for kutt, sprekker og slitasje. Tubeless
 Mange verksteder anbefaler å gå gjennom alle bolter med en momentnøkkel. Produsentene oppgir anbefalte dreiemomenter i brukermanualene.
 
 *Merk: Disse rådene er generelle anbefalinger fra bransjen. Kontakt et autorisert verksted for profesjonell hjelp.*`,
-    image: "/placeholder.svg",
+    image: bikeMaintenance,
     publishedAt: "10. desember 2024",
     source: {
       name: "Diverse bransjekilder og produsentanbefalinger",
       url: "https://mtbtest.no/guider"
     },
-    relatedProducts: [
-      { name: "Muc-Off rengjøringssett", image: "/placeholder.svg", price: "599 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "Park Tool kjedemåler", image: "/placeholder.svg", price: "149 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "PRO moment-nøkkelsett", image: "/placeholder.svg", price: "799 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["shimano-vs-sram", "trysil-stier", "enduro-test"]
   }
 ];

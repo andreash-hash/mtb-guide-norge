@@ -24,7 +24,6 @@ const Footer = () => {
     { name: "Sammenligninger", href: "/sammenligninger" },
     { name: "Guider", href: "/guider" },
     { name: "Nyheter", href: "/nyheter" },
-    { name: "Butikk", href: "/butikk" },
   ];
 
   const resources = [

@@ -1,4 +1,17 @@
 import { NewsArticle } from "./newsArticles";
+import mtbSuspension from "@/assets/news/mtb-suspension.jpg";
+import mountainBiking from "@/assets/news/mountain-biking.jpg";
+import bikeComponents from "@/assets/news/bike-components.jpg";
+import bikeparkTrail from "@/assets/news/bikepark-trail.jpg";
+import trailBikeAction from "@/assets/news/trail-bike-action.jpg";
+import cyclingNature from "@/assets/news/cycling-nature.jpg";
+import bikeMaintenance from "@/assets/news/bike-maintenance.jpg";
+import mtbRider from "@/assets/news/mtb-rider.jpg";
+import mountainLandscape from "@/assets/news/mountain-landscape.jpg";
+import eMtb from "@/assets/news/e-mtb.jpg";
+import bikeTire from "@/assets/news/bike-tire.jpg";
+import indoorCycling from "@/assets/news/indoor-cycling.jpg";
+import mtbForestTrail from "@/assets/news/mtb-forest-trail.jpg";
 
 export const newNewsArticles: NewsArticle[] = [
   {
@@ -30,14 +43,9 @@ Ifølge Fox sine spesifikasjoner:
 Fox 36 Factory 2025 har en veiledende pris på 12.499 kroner ifølge produsenten. Gaffelen forventes i norske butikker fra februar 2025.
 
 *Kilde: Fox Racing Shox pressemelding*`,
-    image: "/placeholder.svg",
+    image: mtbSuspension,
     publishedAt: "15. januar 2025",
     source: { name: "Fox Racing Shox pressemelding", url: "https://www.ridefox.com/" },
-    relatedProducts: [
-      { name: "Fox 36 Factory", image: "/placeholder.svg", price: "12.499 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "Fox 36 Performance", image: "/placeholder.svg", price: "8.999 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "Fox Float X2", image: "/placeholder.svg", price: "9.999 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["trek-fuel-ex-2025", "shimano-vs-sram", "enduro-test"]
   },
   {
@@ -61,13 +69,9 @@ Sight C har ifølge spesifikasjonene 150mm vandring foran og 140mm bak. Produsen
 Ifølge Norco starter Range C på 54.990 kr og Sight C på 44.990 kr for karbonversjonene.
 
 *Kilde: Norco Bicycles pressemelding*`,
-    image: "/placeholder.svg",
+    image: mountainBiking,
     publishedAt: "12. januar 2025",
     source: { name: "Norco Bicycles pressemelding", url: "https://www.norco.com/" },
-    relatedProducts: [
-      { name: "Norco Range C2", image: "/placeholder.svg", price: "54.990 kr", retailer: "Norco", affiliateLink: "#" },
-      { name: "Norco Sight C2", image: "/placeholder.svg", price: "44.990 kr", retailer: "Norco", affiliateLink: "#" }
-    ],
     relatedNews: ["trek-fuel-ex-2025", "enduro-test", "fox-36-2025"]
   },
   {
@@ -98,13 +102,9 @@ Ifølge SRAM tilbys systemet i tre nivåer:
 GX Eagle AXS T-Type starter på 8.999 kr ifølge SRAM, mens toppmodellen XX koster 18.999 kr.
 
 *Kilde: SRAM pressemelding*`,
-    image: "/placeholder.svg",
+    image: bikeComponents,
     publishedAt: "10. januar 2025",
     source: { name: "SRAM pressemelding", url: "https://www.sram.com/" },
-    relatedProducts: [
-      { name: "SRAM XX Eagle AXS T-Type", image: "/placeholder.svg", price: "18.999 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "SRAM GX Eagle AXS T-Type", image: "/placeholder.svg", price: "8.999 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["shimano-vs-sram", "trek-fuel-ex-2025", "enduro-test"]
   },
   {
@@ -133,13 +133,9 @@ Nesbyen kommune og private investorer har sammen annonsert en investering på 25
 Åpning er planlagt til 1. juni 2025 ifølge pressemeldingen.
 
 *Kilde: Nesbyen bikepark pressemelding*`,
-    image: "/placeholder.svg",
+    image: bikeparkTrail,
     publishedAt: "8. januar 2025",
     source: { name: "Nesbyen bikepark pressemelding", url: "https://www.nesbyen.com/" },
-    relatedProducts: [
-      { name: "Fox Proframe hjelm", image: "/placeholder.svg", price: "2.999 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "100% Accuri briller", image: "/placeholder.svg", price: "699 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["trysil-stier", "trek-fuel-ex-2025", "elsykkel-rekord"]
   },
   {
@@ -170,13 +166,9 @@ Ifølge produsentens spesifikasjoner:
 Veiledende pris er 10.999 kr ifølge SRAM.
 
 *Kilde: SRAM/RockShox pressemelding*`,
-    image: "/placeholder.svg",
+    image: mtbSuspension,
     publishedAt: "5. januar 2025",
     source: { name: "SRAM/RockShox pressemelding", url: "https://www.sram.com/rockshox" },
-    relatedProducts: [
-      { name: "RockShox ZEB Ultimate", image: "/placeholder.svg", price: "10.999 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "RockShox Lyrik Ultimate", image: "/placeholder.svg", price: "9.499 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["fox-36-2025", "enduro-test", "sram-eagle-transmission"]
   },
   {
@@ -203,13 +195,9 @@ Ifølge Scott sine spesifikasjoner har den nye Spark fått:
 Scott Spark RC Comp starter på 39.990 kr ifølge produsenten. Toppmodellen Spark RC SL koster 119.990 kr.
 
 *Kilde: Scott Sports pressemelding*`,
-    image: "/placeholder.svg",
+    image: trailBikeAction,
     publishedAt: "3. januar 2025",
     source: { name: "Scott Sports pressemelding", url: "https://www.scott-sports.com/" },
-    relatedProducts: [
-      { name: "Scott Spark RC Comp", image: "/placeholder.svg", price: "39.990 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "Scott Scale 970", image: "/placeholder.svg", price: "12.990 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["trek-fuel-ex-2025", "specialized-priskutt", "enduro-test"]
   },
   {
@@ -241,13 +229,9 @@ Flere forsikringsselskaper tilbyr nå separat sykkelforsikring ifølge bransjein
 - Meld tyveri til politiet innen 24 timer
 
 *Kilde: Diverse forsikringsselskaper og bransjeorganisasjoner*`,
-    image: "/placeholder.svg",
+    image: cyclingNature,
     publishedAt: "1. januar 2025",
     source: { name: "Diverse forsikringsselskaper", url: "https://mtbtest.no/guider" },
-    relatedProducts: [
-      { name: "Abus Granit X-Plus lås", image: "/placeholder.svg", price: "1.299 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "Kryptonite Evolution lås", image: "/placeholder.svg", price: "899 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["varsesong-tips", "elsykkel-rekord", "specialized-priskutt"]
   },
   {
@@ -275,13 +259,9 @@ XT M8200-bremsene har ifølge Shimano fått nye bremsecalipere med bedre varmeav
 Komplett XT M8200-gruppe koster ifølge Shimano ca. 8.500 kr. Bremser selges separat fra 1.899 kr per sett.
 
 *Kilde: Shimano pressemelding*`,
-    image: "/placeholder.svg",
+    image: bikeComponents,
     publishedAt: "28. desember 2024",
     source: { name: "Shimano pressemelding", url: "https://bike.shimano.com/" },
-    relatedProducts: [
-      { name: "Shimano XT M8200 gruppe", image: "/placeholder.svg", price: "8.500 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "Shimano XT bremser", image: "/placeholder.svg", price: "1.899 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["shimano-vs-sram", "sram-eagle-transmission", "trek-fuel-ex-2025"]
   },
   {
@@ -324,13 +304,9 @@ Ifølge arrangøren: Stafettritt gjennom Oslo fra nord til sør.
 - Sted: Oslo
 
 *Kilde: Arrangørenes nettsider og sosiale medier*`,
-    image: "/placeholder.svg",
+    image: mountainLandscape,
     publishedAt: "25. desember 2024",
     source: { name: "Diverse arrangører", url: "https://mtbtest.no/nyheter" },
-    relatedProducts: [
-      { name: "Garmin Edge 840", image: "/placeholder.svg", price: "4.999 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "GoPro Hero 12", image: "/placeholder.svg", price: "4.499 kr", retailer: "Elkjøp", affiliateLink: "#" }
-    ],
     relatedNews: ["trysil-stier", "nesbyen-bikepark-utvidelse", "elsykkel-rekord"]
   },
   {
@@ -366,13 +342,9 @@ Letteste modell ifølge produsent er Specialized Levo SL på 16,8 kg. Tyngste er
 Scott Lumen eRide er billigst med 74.990 kr, mens Specialized Levo SL er dyrest med 89.990 kr ifølge veiledende priser.
 
 *Merk: Basert på produsentenes oppgitte spesifikasjoner.*`,
-    image: "/placeholder.svg",
+    image: eMtb,
     publishedAt: "22. desember 2024",
     source: { name: "Produsentenes offisielle spesifikasjoner", url: "https://mtbtest.no/sammenligninger" },
-    relatedProducts: [
-      { name: "Specialized Levo SL", image: "/placeholder.svg", price: "89.990 kr", retailer: "Specialized", affiliateLink: "#" },
-      { name: "Trek Fuel EXe", image: "/placeholder.svg", price: "79.990 kr", retailer: "Trek", affiliateLink: "#" }
-    ],
     relatedNews: ["elsykkel-rekord", "trek-fuel-ex-2025", "specialized-priskutt"]
   },
   {
@@ -416,13 +388,9 @@ Ifølge bransjen er typisk lufttrykk:
 - Juster etter vekt, terreng og personlig preferanse
 
 *Kilde: Maxxis, Schwalbe og Continental produktinformasjon*`,
-    image: "/placeholder.svg",
+    image: bikeTire,
     publishedAt: "18. desember 2024",
     source: { name: "Diverse dekkprodusenter", url: "https://mtbtest.no/guider" },
-    relatedProducts: [
-      { name: "Maxxis Minion DHF 3C", image: "/placeholder.svg", price: "749 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "Schwalbe Magic Mary", image: "/placeholder.svg", price: "699 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["varsesong-tips", "enduro-test", "shimano-vs-sram"]
   },
   {
@@ -463,13 +431,9 @@ Tips fra coacher:
 - Planlegg neste sesong og sett mål
 
 *Kilde: Diverse sykkelcoacher og treningseksperter*`,
-    image: "/placeholder.svg",
+    image: indoorCycling,
     publishedAt: "14. desember 2024",
     source: { name: "Diverse sykkelcoacher", url: "https://mtbtest.no/guider" },
-    relatedProducts: [
-      { name: "Wahoo KICKR Core", image: "/placeholder.svg", price: "7.999 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "Garmin HRM-Pro Plus", image: "/placeholder.svg", price: "1.299 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["varsesong-tips", "elsykkel-rekord", "mtb-forsikring-tips"]
   },
   {
@@ -501,12 +465,9 @@ Ifølge Giant har rammen fått integrert kabelføring og plass til vannflaske i 
 Trance X Advanced 2 starter på 44.990 kr ifølge Giant. Pro-versjonen koster 89.990 kr.
 
 *Kilde: Giant Bicycles pressemelding*`,
-    image: "/placeholder.svg",
+    image: mtbForestTrail,
     publishedAt: "11. desember 2024",
     source: { name: "Giant Bicycles pressemelding", url: "https://www.giant-bicycles.com/" },
-    relatedProducts: [
-      { name: "Giant Trance X Advanced 2", image: "/placeholder.svg", price: "44.990 kr", retailer: "Giant", affiliateLink: "#" }
-    ],
     relatedNews: ["trek-fuel-ex-2025", "norco-range-2025", "enduro-test"]
   },
   {
@@ -548,13 +509,9 @@ Bransjeorganisasjoner anbefaler:
 Ifølge NOTS (Norsk Organisasjon for Terrengsykling) må organisert stibygging godkjennes av grunneier og kommune.
 
 *Kilde: Friluftsloven, Miljødirektoratet og NOTS*`,
-    image: "/placeholder.svg",
+    image: mountainLandscape,
     publishedAt: "8. desember 2024",
     source: { name: "Friluftsloven og Miljødirektoratet", url: "https://lovdata.no/dokument/NL/lov/1957-06-28-16" },
-    relatedProducts: [
-      { name: "Camelbak MULE", image: "/placeholder.svg", price: "1.199 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "Garmin Edge 840", image: "/placeholder.svg", price: "4.999 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["trysil-stier", "nesbyen-bikepark-utvidelse", "mtb-sesongstart-2025"]
   },
   {
@@ -591,13 +548,9 @@ Ifølge Maxxis er den nye Shorty redesignet for vått og gjørmete terreng:
 Alle tre modellene har veiledende pris fra 649 kr ifølge Maxxis.
 
 *Kilde: Maxxis pressemelding*`,
-    image: "/placeholder.svg",
+    image: bikeTire,
     publishedAt: "5. desember 2024",
     source: { name: "Maxxis pressemelding", url: "https://www.maxxis.com/" },
-    relatedProducts: [
-      { name: "Maxxis Minion DHF 3C", image: "/placeholder.svg", price: "749 kr", retailer: "XXL", affiliateLink: "#" },
-      { name: "Maxxis Dissector EXO+", image: "/placeholder.svg", price: "699 kr", retailer: "XXL", affiliateLink: "#" }
-    ],
     relatedNews: ["dekkguide-sesong", "enduro-test", "trek-fuel-ex-2025"]
   }
 ];

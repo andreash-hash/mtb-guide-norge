@@ -7,7 +7,6 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import News from "./pages/News";
 import NewsDetail from "./pages/NewsDetail";
-import Shop from "./pages/Shop";
 import Comparisons from "./pages/Comparisons";
 import ComparisonDetail from "./pages/ComparisonDetail";
 import Guides from "./pages/Guides";
@@ -27,7 +26,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/nyheter" element={<News />} />
             <Route path="/nyheter/:newsId" element={<NewsDetail />} />
-            <Route path="/butikk" element={<Shop />} />
             <Route path="/sammenligninger" element={<Comparisons />} />
             <Route path="/sammenligninger/:bikeId" element={<ComparisonDetail />} />
             <Route path="/guider" element={<Guides />} />
