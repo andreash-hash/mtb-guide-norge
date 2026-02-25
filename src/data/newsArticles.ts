@@ -12,6 +12,7 @@ import indoorCycling from "@/assets/news/indoor-cycling.jpg";
 import mtbSuspension from "@/assets/news/mtb-suspension.jpg";
 import bikeShop from "@/assets/news/bike-shop.jpg";
 import mountainLandscape from "@/assets/news/mountain-landscape.jpg";
+import canyonShowroom from "@/assets/news/canyon-showroom.jpg";
 
 export interface NewsArticle {
   id: string;
@@ -90,7 +91,7 @@ For XC-entusiaster er Epic Comp nå priset til 39.990 kroner, ned fra 54.990 kro
 Specialized Norge opplyser at rabattene gjelder så langt lageret rekker. Enkelte størrelser og farger er allerede utsolgt hos flere forhandlere.
 
 "Vi anbefaler alle som vurderer et kjøp å handle raskt," siteres Specialized Norge i deres pressemelding.`,
-    image: bikeShop,
+    image: bikeShop, // Specialized priskutt
     publishedAt: "26. desember 2024",
     source: {
       name: "Specialized Norge",
@@ -204,7 +205,7 @@ Canyon oppgir at prisene forblir på samme nivå som ved direktekjøp fra nettsi
 ## Åpning i februar
 
 Showroomet åpner 1. februar 2025 ifølge pressemeldingen.`,
-    image: bikeShop,
+    image: canyonShowroom,
     publishedAt: "18. desember 2024",
     source: {
       name: "Canyon Norge pressemelding",
