@@ -134,6 +134,32 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Viktig informasjon / Disclaimer */}
+      <section className="py-12 bg-muted/50 border-t border-border">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-lg font-bold text-foreground mb-4">Viktig informasjon</h2>
+            <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+              <p>
+                <strong className="text-foreground">Innholdet på denne siden er ikke basert på fysiske produkttester.</strong>{" "}
+                All informasjon er hentet fra produsentenes egne spesifikasjoner, offisielle produktsider og offentlig tilgjengelige kilder. 
+                Vi sammenligner og presenterer tekniske data for å hjelpe deg med å ta informerte valg.
+              </p>
+              <p>
+                <strong className="text-foreground">Affiliate-lenker:</strong>{" "}
+                MTB Test Norge inneholder lenker til partnere og forhandlere. Dersom du kjøper et produkt via en av våre lenker, 
+                kan vi motta en liten provisjon – uten ekstra kostnad for deg. Dette bidrar til å finansiere driften av nettstedet.
+              </p>
+              <p>
+                <strong className="text-foreground">Prisene</strong> som vises kan variere og er hentet fra eksterne kilder. 
+                Vi anbefaler alltid å sjekke oppdatert pris hos forhandler før kjøp. 
+                Vi tar forbehold om eventuelle feil i tekniske spesifikasjoner eller prisinformasjon.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>);
 
