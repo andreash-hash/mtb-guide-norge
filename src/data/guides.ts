@@ -122,21 +122,21 @@ Ta deg tid, prøvekjør hvis mulig, og ikke vær redd for å spørre om råd i s
     relatedProducts: [
       {
         name: "Trek Fuel EX 7",
-        image: "/placeholder.svg",
+        image: "/products/trek-fuel-ex-7.jpg",
         price: "39.990 kr",
         retailer: "Trek",
         affiliateLink: "#"
       },
       {
         name: "Canyon Spectral 125",
-        image: "/placeholder.svg",
+        image: "/products/canyon-spectral-125.jpg",
         price: "44.990 kr",
         retailer: "Canyon",
         affiliateLink: "#"
       },
       {
         name: "Norco Fluid FS 1",
-        image: "/placeholder.svg",
+        image: "/products/norco-fluid-fs-1.jpg",
         price: "24.990 kr",
         retailer: "XXL",
         affiliateLink: "#"
@@ -244,21 +244,21 @@ Velkommen til terrengsykling!
     relatedProducts: [
       {
         name: "Giro Switchblade hjelm",
-        image: "/placeholder.svg",
+        image: "/products/giro-switchblade.jpg",
         price: "2.499 kr",
         retailer: "XXL",
         affiliateLink: "#"
       },
       {
         name: "Fox Ranger hansker",
-        image: "/placeholder.svg",
+        image: "/products/fox-ranger-gloves.jpg",
         price: "399 kr",
         retailer: "XXL",
         affiliateLink: "#"
       },
       {
         name: "Camelbak MULE ryggsekk",
-        image: "/placeholder.svg",
+        image: "/products/camelbak-mule.jpg",
         price: "1.199 kr",
         retailer: "XXL",
         affiliateLink: "#"
@@ -397,21 +397,21 @@ Grunnleggende verktøy du bør ha hjemme:
     relatedProducts: [
       {
         name: "Park Tool IB-3 Multitool",
-        image: "/placeholder.svg",
+        image: "/products/park-tool-ib3.jpg",
         price: "399 kr",
         retailer: "XXL",
         affiliateLink: "#"
       },
       {
         name: "Muc-Off rengjøringssett",
-        image: "/placeholder.svg",
+        image: "/products/muc-off-cleaning.jpg",
         price: "599 kr",
         retailer: "XXL",
         affiliateLink: "#"
       },
       {
         name: "PRO moment-nøkkelsett",
-        image: "/placeholder.svg",
+        image: "/products/pro-torque-wrench.jpg",
         price: "799 kr",
         retailer: "XXL",
         affiliateLink: "#"
@@ -544,21 +544,21 @@ De fleste bikeparker tilbyr sykkelutleie, noe som gjør det enkelt å prøve ute
     relatedProducts: [
       {
         name: "Garmin Edge 840",
-        image: "/placeholder.svg",
+        image: "/products/garmin-edge-840.jpg",
         price: "4.999 kr",
         retailer: "XXL",
         affiliateLink: "#"
       },
       {
         name: "Osprey Raptor 14 ryggsekk",
-        image: "/placeholder.svg",
+        image: "/products/osprey-raptor-14.jpg",
         price: "1.599 kr",
         retailer: "XXL",
         affiliateLink: "#"
       },
       {
         name: "GoPro Hero 12",
-        image: "/placeholder.svg",
+        image: "/products/gopro-hero-12.jpg",
         price: "4.499 kr",
         retailer: "Elkjøp",
         affiliateLink: "#"
@@ -702,21 +702,21 @@ En god ryggsekk er uvurderlig på lengre turer.
     relatedProducts: [
       {
         name: "Fox Speedframe Pro hjelm",
-        image: "/placeholder.svg",
+        image: "/products/fox-speedframe-pro.jpg",
         price: "2.199 kr",
         retailer: "XXL",
         affiliateLink: "#"
       },
       {
         name: "POC VPD knebeskyttere",
-        image: "/placeholder.svg",
+        image: "/products/poc-vpd-knee.jpg",
         price: "899 kr",
         retailer: "XXL",
         affiliateLink: "#"
       },
       {
         name: "Five Ten Freerider sko",
-        image: "/placeholder.svg",
+        image: "/products/five-ten-freerider.jpg",
         price: "1.299 kr",
         retailer: "XXL",
         affiliateLink: "#"
@@ -892,21 +892,21 @@ Sti bygget for jevn fart med naturlige svinger og hopp.
     relatedProducts: [
       {
         name: "Park Tool Big Blue Book",
-        image: "/placeholder.svg",
+        image: "/products/park-tool-blue-book.jpg",
         price: "349 kr",
         retailer: "XXL",
         affiliateLink: "#"
       },
       {
         name: "Shimano Deore XT drivetrain",
-        image: "/placeholder.svg",
+        image: "/products/shimano-deore-xt.jpg",
         price: "4.999 kr",
         retailer: "XXL",
         affiliateLink: "#"
       },
       {
         name: "RockShox Reverb dropper",
-        image: "/placeholder.svg",
+        image: "/products/rockshox-reverb.jpg",
         price: "3.499 kr",
         retailer: "XXL",
         affiliateLink: "#"
