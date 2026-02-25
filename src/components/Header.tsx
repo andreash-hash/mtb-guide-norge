@@ -19,27 +19,27 @@ const Header = () => {
       <div className="h-0.5 bg-gradient-to-r from-accent via-secondary to-accent"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo with silhouette */}
-          <a href="/" className="flex items-center gap-2 group">
+          <a href="/" className="flex items-center gap-3 group">
             <img 
               src={mtbSilhouette} 
               alt="MTB Test logo" 
-              className="h-10 w-10 object-contain transition-transform group-hover:scale-110"
+              className="h-14 w-14 object-contain transition-transform group-hover:scale-110"
             />
             <div className="flex flex-col leading-none">
-              <span className="text-xl font-extrabold text-primary tracking-tight">MTB Test</span>
-              <span className="text-[10px] font-semibold text-accent uppercase tracking-widest">Norge</span>
+              <span className="text-2xl font-extrabold text-primary tracking-tight">MTB Test</span>
+              <span className="text-xs font-semibold text-accent uppercase tracking-widest">Norge</span>
             </div>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center space-x-2">
             {menuItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="px-4 py-2 rounded-md text-foreground hover:text-accent hover:bg-accent/5 transition-all duration-200 font-medium text-sm"
+                className="px-4 py-2 rounded-md text-foreground hover:text-accent hover:bg-accent/5 transition-all duration-200 font-semibold text-base"
               >
                 {item.name}
               </a>
