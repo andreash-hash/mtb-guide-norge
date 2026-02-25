@@ -1,29 +1,43 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-mtb.jpg";
+import mtbSilhouette from "@/assets/mtb-silhouette.png";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
       </div>
 
+      {/* Accent line decoration */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-80"></div>
+
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <div className="fade-in">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 tracking-tight">
-            <span className="text-accent">OPPDAG NYE STIER OG SYKLER</span>
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
+        {/* Left: Text */}
+        <div className="fade-in text-center lg:text-left lg:max-w-2xl">
+          <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-accent/40 bg-accent/10 backdrop-blur-sm">
+            <span className="text-accent text-sm font-semibold tracking-wide uppercase">Norges MTB-ressurs</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 tracking-tight leading-[0.9]">
+            OPPDAG NYE
+            <br />
+            <span className="text-accent">STIER OG</span>
+            <br />
+            SYKLER
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto font-medium">
+          <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-xl font-medium">
             Mer flyt. Mer glede. Mer sykling.
           </p>
 
-          <div className="slide-up">
+          <div className="slide-up flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button 
               variant="cta" 
               size="lg"
@@ -32,6 +46,27 @@ const Hero = () => {
             >
               Se sammenligninger
             </Button>
+            <Button 
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 py-4 border-white/30 text-white hover:bg-white/10 hover:text-white"
+              onClick={() => document.getElementById('om-oss')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Om oss
+            </Button>
+          </div>
+        </div>
+
+        {/* Right: Silhouette */}
+        <div className="hidden lg:block fade-in relative">
+          <div className="relative w-[420px] h-[420px]">
+            {/* Glow behind silhouette */}
+            <div className="absolute inset-0 rounded-full bg-accent/15 blur-3xl scale-75"></div>
+            <img 
+              src={mtbSilhouette} 
+              alt="Mountain biker silhouette" 
+              className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_40px_rgba(245,124,0,0.3)]"
+            />
           </div>
         </div>
       </div>
