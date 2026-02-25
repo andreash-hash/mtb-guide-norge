@@ -47,7 +47,7 @@ const Hero = () => {
             <Button 
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-4 border-white/30 text-white hover:bg-white/10 hover:text-white"
+              className="text-lg px-8 py-4 border-2 border-white bg-white/15 text-white font-semibold backdrop-blur-sm hover:bg-white/25 hover:text-white"
               onClick={() => document.getElementById('om-oss')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Om oss
