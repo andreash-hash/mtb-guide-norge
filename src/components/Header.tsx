@@ -26,7 +26,7 @@ const Header = () => {
             <img 
               src={mtbSilhouette} 
               alt="MTB Test logo" 
-              className="h-14 w-14 object-contain transition-transform group-hover:scale-110 mix-blend-multiply"
+              className="h-14 w-14 object-contain transition-transform group-hover:scale-110 mix-blend-darken"
             />
             <div className="flex flex-col leading-none">
               <span className="text-2xl font-extrabold text-primary tracking-tight">MTB Test</span>
