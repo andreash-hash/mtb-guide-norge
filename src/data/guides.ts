@@ -1075,7 +1075,7 @@ Her er en typisk sammenligning av geometriverdier for størrelse M:
 - Chainstay: 435-450 mm
 
 Husk at tallene forteller bare en del av historien. Hvordan rammekonstruksjonen, dempingen og hjulstørrelsen samspiller med geometrien avgjør den totale kjøreopplevelsen. Beste måten å finne din sykkel på er å prøvekjøre flere alternativ og kjenne etter hva som føles riktig for din kropp og ditt terreng.
-    \`,
+    `,
     relatedProducts: [
       {
         name: "Trek Fuel EX 7",
