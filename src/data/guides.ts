@@ -142,7 +142,7 @@ Ta deg tid, prøvekjør hvis mulig, og ikke vær redd for å spørre om råd i s
         affiliateLink: "#"
       }
     ],
-    relatedGuides: ["mtb-for-nybegynnere", "terrengsykkel-terminologi"]
+    relatedGuides: ["mtb-for-nybegynnere", "terrengsykkel-terminologi", "mtb-geometri-forklart"]
   },
   {
     id: "mtb-for-nybegynnere",
