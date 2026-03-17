@@ -1,4 +1,4 @@
-import { Bike, Map, Wrench, Mountain, Backpack, BookOpen, Compass } from "lucide-react";
+import { Bike, Map, Wrench, Mountain, Backpack, BookOpen, Compass, Zap } from "lucide-react";
 
 export interface Guide {
   id: string;
