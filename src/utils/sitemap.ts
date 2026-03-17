@@ -84,6 +84,6 @@ export function getSitemapStats() {
     reviews: reviewIds.length,
     guides: guideIds.length,
     news: newsIds.length,
-    mainPages: 5,
+    mainPages: 4,
   };
 }
