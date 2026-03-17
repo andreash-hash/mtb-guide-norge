@@ -16,7 +16,8 @@ const reviewIds = [
 
 const guideIds = [
   'velg-riktig-terrengsykkel', 'mtb-for-nybegynnere', 'vedlikehold',
-  'beste-stier-norge', 'riktig-utstyr', 'terrengsykkel-terminologi'
+  'beste-stier-norge', 'riktig-utstyr', 'terrengsykkel-terminologi',
+  'mtb-geometri-forklart', 'emtb-hardtail-vs-fulldemper'
 ];
 
 const newsIds = [
@@ -44,8 +45,7 @@ export function generateSitemapUrls(): SitemapUrl[] {
     { loc: `${SITE_URL}/`, lastmod: currentDate, changefreq: 'daily', priority: 1.0 },
     { loc: `${SITE_URL}/sammenligninger`, lastmod: currentDate, changefreq: 'weekly', priority: 0.9 },
     { loc: `${SITE_URL}/guider`, lastmod: currentDate, changefreq: 'weekly', priority: 0.9 },
-    { loc: `${SITE_URL}/nyheter`, lastmod: currentDate, changefreq: 'daily', priority: 0.8 },
-    { loc: `${SITE_URL}/butikk`, lastmod: currentDate, changefreq: 'weekly', priority: 0.8 }
+    { loc: `${SITE_URL}/nyheter`, lastmod: currentDate, changefreq: 'daily', priority: 0.8 }
   );
 
   reviewIds.forEach((id) => {
