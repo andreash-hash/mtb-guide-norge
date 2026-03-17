@@ -913,6 +913,193 @@ Sti bygget for jevn fart med naturlige svinger og hopp.
       }
     ],
     relatedGuides: ["velg-riktig-terrengsykkel", "vedlikehold"]
+  },
+  {
+    id: "mtb-geometri-forklart",
+    title: "Terrengsykkel-geometri forklart",
+    icon: Compass,
+    intro: "Forstå geometritabellen: reach, stack, styrevinkel, chainstay og mer – og hva det betyr for kjøreegenskapene",
+    readTime: 14,
+    tableOfContents: [
+      { id: "kort-historie", title: "Kort historikk" },
+      { id: "geometri-forklart", title: "Geometri forklart" },
+      { id: "seteror", title: "Seterør og passform" },
+      { id: "reach", title: "Reach" },
+      { id: "stack", title: "Stack" },
+      { id: "styrevinkel", title: "Styrevinkel (Head angle)" },
+      { id: "chainstay", title: "Chainstay-lengde" },
+      { id: "setevinkel", title: "Setevinkel" },
+      { id: "wheelbase", title: "Wheelbase" },
+      { id: "bb-drop", title: "BB drop og tyngdepunkt" },
+      { id: "geometri-sammenligning", title: "Geometri-sammenligning" },
+    ],
+    content: \`
+## Kort historikk
+
+Terrengsykkelgeometri har gjennomgått en dramatisk utvikling de siste tiårene. Fra de tidlige dagene på 1970-tallet i Marin County, California – der entusiaster rullet nedover bratte grusveier på modifiserte strandcruisere – til dagens avanserte geometriberegninger, har mye endret seg.
+
+Gjennom 1990- og 2000-tallet eksperimenterte designere med mange ulike løsninger for å finne den ideelle kombinasjonen av hjul, demping og rammekonstruksjon. Mange ville design ble forkastet, mens andre la grunnlaget for det vi kjenner som moderne terrengsykkelgeometri.
+
+De siste ti årene har geometrien endret seg mer enn noen gang. Moderne terrengsykler har blitt lengre, lavere og slakkere – noe som gir helt andre kjøreegenskaper enn eldre modeller. Å forstå geometritabellen er nøkkelen til å finne sykkelen som passer din kropp, din kjørestil og terrenget du sykler i.
+
+## Geometri forklart
+
+En geometritabell kan ved første øyekast se ut som en uoverskuelig vegg av tall. Men når du forstår hva hver måling betyr, blir det et kraftig verktøy for å sammenligne sykler og forstå hvordan de vil oppføre seg på stien.
+
+Geometrien er selve hjertet i sykkelen. Komponentene kan skiftes ut over tid, men geometrien følger deg gjennom hele sykkelens levetid. Riktig geometri for din kropp og kjørestil er nøkkelen til en god opplevelse.
+
+## Seterør og passform
+
+Seterørlengden er det viktigste målet for passform. Helt enkelt: er seterøret for langt, får du ikke plass på sykkelen. Er det for kort, kan du ikke tråe ordentlig.
+
+### Dropper post og seterørlengde
+Moderne terrengsykler har kortere seterør enn før, hovedsakelig for å gi plass til lengre dropper post. Når du velger sykkel, sjekk at seterøret er kort nok til å montere den dropper post-lengden du ønsker, samtidig som du kan nå full setehøyde.
+
+### Slik finner du riktig setehøyde
+Mål avstanden fra midten av kranken til toppen av setet med bena i laveste pedalposisjon. Kneet skal ha en lett bøy (ca. 25-30 grader). De fleste produsenter oppgir setehøyde-range for hver størrelse.
+
+## Reach
+
+Reach er kanskje det viktigste tallet i en moderne geometritabell. Det måler den horisontale avstanden fra midten av kranken til toppen av styrerøret – altså hvor langt sykkelen strekker seg foran deg når du står på pedalene.
+
+### Hvorfor er reach viktig?
+I motsetning til tradisjonelt toppløps-mål (som brukes på landevei), forteller reach deg hvordan sykkelen føles når du står oppreist. Og det er jo nettopp der moroa skjer på terrengsykkelen.
+
+### Reach varierer med sykkeltype
+- **XC-sykler**: Typisk kortere reach (420-445 mm i M), kombinert med lengre stem
+- **Trail-sykler**: Middels reach (440-470 mm i M)
+- **Enduro/DH-sykler**: Lengre reach (460-500 mm i M), med kort stem
+
+Merk at kortere reach + lengre stem kan gi tilsvarende total lengde som lengre reach + kort stem. Noen produsenter oppgir «Reach+» som kombinerer begge.
+
+### Personlig preferanse
+En lengre sykkel føles mer stabil i fart, men er tregere i trange svinger. En kortere sykkel er mer leken og enklere å manøvrere, men kan føles nervøs i høy hastighet. Det finnes ikke ett riktig svar – det handler om hva som passer deg.
+
+## Stack
+
+Stack måler den vertikale avstanden fra midten av kranken til toppen av styrerøret. Dette forteller deg hvor høyt fronten av sykkelen er i forhold til pedalene.
+
+### Stack og kjørestil
+- **XC-sykler**: Lav stack (570-590 mm) – aggressiv, aerodynamisk posisjon
+- **Trail-sykler**: Middels stack (600-620 mm) – balansert for opp og ned
+- **Enduro/DH-sykler**: Høy stack (620-640 mm) – oppreist posisjon for bratte nedkjøringer
+
+Du kan justere styrehøyden med spacere og ulike stem-vinkler, men stack gir deg utgangspunktet fra rammen.
+
+## Styrevinkel (Head angle)
+
+Styrevinkelen forteller deg hvordan sykkelen styrer. Den måles som vinkelen mellom gaffelen og bakken.
+
+### Slakk vs bratt
+- **Slakk vinkel (63-65°)**: Treigere, mer stabil styring. Gir selvtillit i bratt terreng og høy fart. Typisk for enduro og DH-sykler.
+- **Bratt vinkel (67-70°)**: Kvikkere styring ved lav hastighet. Mer effektiv på klatring. Typisk for XC-sykler.
+
+### Trail-sykler i mellom
+Trail-sykler har typisk styrevinkel mellom 64-67°, avhengig av om de heller mot nedkjøring eller klatring. Bare én grad forskjell kan gi merkbar endring i kjørefølelse.
+
+### Husk sammenhengen
+Slakkere styrevinkel gjør hele fronten av sykkelen lengre. Sammen med lengre reach gir dette en sykkel som føles romslig og stabil – men som krever mer krefter i trange svinger.
+
+## Chainstay-lengde
+
+Chainstay-lengden – avstanden fra kranken til baknavet – påvirker stabiliteten og lekenheten til sykkelen fundamentalt.
+
+### Kort vs lang chainstay
+- **Kort chainstay (420-435 mm)**: Lettere å løfte forhjulet, mer lekent. Enklere å wheelie, manualle og kutte svinger. Populært blant lekne ryttere.
+- **Lang chainstay (435-450 mm)**: Mer stabil og forutsigbar. Bedre vektfordeling i bratt terreng. Typisk for ren nedkjøring.
+
+### E-MTB og chainstay
+Elsykler har ofte litt lengre chainstays enn tilsvarende vanlige sykler. Motoren tillater brattere klatringer, og lengre chainstay gir bedre vektfordeling over bakhjulet i slike situasjoner.
+
+### Hjulstørrelse og chainstay
+27.5"-hjul tillater kortere chainstay enn 29", noe som er en av grunnene til at mullet-oppsett (29" foran, 27.5" bak) er blitt populært – du får rulleegenskapene til 29" foran med den korte chainstay-lengden til 27.5" bak.
+
+## Setevinkel
+
+Setevinkelen forteller deg om sykkelen er best egnet for flatt terreng eller bratte klatringer.
+
+### Bratt vs slakk setevinkel
+- **Bratt setevinkel (76-78°)**: Plasserer deg mer over kranken. Bedre for bratte klatringer der du trenger vekt på forhjulet for å beholde styring og grep.
+- **Slakkere setevinkel (73-75°)**: Setter deg lenger bak. Kan være mer komfortabelt på flate partier, men gir dårligere klatreposisjon i bratt terreng.
+
+### Utviklingen
+Moderne sykler har generelt brattere setevinkler enn eldre modeller. Enduro-sykler har ofte de bratteste setevinklene (77-78°) fordi de må klatre effektivt mellom etappene.
+
+## Wheelbase
+
+Wheelbase er den totale avstanden fra forhjul til bakhjul. Det er summen av alle de andre målingene og gir et overordnet bilde av sykkelens stabilitet.
+
+### Lengre = mer stabil
+En lengre wheelbase gir generelt mer stabilitet i fart, men gjør sykkelen tyngre å svinge. Kortere wheelbase er kvikkere og mer manøvrerbar.
+
+### Typiske verdier (størrelse M)
+- **XC-sykler**: 1140-1170 mm
+- **Trail-sykler**: 1180-1220 mm
+- **Enduro-sykler**: 1220-1260 mm
+- **DH-sykler**: 1250-1290 mm
+
+## BB drop og tyngdepunkt
+
+BB drop (eller BB height) forteller deg hvor lavt kranken sitter i forhold til akselhøyden på hjulene.
+
+### Lavere = lavere tyngdepunkt
+Mer BB drop gir lavere tyngdepunkt, noe som øker stabiliteten – spesielt i svinger. Ulempen er økt risiko for å slå kranken i steiner og røtter (pedal strikes).
+
+### Typiske verdier
+- **XC-sykler**: 25-30 mm drop
+- **Trail/Enduro-sykler**: 30-40 mm drop
+
+## Geometri-sammenligning
+
+Her er en typisk sammenligning av geometriverdier for størrelse M:
+
+### XC-sykkel (typisk)
+- Styrevinkel: 68-69°
+- Setevinkel: 74-76°
+- Reach: 430-445 mm
+- Stack: 575-590 mm
+- Chainstay: 430-440 mm
+
+### Trail-sykkel (typisk)
+- Styrevinkel: 64-66°
+- Setevinkel: 76-78°
+- Reach: 450-470 mm
+- Stack: 600-620 mm
+- Chainstay: 430-440 mm
+
+### Enduro-sykkel (typisk)
+- Styrevinkel: 63-65°
+- Setevinkel: 77-79°
+- Reach: 465-490 mm
+- Stack: 620-640 mm
+- Chainstay: 435-450 mm
+
+Husk at tallene forteller bare en del av historien. Hvordan rammekonstruksjonen, dempingen og hjulstørrelsen samspiller med geometrien avgjør den totale kjøreopplevelsen. Beste måten å finne din sykkel på er å prøvekjøre flere alternativ og kjenne etter hva som føles riktig for din kropp og ditt terreng.
+    \`,
+    relatedProducts: [
+      {
+        name: "Trek Fuel EX 7",
+        image: "/products/trek-fuel-ex-7.jpg",
+        price: "39.990 kr",
+        retailer: "Trek",
+        affiliateLink: "#"
+      },
+      {
+        name: "Canyon Spectral 125",
+        image: "/products/canyon-spectral-125.jpg",
+        price: "44.990 kr",
+        retailer: "Canyon",
+        affiliateLink: "#"
+      },
+      {
+        name: "Norco Fluid FS 1",
+        image: "/products/norco-fluid-fs-1.jpg",
+        price: "24.990 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      }
+    ],
+    relatedGuides: ["velg-riktig-terrengsykkel", "terrengsykkel-terminologi"]
   }
 ];
 
