@@ -1,4 +1,4 @@
-import { Bike, Map, Wrench, Mountain, Backpack, BookOpen, Compass } from "lucide-react";
+import { Bike, Map, Wrench, Mountain, Backpack, BookOpen, Compass, Zap } from "lucide-react";
 
 export interface Guide {
   id: string;
@@ -1100,6 +1100,191 @@ Husk at tallene forteller bare en del av historien. Hvordan rammekonstruksjonen,
       }
     ],
     relatedGuides: ["velg-riktig-terrengsykkel", "terrengsykkel-terminologi"]
+  },
+  {
+    id: "emtb-hardtail-vs-fulldemper",
+    title: "E-MTB: Hardtail eller fulldemper?",
+    icon: Zap,
+    intro: "Hardtail vs fulldemper elsykkel – fordeler, ulemper, vedlikehold og hva som passer din kjørestil",
+    readTime: 11,
+    tableOfContents: [
+      { id: "forskjellen", title: "Forstå forskjellen" },
+      { id: "hardtail-emtb", title: "Hardtail e-MTB" },
+      { id: "fulldemper-emtb", title: "Fulldemper e-MTB" },
+      { id: "terreng-kjoerestil", title: "Terreng og kjørestil" },
+      { id: "batteri-rekkevidde", title: "Batteri og rekkevidde" },
+      { id: "vedlikehold-kostnader", title: "Vedlikehold og kostnader" },
+      { id: "fordeler-ulemper", title: "Fordeler og ulemper" },
+      { id: "velg-riktig", title: "Finn riktig e-MTB for deg" },
+    ],
+    content: `
+## Forstå forskjellen
+
+I enkleste termer er en hardtail e-MTB en elsykkel med demping kun foran (i gaffelen), mens en fulldemper e-MTB har demping både foran og bak. Denne forskjellen endrer kjøreopplevelsen fundamentalt – det påvirker effektivitet, vekt, komfort og håndtering.
+
+Demping er et tveegget sverd for noen syklister. Er du ute etter tekniske stier, er fulldemping en stor fordel. Men hvis kjøringen din inkluderer mye asfalt, grusvei eller pendling, kan bakdemper være en unødvendig komplikasjon og kostnad.
+
+## Hardtail e-MTB
+
+Hardtail er der mange starter med terrengsykling – også med elsykkel. Med dempegaffel foran og enkel, stiv ramme er de de mest tilgjengelige og rimelige elsyklene for terreng.
+
+### Fordeler med hardtail e-MTB
+- **Rimligere** – Får mer sykkel for pengene
+- **Enklere vedlikehold** – Ingen bakdemper, færre lager og tetninger
+- **Mer effektiv** – Bedre kraftoverføring på jevnt underlag
+- **Lengre rekkevidde** – Mindre energitap i dempingen
+- **Allsidig** – Mange har fester for skjermer og bagasjebrett
+
+### Hvem passer hardtail e-MTB for?
+- Nybegynnere som utforsker terreng
+- De som kombinerer pendling og stisykling
+- Syklister i områder med moderat terreng
+- De som ønsker lavt vedlikehold
+
+## Fulldemper e-MTB
+
+For seriøse terrengsyklister er fulldemper ofte foretrukket. Ekstra demping bak gir markant bedre komfort, grep og kontroll – spesielt i teknisk terreng.
+
+### Demping og kjørefølelse
+Fulldempede elsykler rettet mot ulike disipliner har forskjellig mengde vandring:
+
+- **Mellomlang vandring (130-150 mm)**: Allround trail-sykler som passer de fleste stier. Balansert mellom klatring og nedkjøring.
+- **Lang vandring (160-180 mm)**: Enduro-orienterte sykler for aggressive nedkjøringer og teknisk terreng.
+
+### Vedlikehold av fulldemper
+En av de store ulempene med fulldemper er økt vedlikeholdsbehov:
+- Bakdemper krever service minst én gang årlig
+- Rammelager og bøssinger må sjekkes og byttes jevnlig
+- Begge jobber krever ofte hjelp fra en dyktig mekaniker
+- Totalt sett høyere servicekostnader over tid
+
+## Terreng og kjørestil
+
+Hvor og hvordan du sykler bør være den viktigste faktoren i valget ditt. Still deg selv spørsmålet: **Hva synes jeg er gøy, og hvor liker jeg å sykle?**
+
+### Hva passer hvor?
+
+**Hardtail fungerer best på:**
+- Asfalt og grusvei
+- Skogsstier og enklere terreng
+- Pendling og daglig bruk
+- Lengre turer med behov for rekkevidde
+
+**Fulldemper fungerer best på:**
+- Tekniske stier med røtter og steiner
+- Bratte nedkjøringer
+- Bikeparker og utfordrende terreng
+- Aggressive kjørestiler
+
+**Begge fungerer på:**
+- Moderate skogsstier
+- Lett teknisk singletrack
+
+### En nyttig øvelse
+Skriv ned ti turer du gjerne vil gjøre det neste året. Vurder hver tur: Ville du hatt mer moro med hardtail eller fulldemper? Hva slags underlag er det primært? Ønsker du å cruise eller kjøre hardt? Dette gir ofte et klart svar.
+
+## Batteri og rekkevidde
+
+En fulldemper e-MTB bruker typisk litt mer batteri enn en hardtail over samme distanse – spesielt på jevnt underlag. Stiv bakende betyr at hardtail overfører kraft mer effektivt til bakhjulet.
+
+### Tips for å maksimere rekkevidde på fulldemper
+- **Sjekk lufttrykk** i demper og dekk – feil innstilling øker energitapet
+- **Bruk lockout** på jevnt underlag – de fleste dempere har en liten spak som stiver opp dempingen
+- **Velg riktig assistansenivå** – eco-modus på flate partier
+- **Hold kjeden ren og smurt** – reduserer friksjon
+
+Forskjellen i rekkevidde mellom hardtail og fulldemper blir stadig mindre etter hvert som dempingsteknologien forbedres.
+
+## Vedlikehold og kostnader
+
+### Hardtail e-MTB
+- Gaffelservice 1-2 ganger årlig
+- Kjedeslitasje og bremsebelegg som vanlig
+- Motor og batteri krever minimalt vedlikehold
+- **Estimert årlig servicekostnad: 1.500-3.000 kr**
+
+### Fulldemper e-MTB
+- Gaffelservice 1-2 ganger årlig
+- Bakdemper service minst 1 gang årlig
+- Rammelager/bøssinger sjekkes og byttes ved behov
+- Kjedeslitasje og bremsebelegg som vanlig
+- Motor og batteri krever minimalt vedlikehold
+- **Estimert årlig servicekostnad: 3.000-6.000 kr**
+
+## Fordeler og ulemper
+
+### Hardtail e-MTB oppsummert
+
+**Fordeler:**
+- Rimeligere innkjøpspris
+- Effektiv på jevnt underlag
+- Enklere vedlikehold
+- Typisk lengre batterirekkevidde
+- Allsidig hverdagssykkel
+
+**Ulemper:**
+- Mindre komfortabel i røft terreng
+- Redusert grep på tekniske klatringer
+- Begrenset kapasitet på svært tekniske stier
+
+### Fulldemper e-MTB oppsummert
+
+**Fordeler:**
+- Betydelig mer komfort i krevende terreng
+- Bedre grep og kontroll på tekniske partier
+- Økt selvtillit på bratte nedkjøringer
+- Mer allsidig på variert terreng
+
+**Ulemper:**
+- Dyrere innkjøpspris
+- Tyngre og mer kompleks
+- Potensielt kortere batterirekkevidde
+- Høyere servicekostnader
+
+## Finn riktig e-MTB for deg
+
+Å kjøpe elsykkel er en stor investering. For å få mest mulig ut av pengene, tenk nøye gjennom hvem du er som syklist og hva du vil bruke sykkelen til.
+
+### Velg hardtail hvis:
+- Du er ny innen terrengsykling
+- Du vil bruke sykkelen til pendling og daglig transport
+- Budsjettet er begrenset
+- Du foretrekker enkelt vedlikehold
+- Du sykler mest på grus og moderate stier
+
+### Velg fulldemper hvis:
+- Du vil satse på teknisk stisykling
+- Du har tilgang til bratte stier og bikeparker
+- Komfort på lange turer er viktig
+- Du er villig til å investere i regelmessig service
+- Du vil presse grensene dine i terrenget
+
+Uansett hva du velger – en elsykkel åpner opp for lengre turer, brattere klatringer og mer moro på stien. Motoren utjevner forskjellene mellom hardtail og fulldemper noe, fordi du alltid har ekstra kraft tilgjengelig.
+    `,
+    relatedProducts: [
+      {
+        name: "Trek Fuel EX 7",
+        image: "/products/trek-fuel-ex-7.jpg",
+        price: "39.990 kr",
+        retailer: "Trek",
+        affiliateLink: "#"
+      },
+      {
+        name: "Shimano Deore XT drivetrain",
+        image: "/products/shimano-deore-xt.jpg",
+        price: "4.999 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      },
+      {
+        name: "Norco Fluid FS 1",
+        image: "/products/norco-fluid-fs-1.jpg",
+        price: "24.990 kr",
+        retailer: "XXL",
+        affiliateLink: "#"
+      }
+    ],
+    relatedGuides: ["velg-riktig-terrengsykkel", "mtb-geometri-forklart"]
   }
 ];
 
