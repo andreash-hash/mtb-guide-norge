@@ -933,7 +933,7 @@ Sti bygget for jevn fart med naturlige svinger og hopp.
       { id: "bb-drop", title: "BB drop og tyngdepunkt" },
       { id: "geometri-sammenligning", title: "Geometri-sammenligning" },
     ],
-    content: \`
+    content: `
 ## Kort historikk
 
 Terrengsykkelgeometri har gjennomgått en dramatisk utvikling de siste tiårene. Fra de tidlige dagene på 1970-tallet i Marin County, California – der entusiaster rullet nedover bratte grusveier på modifiserte strandcruisere – til dagens avanserte geometriberegninger, har mye endret seg.
