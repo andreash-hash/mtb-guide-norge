@@ -52,55 +52,58 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Anbefalt MTB-utstyr Section */}
+      {/* Kjøpsguide 2025 Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle subtitle="Kvalitetsutstyr fra våre anbefalte partnere">
-            Anbefalt MTB-utstyr
+          <SectionTitle subtitle="Håndplukket utstyr fra våre anbefalte partnere">
+            Kjøpsguide 2025
           </SectionTitle>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "7mesh Revelation Jacket",
-                description: "Lettvekts vanntett jakke designet for intensiv stisykling. Pustende Gore-Tex membran holder deg tørr uten overoppheting.",
-                category: "Jakker",
-                icon: Shirt,
-              },
-              {
-                name: "7mesh Farside Short",
-                description: "Slitesterk og fleksibel sykkelshorts med strategisk ventilasjon. Perfekt for lange turer i variert terreng.",
-                category: "Shorts",
-                icon: Shirt,
-              },
-              {
-                name: "7mesh Eldorado Jersey",
-                description: "Teknisk jersey i merinoull-blanding. Naturlig luktresistent og temperaturregulerende for norske forhold.",
-                category: "Trøyer",
-                icon: Shirt,
-              },
-            ].map((product) => (
-              <a
-                key={product.name}
-                href="https://7mesh.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border bg-card">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="p-2 rounded-full bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors">
-                        <product.icon className="h-5 w-5" />
-                      </div>
-                      <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{product.category}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* 7mesh */}
+            <a
+              href="https://www.avantlink.com/click.php?tt=cl&merchant_id=36949&website_id=416277&url=https%3A%2F%2F7mesh.com%2Fcollections%2Fjerseys"
+              target="_blank"
+              rel="nofollow noopener"
+              className="group"
+            >
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border bg-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="p-2 rounded-full bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors">
+                      <Shirt className="h-5 w-5" />
                     </div>
-                    <h3 className="font-bold text-foreground group-hover:text-secondary transition-colors mb-2">{product.name}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{product.description}</p>
-                    <span className="inline-block mt-3 text-sm font-medium text-secondary group-hover:underline">Se hos 7mesh →</span>
-                  </CardContent>
-                </Card>
-              </a>
-            ))}
+                    <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Klær</span>
+                  </div>
+                  <h3 className="font-bold text-lg text-foreground group-hover:text-secondary transition-colors mb-2">7mesh Cycling Apparel</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Teknisk sykkelbekledning med et øye for norske fjell og stier.</p>
+                  <p className="text-sm font-semibold text-foreground mt-3">Fra ca. 1.200 kr</p>
+                  <span className="inline-block mt-2 text-sm font-medium text-secondary group-hover:underline">Se pris hos 7mesh →</span>
+                </CardContent>
+              </Card>
+            </a>
+
+            {/* Argonaut Cycles */}
+            <a
+              href="https://www.avantlink.com/click.php?tt=cl&merchant_id=29929&website_id=416277&url=https%3A%2F%2Fargonautcycles.com"
+              target="_blank"
+              rel="nofollow noopener"
+              className="group"
+            >
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border bg-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="p-2 rounded-full bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors">
+                      <Bike className="h-5 w-5" />
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Sykler</span>
+                  </div>
+                  <h3 className="font-bold text-lg text-foreground group-hover:text-secondary transition-colors mb-2">Argonaut Cycles</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Håndlaget karbonsykkel tilpasset deg.</p>
+                  <p className="text-sm font-semibold text-foreground mt-3">Fra ca. 60.000 kr</p>
+                  <span className="inline-block mt-2 text-sm font-medium text-secondary group-hover:underline">Se Argonaut Cycles →</span>
+                </CardContent>
+              </Card>
+            </a>
           </div>
           <p className="text-xs text-muted-foreground text-center mt-6">
             Vi kan motta provisjon på kjøp gjort via våre lenker, uten ekstra kostnad for deg.
