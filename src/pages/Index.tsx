@@ -9,10 +9,12 @@ import Footer from "@/components/Footer";
 import SEOHead, { organizationSchema, websiteSchema } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Bike, Wrench, Shirt, BookOpen } from "lucide-react";
+import { Bike, Wrench, BookOpen } from "lucide-react";
 import { guides } from "@/data/guides";
 import { newsArticles } from "@/data/newsArticles";
 import { bikeComparisons } from "@/data/bikeComparisons";
+import AffiliateProductCard from "@/components/AffiliateProductCard";
+import { affiliateProducts } from "@/data/affiliateProducts";
 
 const Index = () => {
   const categories = [
