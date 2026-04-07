@@ -1,9 +1,11 @@
 import { useParams, Link } from "react-router-dom";
-import { Clock, ExternalLink } from "lucide-react";
+import { Clock, ExternalLink, Lightbulb, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
+import AffiliateDisclosure from "@/components/AffiliateDisclosure";
+import QuickBuyBanner from "@/components/QuickBuyBanner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getGuideById, guides } from "@/data/guides";
@@ -61,35 +63,68 @@ const GuideDetail = () => {
         breadcrumbs={breadcrumbs}
         structuredData={articleStructuredData}
       />
+      <AffiliateDisclosure variant="banner" />
       <Header />
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
+          {/* Sidebar - sticky på desktop */}
           <aside className="lg:col-span-1 order-2 lg:order-1">
-            <div className="lg:sticky lg:top-24">
-              <div className="bg-card rounded-lg border border-border p-6">
-                <h3 className="font-bold text-foreground mb-4">Innholdsfortegnelse</h3>
-                <nav className="space-y-2">
+            <div className="lg:sticky lg:top-24 space-y-4">
+              {/* Innholdsfortegnelse */}
+              <div className="bg-card rounded-lg border border-border p-4 md:p-6">
+                <h2 className="font-bold text-foreground mb-3 text-sm md:text-base">Innholdsfortegnelse</h2>
+                <nav className="space-y-1.5">
                   {guide.tableOfContents.map((item) => (
-                    <a key={item.id} href={`#${item.id}`} className="block text-sm text-muted-foreground hover:text-secondary transition-colors py-1">{item.title}</a>
+                    <a
+                      key={item.id}
+                      href={`#${item.id}`}
+                      className="block text-sm text-muted-foreground hover:text-secondary transition-colors py-1 hover:pl-1"
+                    >
+                      {item.title}
+                    </a>
                   ))}
                 </nav>
+              </div>
+
+              {/* Quick tips boks */}
+              <div className="bg-secondary/5 rounded-lg border border-secondary/20 p-4 md:p-6 hidden lg:block">
+                <div className="flex items-center gap-2 mb-3">
+                  <Lightbulb className="h-5 w-5 text-secondary" />
+                  <h3 className="font-bold text-foreground text-sm">Raskt svar</h3>
+                </div>
+                <p className="text-xs text-muted-foreground mb-3">
+                  Leter du etter en rask anbefaling? Se våre sammenligninger.
+                </p>
+                <Button variant="outline" size="sm" className="w-full" asChild>
+                  <Link to="/sammenligninger" className="flex items-center justify-center gap-1">
+                    Se sykler <ArrowRight className="h-3 w-3" />
+                  </Link>
+                </Button>
               </div>
             </div>
           </aside>
 
           <main className="lg:col-span-3 order-1 lg:order-2">
-            <div className="mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-lg bg-secondary/10 text-secondary"><IconComponent className="h-6 w-6" /></div>
+            {/* Hero-seksjon */}
+            <header className="mb-6 md:mb-8">
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <div className="p-2 md:p-3 rounded-lg bg-secondary/10 text-secondary">
+                  <IconComponent className="h-5 w-5 md:h-6 md:w-6" />
+                </div>
                 <div className="flex items-center text-muted-foreground text-sm">
-                  <Clock className="h-4 w-4 mr-1" /><span>{guide.readTime} min lesetid</span>
+                  <Clock className="h-4 w-4 mr-1" />
+                  <span>{guide.readTime} min lesetid</span>
                 </div>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">{guide.title}</h1>
-              <p className="text-lg text-muted-foreground">{guide.intro}</p>
-            </div>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+                {guide.title}
+              </h1>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                {guide.intro}
+              </p>
+            </header>
 
             <article className="prose prose-lg max-w-none">
               <div className="text-foreground leading-relaxed space-y-6">
@@ -114,25 +149,41 @@ const GuideDetail = () => {
               </div>
             </article>
 
-            <section className="mt-16 pt-8 border-t border-border">
-              <h2 className="text-2xl font-bold text-primary mb-6">Anbefalte produkter</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* CTA-banner midt i innholdet */}
+            <div className="my-8">
+              <QuickBuyBanner variant="compact" />
+            </div>
+
+            <section className="mt-12 md:mt-16 pt-6 md:pt-8 border-t border-border">
+              <h2 className="text-xl md:text-2xl font-bold text-primary mb-4 md:mb-6">Anbefalte produkter</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {guide.relatedProducts.map((product, index) => (
-                  <Card key={index} className="border-border bg-card hover:shadow-md transition-shadow">
+                  <Card key={index} className="border-border bg-card hover:shadow-md transition-shadow group">
                     <CardContent className="p-4">
-                      <div className="aspect-square bg-muted rounded-lg mb-3 flex items-center justify-center">
-                        <img src={product.image} alt={product.name} className="max-h-full max-w-full object-contain p-4" loading="lazy" />
+                      <div className="aspect-square bg-muted rounded-lg mb-3 flex items-center justify-center overflow-hidden">
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="max-h-full max-w-full object-contain p-4 group-hover:scale-105 transition-transform"
+                          loading="lazy"
+                        />
                       </div>
-                      <h3 className="font-semibold text-foreground text-sm mb-1">{product.name}</h3>
+                      <h3 className="font-semibold text-foreground text-sm mb-1 line-clamp-1">{product.name}</h3>
                       <p className="text-secondary font-bold mb-2">{product.price}</p>
-                      <a href={product.affiliateLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm text-muted-foreground hover:text-secondary transition-colors">
-                        Kjøp hos {product.retailer}<ExternalLink className="h-3 w-3 ml-1" />
+                      <a
+                        href={product.affiliateLink}
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        className="inline-flex items-center text-sm text-muted-foreground hover:text-secondary transition-colors"
+                      >
+                        Se pris hos {product.retailer}
+                        <ExternalLink className="h-3 w-3 ml-1" />
                       </a>
                     </CardContent>
                   </Card>
                 ))}
               </div>
-              <p className="text-xs text-muted-foreground mt-4">Reklame for samarbeidspartnere (affiliate).</p>
+              <AffiliateDisclosure variant="compact" className="mt-4" />
             </section>
 
             {relatedGuideData.length > 0 && (

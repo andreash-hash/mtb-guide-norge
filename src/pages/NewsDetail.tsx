@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import NewsCard from "@/components/NewsCard";
 import SEOHead, { createArticleSchema } from "@/components/SEOHead";
+import AffiliateDisclosure from "@/components/AffiliateDisclosure";
+import QuickBuyBanner from "@/components/QuickBuyBanner";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -65,31 +67,36 @@ const NewsDetail = () => {
         breadcrumbs={breadcrumbs}
         structuredData={articleSchema}
       />
+      <AffiliateDisclosure variant="banner" />
       <Header />
       <Breadcrumbs items={breadcrumbs} />
 
       {/* Article Header */}
-      <section className="py-8">
+      <section className="py-6 md:py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <Alert className="mb-6 border-secondary/30 bg-secondary/10">
+            <Alert className="mb-4 md:mb-6 border-secondary/30 bg-secondary/10">
               <FileText className="h-4 w-4 text-secondary" />
               <AlertDescription className="text-sm">
-                📰 Kilde:{" "}
+                Kilde:{" "}
                 <a href={article.source.url} target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline font-medium">
                   {article.source.name}
                 </a>
               </AlertDescription>
             </Alert>
-            <div className="flex items-center gap-4 mb-4">
+            <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-3 md:mb-4">
               <Badge className={`${article.categoryColor} text-white`}>{article.category}</Badge>
               <div className="flex items-center text-muted-foreground text-sm">
                 <Calendar className="h-4 w-4 mr-1" />
-                <span>{article.publishedAt}</span>
+                <time dateTime={article.publishedAt}>{article.publishedAt}</time>
               </div>
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">{article.title}</h1>
-            <p className="text-xl text-muted-foreground">{article.excerpt}</p>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 md:mb-6">
+              {article.title}
+            </h1>
+            <p className="text-base md:text-xl text-muted-foreground leading-relaxed">
+              {article.excerpt}
+            </p>
           </div>
         </div>
       </section>
@@ -145,13 +152,22 @@ const NewsDetail = () => {
 
       
 
+      {/* CTA Banner */}
+      <section className="py-8 md:py-12 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <QuickBuyBanner variant="compact" />
+          </div>
+        </div>
+      </section>
+
       {/* Related News */}
       {relatedArticles.length > 0 && (
-        <section className="py-12">
+        <section className="py-8 md:py-12">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-primary mb-6">Se også</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <h2 className="text-xl md:text-2xl font-bold text-primary mb-4 md:mb-6">Se også</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {relatedArticles.map((relatedArticle) => (
                   relatedArticle && (
                     <Link key={relatedArticle.id} to={`/nyheter/${relatedArticle.id}`} className="group">
@@ -159,7 +175,7 @@ const NewsDetail = () => {
                         <div className="aspect-video bg-muted overflow-hidden rounded-t-lg">
                           <img src={relatedArticle.image} alt={relatedArticle.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                         </div>
-                        <CardContent className="p-4">
+                        <CardContent className="p-3 md:p-4">
                           <Badge className={`${relatedArticle.categoryColor} text-white text-xs mb-2`}>{relatedArticle.category}</Badge>
                           <h3 className="font-semibold text-foreground group-hover:text-secondary transition-colors text-sm line-clamp-2">{relatedArticle.title}</h3>
                         </CardContent>

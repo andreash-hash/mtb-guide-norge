@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, type LucideIcon } from "lucide-react";
+import { ExternalLink, ChevronDown, ChevronUp, Check, AlertCircle, Users, type LucideIcon } from "lucide-react";
 import StarRating from "@/components/StarRating";
 
 interface AffiliateProduct {
@@ -12,6 +13,9 @@ interface AffiliateProduct {
   icon: LucideIcon;
   merchantId: number;
   url: string;
+  pros?: string[];
+  cons?: string[];
+  targetAudience?: string;
 }
 
 // Simulerte ratings for produkter
@@ -28,14 +32,22 @@ const productRatings: Record<number, { rating: number; reviews: number }> = {
   23725: { rating: 4.5, reviews: 112 }, // Campfire Cycling
 };
 
-const AffiliateProductCard = ({ product, websiteId = 416277 }: { product: AffiliateProduct; websiteId?: number }) => {
+interface AffiliateProductCardProps {
+  product: AffiliateProduct;
+  websiteId?: number;
+  showDetails?: boolean;
+}
+
+const AffiliateProductCard = ({ product, websiteId = 416277, showDetails = false }: AffiliateProductCardProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
   const href = `https://www.avantlink.com/click.php?tt=cl&merchant_id=${product.merchantId}&website_id=${websiteId}&url=${encodeURIComponent(product.url)}`;
   const ratingData = productRatings[product.merchantId];
+  const hasProsOrCons = product.pros?.length || product.cons?.length;
 
   return (
-    <a href={href} target="_blank" rel="nofollow noopener sponsored" className="group block">
-      <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border bg-card">
-        <CardContent className="p-4 md:p-6 flex flex-col h-full">
+    <Card className="h-full hover:shadow-lg transition-all duration-300 border-border bg-card">
+      <CardContent className="p-4 md:p-6 flex flex-col h-full">
+        <a href={href} target="_blank" rel="nofollow noopener sponsored" className="group block">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
               <div className="p-2 rounded-full bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors">
@@ -60,28 +72,82 @@ const AffiliateProductCard = ({ product, websiteId = 416277 }: { product: Affili
             </div>
           )}
 
-          <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 flex-grow">
+          <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
             {product.description}
           </p>
+        </a>
 
-          <div className="mt-4 pt-3 border-t border-border">
-            <div className="flex items-center justify-between">
-              <p className="text-sm font-semibold text-foreground">{product.price}</p>
-              <Button
-                variant="cta"
-                size="sm"
-                className="h-9 px-4"
-                asChild
-              >
-                <span className="flex items-center gap-1.5">
-                  Se pris <ExternalLink className="h-3.5 w-3.5" />
-                </span>
-              </Button>
-            </div>
+        {/* Target audience */}
+        {product.targetAudience && (
+          <div className="mt-3 flex items-center gap-1.5 text-xs text-muted-foreground">
+            <Users className="h-3.5 w-3.5" />
+            <span>Passer for: {product.targetAudience}</span>
           </div>
-        </CardContent>
-      </Card>
-    </a>
+        )}
+
+        {/* Expandable pros/cons */}
+        {hasProsOrCons && (showDetails || isExpanded) && (
+          <div className="mt-3 pt-3 border-t border-border space-y-2">
+            {product.pros && product.pros.length > 0 && (
+              <div>
+                <p className="text-xs font-medium text-foreground mb-1">Fordeler:</p>
+                <ul className="space-y-0.5">
+                  {product.pros.slice(0, 2).map((pro, i) => (
+                    <li key={i} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+                      <Check className="h-3 w-3 text-green-600 mt-0.5 shrink-0" />
+                      <span>{pro}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {product.cons && product.cons.length > 0 && (
+              <div>
+                <p className="text-xs font-medium text-foreground mb-1">Vurder:</p>
+                <ul className="space-y-0.5">
+                  {product.cons.slice(0, 2).map((con, i) => (
+                    <li key={i} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+                      <AlertCircle className="h-3 w-3 text-amber-600 mt-0.5 shrink-0" />
+                      <span>{con}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Toggle for pros/cons */}
+        {hasProsOrCons && !showDetails && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="mt-2 flex items-center gap-1 text-xs text-secondary hover:text-secondary/80 transition-colors"
+          >
+            {isExpanded ? (
+              <>Skjul detaljer <ChevronUp className="h-3 w-3" /></>
+            ) : (
+              <>Vis fordeler/ulemper <ChevronDown className="h-3 w-3" /></>
+            )}
+          </button>
+        )}
+
+        <div className="mt-auto pt-3 border-t border-border">
+          <div className="flex items-center justify-between">
+            <p className="text-sm font-semibold text-foreground">{product.price}</p>
+            <Button
+              variant="cta"
+              size="sm"
+              className="h-9 px-4"
+              asChild
+            >
+              <a href={href} target="_blank" rel="nofollow noopener sponsored" className="flex items-center gap-1.5">
+                Se pris <ExternalLink className="h-3.5 w-3.5" />
+              </a>
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
   );
 };
 

@@ -7,7 +7,9 @@
       "Bash(npm run build:*)",
       "Bash(npx vite build:*)",
       "Bash(npx tsc:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAvantLink compliance + conversion optimization\n\nFase 1 - Compliance:\n- Nye sider: /om-oss, /kontakt, /personvern, /vilkar\n- Global AffiliateDisclosure-komponent på alle sider\n- Footer oppdatert med ekte routes\n- Header lenker til /om-oss i stedet for anchor\n\nFase 2 - Konverteringsoptimalisering:\n- StarRating-komponent med anmeldelser\n- ProductComparisonTable for side-by-side sammenligning\n- QuickBuyBanner for konvertering\n- Header med CTA-knapp \"Finn sykkel\"\n- Stjernerating på produktkort\n- Bedre mobil-responsivt design\n- View toggle \\(kort/tabell\\) på sammenligninger\n- CTA above the fold på produktsider\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)"
     ]
   }
 }
