@@ -57,10 +57,10 @@ const Kontakt = () => {
                     Send oss en e-post for generelle henvendelser, samarbeid eller tilbakemeldinger.
                   </p>
                   <a
-                    href="mailto:kontakt@mtbtest.no"
+                    href="mailto:hei@effi.pro"
                     className="text-primary hover:underline font-medium"
                   >
-                    kontakt@mtbtest.no
+                    hei@effi.pro
                   </a>
                 </CardContent>
               </Card>
