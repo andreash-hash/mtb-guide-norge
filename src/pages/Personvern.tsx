@@ -165,8 +165,8 @@ const Personvern = () => {
                 </ul>
                 <p className="text-muted-foreground leading-relaxed mt-4">
                   For å utøve disse rettighetene, kontakt oss på{" "}
-                  <a href="mailto:kontakt@mtbtest.no" className="text-primary hover:underline">
-                    kontakt@mtbtest.no
+                  <a href="mailto:hei@effi.pro" className="text-primary hover:underline">
+                    hei@effi.pro
                   </a>
                 </p>
               </div>
@@ -216,8 +216,8 @@ const Personvern = () => {
                   ta kontakt med oss:
                 </p>
                 <div className="bg-muted/30 rounded-lg p-4">
-                  <p className="text-foreground font-medium">MTB Test Norge</p>
-                  <p className="text-muted-foreground">E-post: kontakt@mtbtest.no</p>
+                  <p className="text-foreground font-medium">Effi</p>
+                  <p className="text-muted-foreground">E-post: hei@effi.pro</p>
                 </div>
               </div>
 
