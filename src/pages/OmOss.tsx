@@ -46,7 +46,7 @@ const OmOss = () => {
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-primary mb-4">Vår misjon</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                MTB Test Norge ble grunnlagt med ett mål: å hjelpe norske terrengsyklister med å ta informerte valg
+                MTB Test Norge drives av Effi, med ett mål: å hjelpe norske terrengsyklister med å ta informerte valg
                 når de skal kjøpe sykkel og utstyr. Vi tror på transparens, ærlighet og faktabasert informasjon.
               </p>
               <p className="text-muted-foreground leading-relaxed">
