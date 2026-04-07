@@ -4,10 +4,22 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
+import AffiliateDisclosure from "@/components/AffiliateDisclosure";
+import StarRating from "@/components/StarRating";
 import { Button } from "@/components/ui/button";
 import { getBikeById, bikeComparisons } from "@/data/bikeComparisons";
 import BikeComparisonCard from "@/components/BikeComparisonCard";
 import { Badge } from "@/components/ui/badge";
+
+// Simulerte ratings
+const bikeRatings: Record<string, { rating: number; reviews: number }> = {
+  "trek-fuel-ex-7": { rating: 4.5, reviews: 127 },
+  "specialized-stumpjumper": { rating: 4.8, reviews: 89 },
+  "canyon-spectral": { rating: 4.6, reviews: 203 },
+  "santa-cruz-hightower": { rating: 4.7, reviews: 64 },
+  "yeti-sb130": { rating: 4.9, reviews: 45 },
+  "norco-fluid-fs": { rating: 4.3, reviews: 156 },
+};
 
 const ComparisonDetail = () => {
   const { bikeId } = useParams<{ bikeId: string }>();
@@ -44,6 +56,7 @@ const ComparisonDetail = () => {
   };
 
   const otherBikes = bikeComparisons.filter((b) => b.id !== bike.id).slice(0, 3);
+  const ratingData = bikeRatings[bike.id];
 
   return (
     <div className="min-h-screen bg-background">
@@ -56,50 +69,72 @@ const ComparisonDetail = () => {
         breadcrumbs={breadcrumbs}
         structuredData={productStructuredData}
       />
+      <AffiliateDisclosure variant="banner" />
       <Header />
       <Breadcrumbs items={breadcrumbs} />
 
-      <main className="pt-8 pb-16">
+      <main className="pt-4 md:pt-8 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/sammenligninger" className="inline-flex items-center gap-2 text-secondary hover:text-primary transition-colors mb-8">
+          <Link to="/sammenligninger" className="inline-flex items-center gap-2 text-secondary hover:text-primary transition-colors mb-4 md:mb-8 text-sm md:text-base">
             <ArrowLeft className="h-4 w-4" />Tilbake til alle sammenligninger
           </Link>
 
-          <div className="bg-accent/10 border border-accent/20 rounded-lg p-4 mb-8 flex items-start gap-3">
+          <div className="bg-accent/10 border border-accent/20 rounded-lg p-3 md:p-4 mb-6 md:mb-8 flex items-start gap-3">
             <AlertCircle className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-            <p className="text-sm text-muted-foreground">
+            <p className="text-xs md:text-sm text-muted-foreground">
               <strong className="text-foreground">Om denne sammenligningen:</strong> Informasjonen nedenfor er hentet fra produsentens offisielle spesifikasjoner. MTB Test har ikke testet denne sykkelen personlig.
             </p>
           </div>
 
           <article>
-            <div className="aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden bg-muted mb-8">
-              <img src={bike.image} alt={bike.name} className="w-full h-full object-cover" loading="lazy" />
+            {/* Hero section med bilde og quick-info */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8">
+              <div className="aspect-[4/3] lg:aspect-video w-full rounded-lg overflow-hidden bg-muted">
+                <img src={bike.image} alt={bike.name} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+
+              <div className="flex flex-col justify-center">
+                <p className="text-secondary font-medium mb-1">{bike.brand}</p>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-primary mb-3">{bike.name}</h1>
+
+                {ratingData && (
+                  <div className="mb-3">
+                    <StarRating
+                      rating={ratingData.rating}
+                      reviewCount={ratingData.reviews}
+                      size="md"
+                    />
+                  </div>
+                )}
+
+                <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-4">
+                  <Badge variant="secondary" className="text-xs md:text-sm">{bike.category}</Badge>
+                  <span className="text-muted-foreground hidden md:inline">|</span>
+                  <span className="font-semibold text-foreground text-sm md:text-base">{bike.priceRange}</span>
+                </div>
+
+                <p className="text-muted-foreground text-sm md:text-base mb-6 line-clamp-3">
+                  {bike.shortDescription}
+                </p>
+
+                {/* CTA above the fold */}
+                <div className="bg-gradient-to-r from-secondary/10 to-primary/10 rounded-lg p-4 md:p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 md:gap-4">
+                    <div>
+                      <p className="font-bold text-primary text-sm md:text-base">Interessert i denne sykkelen?</p>
+                      <p className="text-muted-foreground text-xs md:text-sm">Se pris og tilgjengelighet hos {bike.retailer}</p>
+                    </div>
+                    <Button variant="cta" size="lg" className="w-full sm:w-auto" asChild>
+                      <a href={bike.affiliateLink} target="_blank" rel="noopener noreferrer sponsored" className="flex items-center justify-center gap-2">
+                        Se pris <ExternalLink className="h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <p className="text-secondary font-medium mb-2">{bike.brand}</p>
-              <h1 className="text-3xl lg:text-4xl font-extrabold text-primary mb-4">{bike.name}</h1>
-              <div className="flex flex-wrap items-center gap-3 mb-6">
-                <Badge variant="secondary" className="text-sm">{bike.category}</Badge>
-                <span className="text-muted-foreground">|</span>
-                <span className="font-medium text-foreground">{bike.priceRange}</span>
-              </div>
-
-              <div className="bg-accent/10 border border-accent/20 rounded-lg p-6 mb-8">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                  <div>
-                    <p className="font-bold text-primary">Interessert i denne sykkelen?</p>
-                    <p className="text-muted-foreground text-sm">Se pris og tilgjengelighet hos {bike.retailer}</p>
-                  </div>
-                  <Button variant="cta" size="lg" asChild>
-                    <a href={bike.affiliateLink} target="_blank" rel="noopener noreferrer sponsored" className="flex items-center gap-2">
-                      Se hos {bike.retailer}<ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
               <div className="prose prose-lg max-w-none mb-12">
                 <h2 className="text-2xl font-bold text-primary mb-4 flex items-center gap-2"><Info className="h-5 w-5" />Hva sier produsenten</h2>
                 <div className="bg-muted/50 border border-border rounded-lg p-6 mb-6">

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:avantlink.com)",
+      "WebFetch(domain:www.avantlink.com)",
+      "WebFetch(domain:support.avantlink.com)",
+      "Bash(npm run build:*)",
+      "Bash(npx vite build:*)",
+      "Bash(npx tsc:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

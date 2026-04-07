@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import NewsCard from "@/components/NewsCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
+import AffiliateDisclosure from "@/components/AffiliateDisclosure";
 import { newsArticles, getFeaturedNews, getRegularNews } from "@/data/newsArticles";
 
 const News = () => {
@@ -28,6 +29,7 @@ const News = () => {
           "url": "https://mtbtest.no/nyheter"
         }}
       />
+      <AffiliateDisclosure variant="banner" />
       <Header />
       <Breadcrumbs items={[
         { name: "Hjem", path: "/" },

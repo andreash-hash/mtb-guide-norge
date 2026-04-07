@@ -1,13 +1,20 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/SectionTitle";
 import BikeComparisonCard from "@/components/BikeComparisonCard";
+import ProductComparisonTable from "@/components/ProductComparisonTable";
+import QuickBuyBanner from "@/components/QuickBuyBanner";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
+import AffiliateDisclosure from "@/components/AffiliateDisclosure";
+import { Button } from "@/components/ui/button";
 import { bikeComparisons } from "@/data/bikeComparisons";
-import { AlertCircle } from "lucide-react";
+import { AlertCircle, LayoutGrid, Table } from "lucide-react";
 
 const Comparisons = () => {
+  const [viewMode, setViewMode] = useState<"grid" | "table">("grid");
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -27,6 +34,7 @@ const Comparisons = () => {
           "url": "https://mtbtest.no/sammenligninger"
         }}
       />
+      <AffiliateDisclosure variant="banner" />
       <Header />
       <Breadcrumbs items={[
         { name: "Hjem", path: "/" },
@@ -58,16 +66,68 @@ const Comparisons = () => {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle subtitle="Fra budsjett til premium - sammenlign spesifikasjoner">
-            Siste sammenligninger
-          </SectionTitle>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+            <div>
+              <h2 className="text-2xl font-bold text-primary">Alle sammenligninger</h2>
+              <p className="text-muted-foreground text-sm mt-1">
+                {bikeComparisons.length} sykler fra budsjett til premium
+              </p>
+            </div>
+
+            {/* View toggle - kun på desktop */}
+            <div className="hidden md:flex items-center gap-2 bg-muted rounded-lg p-1">
+              <Button
+                variant={viewMode === "grid" ? "default" : "ghost"}
+                size="sm"
+                onClick={() => setViewMode("grid")}
+                className="gap-2"
+              >
+                <LayoutGrid className="h-4 w-4" />
+                Kort
+              </Button>
+              <Button
+                variant={viewMode === "table" ? "default" : "ghost"}
+                size="sm"
+                onClick={() => setViewMode("table")}
+                className="gap-2"
+              >
+                <Table className="h-4 w-4" />
+                Tabell
+              </Button>
+            </div>
+          </div>
+
+          {/* Tabell-visning (desktop) */}
+          {viewMode === "table" && (
+            <div className="hidden md:block">
+              <ProductComparisonTable bikes={bikeComparisons} />
+            </div>
+          )}
+
+          {/* Kort-visning */}
+          {viewMode === "grid" && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+              {bikeComparisons.map((bike) => (
+                <BikeComparisonCard key={bike.id} bike={bike} />
+              ))}
+            </div>
+          )}
+
+          {/* Mobil viser alltid kort */}
+          <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
             {bikeComparisons.map((bike) => (
               <BikeComparisonCard key={bike.id} bike={bike} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <section className="py-8 md:py-12 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <QuickBuyBanner variant="compact" />
         </div>
       </section>
 

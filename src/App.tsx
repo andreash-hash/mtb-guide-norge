@@ -11,6 +11,10 @@ import Comparisons from "./pages/Comparisons";
 import ComparisonDetail from "./pages/ComparisonDetail";
 import Guides from "./pages/Guides";
 import GuideDetail from "./pages/GuideDetail";
+import OmOss from "./pages/OmOss";
+import Kontakt from "./pages/Kontakt";
+import Personvern from "./pages/Personvern";
+import Vilkar from "./pages/Vilkar";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +34,10 @@ const App = () => (
             <Route path="/sammenligninger/:bikeId" element={<ComparisonDetail />} />
             <Route path="/guider" element={<Guides />} />
             <Route path="/guider/:guideId" element={<GuideDetail />} />
+            <Route path="/om-oss" element={<OmOss />} />
+            <Route path="/kontakt" element={<Kontakt />} />
+            <Route path="/personvern" element={<Personvern />} />
+            <Route path="/vilkar" element={<Vilkar />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

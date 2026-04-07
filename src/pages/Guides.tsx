@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import GuideCard from "@/components/GuideCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
+import AffiliateDisclosure from "@/components/AffiliateDisclosure";
 import { guides } from "@/data/guides";
 
 const Guides = () => {
@@ -25,6 +26,7 @@ const Guides = () => {
           "url": "https://mtbtest.no/guider"
         }}
       />
+      <AffiliateDisclosure variant="banner" />
       <Header />
       <Breadcrumbs items={[
         { name: "Hjem", path: "/" },

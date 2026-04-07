@@ -27,10 +27,10 @@ const Footer = () => {
   ];
 
   const resources = [
-    { name: "Om oss", href: "#om-oss" },
-    { name: "Kontakt", href: "#kontakt" },
-    { name: "Personvern", href: "#personvern" },
-    { name: "Vilkår", href: "#vilkar" },
+    { name: "Om oss", href: "/om-oss" },
+    { name: "Kontakt", href: "/kontakt" },
+    { name: "Personvern", href: "/personvern" },
+    { name: "Vilkår", href: "/vilkar" },
   ];
 
   const socialLinks = [
@@ -73,13 +73,13 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Ressurser</h3>
             <nav className="space-y-2">
               {resources.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="block text-primary-foreground/80 hover:text-secondary transition-colors text-sm"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
